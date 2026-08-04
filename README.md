@@ -1,7 +1,8 @@
-# MicroWorld
+# Semantic Runtime Experiments
 
-**A portable semantic runtime that converts raw event streams into explicit
-semantic state before policy or machine-learning evaluation.**
+*A portable semantic runtime evaluated across multiple financial domains.*
+
+MicroWorld Research Project.
 
 ![MicroWorld semantic runtime pipeline](assets/semantic-runtime.svg)
 
