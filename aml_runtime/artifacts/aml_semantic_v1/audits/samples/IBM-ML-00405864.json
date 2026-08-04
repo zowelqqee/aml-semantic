@@ -1,0 +1,329 @@
+{
+  "conflicts": [],
+  "decision": {
+    "decision": "ABSTAIN",
+    "policy_ids": [
+      "SEM-P00"
+    ],
+    "rationale": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame."
+  },
+  "evidence": [
+    {
+      "confidence": 0.45,
+      "direction": "mitigation",
+      "explanation": "Novelty observed against no counterparty baseline carries no information. (Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 0 known counterparties, below the 5 needed for a counterparty baseline.)",
+      "id": "E-8719d89e36bd",
+      "metadata": {
+        "semantic_object_id": "SO-32f57d8ae8d7eca2",
+        "semantic_type": "NonInformativeNovelty"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M06-UNINFORMATIVE-NOVELTY",
+      "source": "semantic-context/NonInformativeNovelty",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-ed3d2fb3fdd3"
+      ],
+      "timestamp": "2022-09-01T02:50:00",
+      "topic": "counterparty_regime"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.45,
+      "explanation": "Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 0 known counterparties, below the 5 needed for a counterparty baseline.",
+      "id": "SF-ed3d2fb3fdd3",
+      "provenance": "semantic-object/SI-NonInformativeNovelty",
+      "semantic_object_id": "SO-32f57d8ae8d7eca2",
+      "subject_id": "rel:21387:80050F5E0->11:802D680C0",
+      "timestamp": "2022-09-01T02:50:00",
+      "type": "NonInformativeNovelty"
+    }
+  ],
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-8719d89e36bd"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": true
+    }
+  ],
+  "replay_pins": {
+    "context_state_hash": "a82b2d397c410e3ca01c498457e41754",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "47a57fd701da33ca315dd045f3d83f7fa4b86889dc918f92cd549b273ecea975",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "semantic_object_set_hash": "cf25cb19dab17b0e4fe80a17ddabb60f3e65dfe183956c0e55b257b454b19670",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "a82b2d397c410e3ca01c498457e41754",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "beneficiary_jurisdiction": "Finland",
+          "originator_jurisdiction": "Greece",
+          "window": "prior-only"
+        },
+        "confidence": 0.44,
+        "confidence_explanation": "prior 0.88 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.440000",
+        "created_at": "2022-09-01T02:50:00#405862",
+        "id": "SO-a4dfd64375981dc6",
+        "meaning": "The booking jurisdictions of the two legs differ.",
+        "object_class": "event",
+        "origin": "SI-CrossJurisdictionTransfer",
+        "subject_id": "IBM-ML-00405864",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:80067EC60",
+          "acct:21387:80050F5E0",
+          "juris:Greece",
+          "cust:80061E9E0",
+          "acct:11:802D680C0",
+          "juris:Finland"
+        ],
+        "supporting_facts": [
+          "Greece -> Finland"
+        ],
+        "supporting_relationships": [],
+        "type": "CrossJurisdictionTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "baseline_minimum": 5,
+          "prior_outbound_events": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:50:00#405862",
+        "id": "SO-52438719ce3b0b54",
+        "meaning": "Too little history exists for any claim about this party's normal behaviour.",
+        "object_class": "profile",
+        "origin": "SI-NoEstablishedBaseline",
+        "subject_id": "21387:80050F5E0",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:80067EC60",
+          "acct:21387:80050F5E0",
+          "juris:Greece",
+          "cust:80061E9E0",
+          "acct:11:802D680C0",
+          "juris:Finland"
+        ],
+        "supporting_facts": [
+          "0 prior outbound events (< 5)"
+        ],
+        "supporting_relationships": [],
+        "type": "NoEstablishedBaseline",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 0,
+          "prior_distinct_counterparties": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.45,
+        "confidence_explanation": "prior 0.90 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.450000",
+        "created_at": "2022-09-01T02:50:00#405862",
+        "id": "SO-32f57d8ae8d7eca2",
+        "meaning": "Novelty observed against no counterparty baseline; the default state of the world, not a signal.",
+        "object_class": "relationship",
+        "origin": "SI-NonInformativeNovelty",
+        "subject_id": "rel:21387:80050F5E0->11:802D680C0",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:80067EC60",
+          "acct:21387:80050F5E0",
+          "juris:Greece",
+          "cust:80061E9E0",
+          "acct:11:802D680C0",
+          "juris:Finland"
+        ],
+        "supporting_facts": [
+          "0 prior payments on this pair",
+          "originator has 0 known counterparties, below the 5 needed for a counterparty baseline"
+        ],
+        "supporting_relationships": [
+          "rel:21387:80050F5E0->11:802D680C0"
+        ],
+        "type": "NonInformativeNovelty",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 490.5,
+          "currency": "Euro",
+          "prior_same_currency_events": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:50:00#405862",
+        "id": "SO-ff397fb3c1aa98f7",
+        "meaning": "A magnitude observed with no reference frame; explicit ignorance, not a finding.",
+        "object_class": "event",
+        "origin": "SI-UnscaledValue",
+        "subject_id": "IBM-ML-00405864",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:80067EC60",
+          "acct:21387:80050F5E0",
+          "juris:Greece",
+          "cust:80061E9E0",
+          "acct:11:802D680C0",
+          "juris:Finland"
+        ],
+        "supporting_facts": [
+          "amount 490.50 Euro observed with 0 prior same-currency events"
+        ],
+        "supporting_relationships": [],
+        "type": "UnscaledValue",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ABSTAIN: Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame. Reading: CrossJurisdictionTransfer, UnscaledValue.",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 490.5,
+    "beneficiary_account_id": "11:802D680C0",
+    "country_id": "",
+    "currency": "Euro",
+    "id": "IBM-ML-00405864",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "490.50",
+      "from_bank": "21387",
+      "payment_currency": "Euro",
+      "to_bank": "11"
+    },
+    "originator_account_id": "21387:80050F5E0",
+    "payment_type": "ACH",
+    "timestamp": "2022-09-01T02:50:00"
+  }
+}

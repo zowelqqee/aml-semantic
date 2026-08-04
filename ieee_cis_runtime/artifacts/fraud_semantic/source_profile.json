@@ -1,0 +1,57 @@
+{
+  "behaviour_commits": 590540,
+  "behaviour_object_emissions": {
+    "CardTestingBehaviour": 57,
+    "CompromisedCardBehaviour": 822,
+    "DeviceRotationBehaviour": 56,
+    "DormantCardReactivation": 7427,
+    "ExpectedVelocityBehaviour": 1137,
+    "InsufficientCardHistory": 48996,
+    "NormalSpendingBehaviour": 460474,
+    "TrustedDeviceBehaviour": 72723,
+    "UnexpectedSpendingBehaviour": 44486,
+    "VelocityBurstBehaviour": 66405
+  },
+  "fraud_rate": 0.03499000914417313,
+  "identity_join": {
+    "rate": 0.2442391709283029,
+    "rows": 144233
+  },
+  "labels": {
+    "fraud": 20663,
+    "legitimate": 569877
+  },
+  "rows": 590540,
+  "runtime_decisions": {
+    "ABSTAIN": 464151,
+    "ALLOW": 125702,
+    "REVIEW": 687
+  },
+  "semantic_commits": 590540,
+  "semantic_object_emissions": {
+    "AmountRegime": 541544,
+    "ChannelRegime": 541544,
+    "DeviceRegime": 488121,
+    "EstablishedDeviceRelationship": 91185,
+    "ExpectedHighValueSpend": 81706,
+    "FirstDeviceContact": 11256,
+    "MinimalTestAmount": 126,
+    "NoEstablishedCardHistory": 48996,
+    "NonInformativeDeviceNovelty": 18176,
+    "RecentlyLinkedDevice": 20238,
+    "RoutineSpendingAmount": 458859,
+    "SharedClientSignatureExposure": 101898,
+    "TempoRegime": 541544,
+    "TempoRegimeShift": 32342,
+    "UnexpectedBillingRegion": 27441,
+    "UnexpectedSpendingAmount": 853,
+    "UnscaledSpendingAmount": 48996,
+    "UnverifiedDeviceContext": 446307
+  },
+  "transaction_dt": {
+    "maximum": 15811131,
+    "minimum": 86400,
+    "non_decreasing": true,
+    "span_days": 181.99920138888888
+  }
+}

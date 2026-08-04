@@ -1,0 +1,478 @@
+{
+  "behaviour": {
+    "behaviours": [
+      {
+        "causal_explanation": "No behavioural claim is supportable for this account yet.",
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "counter_evidence": [
+          "2 outbound and 3 inbound events exist but do not reach the minimum"
+        ],
+        "created_at": "2022-09-01T02:52:00#406725",
+        "direction": "none",
+        "id": "BO-825804085f0de926",
+        "interval": {
+          "end_minute": 27699832,
+          "horizon": "minutes",
+          "span_minutes": 169,
+          "start_minute": 27699663
+        },
+        "meaning": "Too few observations exist for any behavioural claim about this account.",
+        "origin": "BI-InsufficientBehaviouralHistory",
+        "subject_id": "20:80BC62F10",
+        "supporting_entities": [
+          "cust:8009FAAE0",
+          "acct:20:80BC62F10",
+          "juris:China"
+        ],
+        "supporting_observations": [
+          "5 prior observations (< 6)"
+        ],
+        "supporting_relationships": [
+          "rel:20:80BC62F10->240229:80F025640"
+        ],
+        "supporting_semantic_objects": [
+          "SO-e69477238f5fb4da"
+        ],
+        "topic": "behaviour_coverage",
+        "type": "InsufficientBehaviouralHistory",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      }
+    ],
+    "layer_version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0",
+    "lifecycle": {
+      "age_minutes": 169,
+      "buckets_active": 1,
+      "distinct_counterparties": 1,
+      "first_seen_minute": 27699663,
+      "horizons_filled": [
+        "minutes",
+        "hours"
+      ],
+      "horizons_unfillable": [
+        "days",
+        "weeks"
+      ],
+      "id": "LC-b6786b32e7c65011",
+      "idle_minutes": 0,
+      "observed_events": 5,
+      "subject_id": "20:80BC62F10"
+    },
+    "ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "ontology_version": "aml-behaviour-ontology/1.0",
+    "role": {
+      "confidence": 0.0,
+      "explanation": "Role Unknown follows from lifecycle state",
+      "id": "RO-aa8b5dd49e4e2db4",
+      "previous_role": "Unknown",
+      "role": "Unknown",
+      "since_minute": 27699678,
+      "subject_id": "20:80BC62F10",
+      "supporting_behaviours": [],
+      "tenure_minutes": 154,
+      "transition_count": 1,
+      "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+    },
+    "scenarios": [
+      {
+        "causal_explanation": "Activity is internal settlement between accounts of one party.",
+        "confidence": 0.6,
+        "counter_evidence": [],
+        "id": "SC-d42e4aa3d4380f57",
+        "interval": {
+          "end_minute": 27699832,
+          "horizon": "hours",
+          "span_minutes": 169,
+          "start_minute": 27699663
+        },
+        "matched_stages": [
+          "Settle",
+          "Settle"
+        ],
+        "observed_stages": [
+          "Receive",
+          "Settle",
+          "Settle",
+          "Payments"
+        ],
+        "subject_id": "20:80BC62F10",
+        "supporting_behaviours": [
+          "BO-825804085f0de926"
+        ],
+        "type": "TreasuryCycling",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      }
+    ],
+    "stage": "Payments",
+    "subject_id": "20:80BC62F10",
+    "transaction_id": "IBM-ML-00406727",
+    "transition": null,
+    "withheld": [
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "SeasonalBusinessCycle"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "MonthlySalaryCadence"
+      },
+      {
+        "missing_inputs": [
+          "multi_week_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "LongTermDormancyReactivation"
+      },
+      {
+        "missing_inputs": [
+          "multi_year_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "AnnualTaxCycle"
+      }
+    ]
+  },
+  "behaviour_rationale": "ABSTAIN: Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame. Role: Unknown. Behaviour: InsufficientBehaviouralHistory. Scenario: TreasuryCycling.",
+  "behaviour_runtime_version": "aml-behaviour-runtime/1.0",
+  "conflicts": [],
+  "decision": {
+    "decision": "ABSTAIN",
+    "policy_ids": [
+      "SEM-P00"
+    ],
+    "rationale": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame."
+  },
+  "evidence": [
+    {
+      "confidence": 0.45,
+      "direction": "mitigation",
+      "explanation": "Novelty observed against no counterparty baseline carries no information. (Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 0 known counterparties, below the 5 needed for a counterparty baseline.)",
+      "id": "E-8f37553dcf5a",
+      "metadata": {
+        "semantic_object_id": "SO-111775a189c7d214",
+        "semantic_type": "NonInformativeNovelty"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M06-UNINFORMATIVE-NOVELTY",
+      "source": "semantic-context/NonInformativeNovelty",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-f7b528fd4c84"
+      ],
+      "timestamp": "2022-09-01T02:52:00",
+      "topic": "counterparty_regime"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.45,
+      "explanation": "Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 0 known counterparties, below the 5 needed for a counterparty baseline.",
+      "id": "SF-f7b528fd4c84",
+      "provenance": "semantic-object/SI-NonInformativeNovelty",
+      "semantic_object_id": "SO-111775a189c7d214",
+      "subject_id": "rel:20:80BC62F10->240229:80F025640",
+      "timestamp": "2022-09-01T02:52:00",
+      "type": "NonInformativeNovelty"
+    }
+  ],
+  "frozen_runtime_decision": "ALLOW",
+  "laundering_label_evaluation_only": 1,
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-8f37553dcf5a"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": true
+    }
+  ],
+  "replay_pins": {
+    "behaviour_layer_hash": "062fec68c82db5c8c247bd80367be9d280783b00f077d6c49c8cfbcf434620c4",
+    "behaviour_object_set_hash": "6aba0ae23c062c5889d0dfe38c8b965d5ef086a6540eb8e62d080a76a7f967c3",
+    "behaviour_ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "behaviour_projection_hash": "de388fc9392ad5123dc110741efb722bb1fdfba87a445c45cbdf85b41906cf3b",
+    "context_state_hash": "fc493d95d9cfe28be374c8f71227dcb6",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "60910d6bd4b7864088fb0214a86ea8e9652707b3ca82d80a05d8dc878cae5a5f",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "role_state_hash": "d7b06acb402fae0078a67d2191b353bf9061127cbd1c9efc34954f19ccf1f3ef",
+    "semantic_object_set_hash": "b58304f755a0cd5ab989071826cc85c2d95a21d991b8808bef8d6e89cfc8712b",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": true,
+  "semantic": {
+    "context_state_hash": "fc493d95d9cfe28be374c8f71227dcb6",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "beneficiary_jurisdiction": "Switzerland",
+          "originator_jurisdiction": "China",
+          "window": "prior-only"
+        },
+        "confidence": 0.44,
+        "confidence_explanation": "prior 0.88 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.440000",
+        "created_at": "2022-09-01T02:52:00#406725",
+        "id": "SO-1151996da7644cce",
+        "meaning": "The booking jurisdictions of the two legs differ.",
+        "object_class": "event",
+        "origin": "SI-CrossJurisdictionTransfer",
+        "subject_id": "IBM-ML-00406727",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009FAAE0",
+          "acct:20:80BC62F10",
+          "juris:China",
+          "cust:800E6E5E0",
+          "acct:240229:80F025640",
+          "juris:Switzerland"
+        ],
+        "supporting_facts": [
+          "China -> Switzerland"
+        ],
+        "supporting_relationships": [],
+        "type": "CrossJurisdictionTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "baseline_minimum": 5,
+          "prior_outbound_events": 2,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#406725",
+        "id": "SO-e69477238f5fb4da",
+        "meaning": "Too little history exists for any claim about this party's normal behaviour.",
+        "object_class": "profile",
+        "origin": "SI-NoEstablishedBaseline",
+        "subject_id": "20:80BC62F10",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009FAAE0",
+          "acct:20:80BC62F10",
+          "juris:China",
+          "cust:800E6E5E0",
+          "acct:240229:80F025640",
+          "juris:Switzerland"
+        ],
+        "supporting_facts": [
+          "2 prior outbound events (< 5)"
+        ],
+        "supporting_relationships": [],
+        "type": "NoEstablishedBaseline",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 0,
+          "prior_distinct_counterparties": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.45,
+        "confidence_explanation": "prior 0.90 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.450000",
+        "created_at": "2022-09-01T02:52:00#406725",
+        "id": "SO-111775a189c7d214",
+        "meaning": "Novelty observed against no counterparty baseline; the default state of the world, not a signal.",
+        "object_class": "relationship",
+        "origin": "SI-NonInformativeNovelty",
+        "subject_id": "rel:20:80BC62F10->240229:80F025640",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009FAAE0",
+          "acct:20:80BC62F10",
+          "juris:China",
+          "cust:800E6E5E0",
+          "acct:240229:80F025640",
+          "juris:Switzerland"
+        ],
+        "supporting_facts": [
+          "0 prior payments on this pair",
+          "originator has 0 known counterparties, below the 5 needed for a counterparty baseline"
+        ],
+        "supporting_relationships": [
+          "rel:20:80BC62F10->240229:80F025640"
+        ],
+        "type": "NonInformativeNovelty",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 7332.87,
+          "currency": "Swiss Franc",
+          "prior_same_currency_events": 1,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#406725",
+        "id": "SO-7f24ca0777b5414e",
+        "meaning": "A magnitude observed with no reference frame; explicit ignorance, not a finding.",
+        "object_class": "event",
+        "origin": "SI-UnscaledValue",
+        "subject_id": "IBM-ML-00406727",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009FAAE0",
+          "acct:20:80BC62F10",
+          "juris:China",
+          "cust:800E6E5E0",
+          "acct:240229:80F025640",
+          "juris:Switzerland"
+        ],
+        "supporting_facts": [
+          "amount 7332.87 Swiss Franc observed with 1 prior same-currency events"
+        ],
+        "supporting_relationships": [],
+        "type": "UnscaledValue",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ABSTAIN: Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame. Reading: CrossJurisdictionTransfer, UnscaledValue.",
+  "semantic_runtime_decision": "ABSTAIN",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 7332.87,
+    "beneficiary_account_id": "240229:80F025640",
+    "country_id": "",
+    "currency": "Swiss Franc",
+    "id": "IBM-ML-00406727",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "7332.87",
+      "from_bank": "20",
+      "payment_currency": "Swiss Franc",
+      "to_bank": "240229"
+    },
+    "originator_account_id": "20:80BC62F10",
+    "payment_type": "ACH",
+    "timestamp": "2022-09-01T02:52:00"
+  }
+}

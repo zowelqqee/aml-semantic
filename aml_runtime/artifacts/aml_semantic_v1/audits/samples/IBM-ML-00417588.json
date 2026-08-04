@@ -1,0 +1,610 @@
+{
+  "conflicts": [
+    {
+      "dimensions": [
+        "positive_negative",
+        "source_strength_asymmetry",
+        "old_vs_recent"
+      ],
+      "explanation": "Counterparty novelty conflicts with a value inside the party's own regime. Risk confidence=0.80, source reliability=0.70; mitigating confidence=0.76, source reliability=0.85. Conflict dimensions: positive_negative, source_strength_asymmetry, old_vs_recent.",
+      "id": "C-7bb87b4eebc9",
+      "kind": "value_context",
+      "mitigating_confidence": 0.755556,
+      "mitigating_evidence_id": "E-ac6f231eda3f",
+      "mitigating_source_reliability": 0.85,
+      "risk_confidence": 0.795589,
+      "risk_evidence_id": "E-c436d9876301",
+      "risk_source_reliability": 0.7
+    },
+    {
+      "dimensions": [
+        "positive_negative",
+        "confidence_asymmetry",
+        "source_strength_asymmetry",
+        "old_vs_recent"
+      ],
+      "explanation": "Instrument opacity conflicts with a value inside the party's own regime. Risk confidence=0.42, source reliability=0.60; mitigating confidence=0.76, source reliability=0.85. Conflict dimensions: positive_negative, confidence_asymmetry, source_strength_asymmetry, old_vs_recent.",
+      "id": "C-89d7c48eaf6f",
+      "kind": "value_context",
+      "mitigating_confidence": 0.755556,
+      "mitigating_evidence_id": "E-ac6f231eda3f",
+      "mitigating_source_reliability": 0.85,
+      "risk_confidence": 0.425,
+      "risk_evidence_id": "E-9b7fb52aba35",
+      "risk_source_reliability": 0.6
+    }
+  ],
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "SEM-P20"
+    ],
+    "rationale": "Allow when the semantic reading is determined and no unqualified corroboration remains."
+  },
+  "evidence": [
+    {
+      "confidence": 0.887697,
+      "direction": "mitigation",
+      "explanation": "The burst matches the party's own distribution shape. (High tempo that matches the party's own operational shape. Supporting: 102 outbound events in the current 60-minute bucket; own mean 723.250 events per bucket.)",
+      "id": "E-2a28c1988d7a",
+      "metadata": {
+        "semantic_object_id": "SO-f723647bb1ce2ee3",
+        "semantic_type": "NormalOperationalBurst"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M03-OPERATIONAL-BURST",
+      "source": "semantic-context/NormalOperationalBurst",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-31baed5352fd"
+      ],
+      "timestamp": "2022-09-01T03:11:00",
+      "topic": "tempo_regime"
+    },
+    {
+      "confidence": 0.755556,
+      "direction": "mitigation",
+      "explanation": "The value sits inside the party's own established regime. (Value sits inside the party's own established regime. Supporting: amount 500.64 Euro; own prior max 100726535.26; own p90 16163.50.)",
+      "id": "E-ac6f231eda3f",
+      "metadata": {
+        "semantic_object_id": "SO-21144bbeab88c59b",
+        "semantic_type": "RoutineValueTransfer"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M05-ROUTINE-VALUE",
+      "source": "semantic-context/RoutineValueTransfer",
+      "source_reliability": 0.85,
+      "supporting_facts": [
+        "SF-bc4c74a56cea"
+      ],
+      "timestamp": "2022-09-01T03:11:00",
+      "topic": "value_regime"
+    },
+    {
+      "confidence": 0.795589,
+      "direction": "risk",
+      "explanation": "A counterparty outside the party's known counterparty set. (A counterparty never used before by a party whose counterparty set is known. Supporting: 0 prior payments on this pair.)",
+      "id": "E-c436d9876301",
+      "metadata": {
+        "semantic_object_id": "SO-34b0f46474580591",
+        "semantic_type": "FirstContact"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-R03-INFORMATIVE-NOVELTY",
+      "source": "semantic-context/FirstContact",
+      "source_reliability": 0.7,
+      "supporting_facts": [
+        "SF-9284b674356d"
+      ],
+      "timestamp": "2022-09-01T03:11:00",
+      "topic": "counterparty_regime"
+    },
+    {
+      "confidence": 0.425,
+      "direction": "risk",
+      "explanation": "Settlement carries no counterparty audit trail. (Settlement instrument carries no counterparty audit trail. Supporting: payment format Cash.)",
+      "id": "E-9b7fb52aba35",
+      "metadata": {
+        "semantic_object_id": "SO-2a440fdd03d05e91",
+        "semantic_type": "CashInstrumentSettlement"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-R07-CASH-INSTRUMENT",
+      "source": "semantic-context/CashInstrumentSettlement",
+      "source_reliability": 0.6,
+      "supporting_facts": [
+        "SF-914ac7fa9934"
+      ],
+      "timestamp": "2022-09-01T03:11:00",
+      "topic": "settlement_instrument"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.425,
+      "explanation": "Settlement instrument carries no counterparty audit trail. Supporting: payment format Cash.",
+      "id": "SF-914ac7fa9934",
+      "provenance": "semantic-object/SI-CashInstrumentSettlement",
+      "semantic_object_id": "SO-2a440fdd03d05e91",
+      "subject_id": "IBM-ML-00417588",
+      "timestamp": "2022-09-01T03:11:00",
+      "type": "CashInstrumentSettlement"
+    },
+    {
+      "confidence": 0.795589,
+      "explanation": "A counterparty never used before by a party whose counterparty set is known. Supporting: 0 prior payments on this pair.",
+      "id": "SF-9284b674356d",
+      "provenance": "semantic-object/SI-FirstContact",
+      "semantic_object_id": "SO-34b0f46474580591",
+      "subject_id": "rel:70:1004286A8->27684:804E3FF10",
+      "timestamp": "2022-09-01T03:11:00",
+      "type": "FirstContact"
+    },
+    {
+      "confidence": 0.887697,
+      "explanation": "High tempo that matches the party's own operational shape. Supporting: 102 outbound events in the current 60-minute bucket; own mean 723.250 events per bucket.",
+      "id": "SF-31baed5352fd",
+      "provenance": "semantic-object/SI-NormalOperationalBurst",
+      "semantic_object_id": "SO-f723647bb1ce2ee3",
+      "subject_id": "70:1004286A8",
+      "timestamp": "2022-09-01T03:11:00",
+      "type": "NormalOperationalBurst"
+    },
+    {
+      "confidence": 0.755556,
+      "explanation": "Value sits inside the party's own established regime. Supporting: amount 500.64 Euro; own prior max 100726535.26; own p90 16163.50.",
+      "id": "SF-bc4c74a56cea",
+      "provenance": "semantic-object/SI-RoutineValueTransfer",
+      "semantic_object_id": "SO-21144bbeab88c59b",
+      "subject_id": "IBM-ML-00417588",
+      "timestamp": "2022-09-01T03:11:00",
+      "type": "RoutineValueTransfer"
+    }
+  ],
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 2,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 2,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-2a28c1988d7a",
+        "E-ac6f231eda3f",
+        "E-c436d9876301",
+        "E-9b7fb52aba35"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 2,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 2,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "context_state_hash": "c89f8bdedc7ab0d4e76c00cdce202267",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "dbe20b7acb557f2e5c144a4952602e97474b0fabc75578a6d96140d6c3b1d278",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "semantic_object_set_hash": "4745e8b2d592c52148389f5f7a74cb587e3082632ee58c94990f7d9e1ec38724",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "c89f8bdedc7ab0d4e76c00cdce202267",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "payment_format": "Cash",
+          "window": "prior-only"
+        },
+        "confidence": 0.425,
+        "confidence_explanation": "prior 0.85 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.425000",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-2a440fdd03d05e91",
+        "meaning": "Settlement instrument carries no counterparty audit trail.",
+        "object_class": "event",
+        "origin": "SI-CashInstrumentSettlement",
+        "subject_id": "IBM-ML-00417588",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "payment format Cash"
+        ],
+        "supporting_relationships": [],
+        "type": "CashInstrumentSettlement",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "prior_distinct_counterparties": 1443,
+          "window": "prior-only"
+        },
+        "confidence": 0.895038,
+        "confidence_explanation": "prior 0.90 x support 0.9945 (n=1443, k=8) x coverage 1.00 = 0.895038",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-2149848b0bf7487e",
+        "meaning": "The counterparty set the party normally uses.",
+        "object_class": "profile",
+        "origin": "SI-CounterpartyRegime",
+        "subject_id": "70:1004286A8",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "1443 distinct prior counterparties"
+        ],
+        "supporting_relationships": [],
+        "type": "CounterpartyRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "beneficiary_jurisdiction": "Ireland",
+          "originator_jurisdiction": "United States",
+          "window": "prior-only"
+        },
+        "confidence": 0.44,
+        "confidence_explanation": "prior 0.88 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.440000",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-91357cdca99e4cb4",
+        "meaning": "The booking jurisdictions of the two legs differ.",
+        "object_class": "event",
+        "origin": "SI-CrossJurisdictionTransfer",
+        "subject_id": "IBM-ML-00417588",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "United States -> Ireland"
+        ],
+        "supporting_relationships": [],
+        "type": "CrossJurisdictionTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "in_distinct": 3,
+          "out_distinct": 1443,
+          "window": "prior-only"
+        },
+        "confidence": 0.907423,
+        "confidence_explanation": "prior 0.92 x support 0.9863 (n=1443, k=20) x coverage 1.00 = 0.907423",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-59a99f610f2dfbd3",
+        "meaning": "One-to-many payer: a settlement or payroll-operator shape.",
+        "object_class": "profile",
+        "origin": "SI-DistributionNode",
+        "subject_id": "70:1004286A8",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "out-degree 1443 vs in-degree 3"
+        ],
+        "supporting_relationships": [],
+        "type": "DistributionNode",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 0,
+          "prior_distinct_counterparties": 1443,
+          "window": "prior-only"
+        },
+        "confidence": 0.795589,
+        "confidence_explanation": "prior 0.80 x support 0.9945 (n=1443, k=8) x coverage 1.00 = 0.795589",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-34b0f46474580591",
+        "meaning": "A counterparty never used before by a party whose counterparty set is known.",
+        "object_class": "relationship",
+        "origin": "SI-FirstContact",
+        "subject_id": "rel:70:1004286A8->27684:804E3FF10",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "0 prior payments on this pair"
+        ],
+        "supporting_relationships": [
+          "rel:70:1004286A8->27684:804E3FF10"
+        ],
+        "type": "FirstContact",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "burst": 102,
+          "mean_bucket_rate": 723.25,
+          "prior_outbound_events": 2893,
+          "shift_multiple": 4.0,
+          "window": "prior-only"
+        },
+        "confidence": 0.887697,
+        "confidence_explanation": "prior 0.90 x support 0.9863 (n=1443, k=20) x coverage 1.00 = 0.887697",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-f723647bb1ce2ee3",
+        "meaning": "High tempo that matches the party's own operational shape.",
+        "object_class": "event",
+        "origin": "SI-NormalOperationalBurst",
+        "subject_id": "70:1004286A8",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "102 outbound events in the current 60-minute bucket",
+          "own mean 723.250 events per bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "NormalOperationalBurst",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 500.64,
+          "break_multiple": 4.0,
+          "currency": "Euro",
+          "high_mark": 16163.5,
+          "prior_events": 64,
+          "prior_max": 100726535.26,
+          "window": "prior-only"
+        },
+        "confidence": 0.755556,
+        "confidence_explanation": "prior 0.85 x support 0.8889 (n=64, k=8) x coverage 1.00 = 0.755556",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-21144bbeab88c59b",
+        "meaning": "Value sits inside the party's own established regime.",
+        "object_class": "event",
+        "origin": "SI-RoutineValueTransfer",
+        "subject_id": "IBM-ML-00417588",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "amount 500.64 Euro",
+          "own prior max 100726535.26",
+          "own p90 16163.50"
+        ],
+        "supporting_relationships": [],
+        "type": "RoutineValueTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "mean_bucket_rate": 723.25,
+          "prior_outbound_events": 2893,
+          "window": "prior-only"
+        },
+        "confidence": 0.897518,
+        "confidence_explanation": "prior 0.90 x support 0.9972 (n=2893, k=8) x coverage 1.00 = 0.897518",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-580c66ffa56349e3",
+        "meaning": "The party's own observed transaction tempo.",
+        "object_class": "profile",
+        "origin": "SI-TempoRegime",
+        "subject_id": "70:1004286A8",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "mean 723.250 outbound events per 60-minute bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "TempoRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "currency": "Euro",
+          "high_mark": 16163.5,
+          "prior_events": 64,
+          "prior_max": 100726535.26,
+          "window": "prior-only"
+        },
+        "confidence": 0.844444,
+        "confidence_explanation": "prior 0.95 x support 0.8889 (n=64, k=8) x coverage 1.00 = 0.844444",
+        "created_at": "2022-09-01T03:11:00#417586",
+        "id": "SO-c80b747719cda698",
+        "meaning": "The party's own observed operating scale in one currency.",
+        "object_class": "profile",
+        "origin": "SI-ValueRegime",
+        "subject_id": "70:1004286A8|Euro",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800CD3AC0",
+          "acct:70:1004286A8",
+          "juris:United States",
+          "cust:80082D290",
+          "acct:27684:804E3FF10",
+          "juris:Ireland"
+        ],
+        "supporting_facts": [
+          "prior max 100726535.26, p90 16163.50 Euro"
+        ],
+        "supporting_relationships": [],
+        "type": "ValueRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Reading: CashInstrumentSettlement, CrossJurisdictionTransfer, NormalOperationalBurst, RoutineValueTransfer.",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 500.64,
+    "beneficiary_account_id": "27684:804E3FF10",
+    "country_id": "",
+    "currency": "Euro",
+    "id": "IBM-ML-00417588",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "500.64",
+      "from_bank": "70",
+      "payment_currency": "Euro",
+      "to_bank": "27684"
+    },
+    "originator_account_id": "70:1004286A8",
+    "payment_type": "Cash",
+    "timestamp": "2022-09-01T03:11:00"
+  }
+}

@@ -1,0 +1,1854 @@
+{
+  "ablations": [
+    {
+      "dropped_feature_count": 15,
+      "dropped_group": "raw",
+      "feature_count": 50,
+      "features": "raw_plus_semantic_minus_raw",
+      "inference_latency_ms": 0.0001276049634953524,
+      "inference_seconds": 0.01507116702850908,
+      "metrics": {
+        "alert_rate": 0.2654604260507332,
+        "f1": 0.1445068752294096,
+        "false_negatives": 1505,
+        "false_positives": 28794,
+        "pr_auc": 0.12038384057155932,
+        "precision": 0.08161898382929864,
+        "recall": 0.6296751968503937,
+        "roc_auc": 0.7540125696926756,
+        "true_negatives": 85250,
+        "true_positives": 2559
+      },
+      "peak_rss_bytes": 822444032,
+      "training_seconds": 11.063369125011377
+    },
+    {
+      "dropped_feature_count": 10,
+      "dropped_group": "behaviours",
+      "feature_count": 55,
+      "features": "raw_plus_semantic_minus_behaviours",
+      "inference_latency_ms": 0.00013682921591323685,
+      "inference_seconds": 0.016160625033080578,
+      "metrics": {
+        "alert_rate": 0.2519897043384021,
+        "f1": 0.16218293620292082,
+        "false_negatives": 1321,
+        "false_positives": 27019,
+        "pr_auc": 0.18203786539871605,
+        "precision": 0.09216450507358376,
+        "recall": 0.6749507874015748,
+        "roc_auc": 0.7969912867930238,
+        "true_negatives": 87025,
+        "true_positives": 2743
+      },
+      "peak_rss_bytes": 1132249088,
+      "training_seconds": 12.036676250048913
+    },
+    {
+      "dropped_feature_count": 6,
+      "dropped_group": "evidence",
+      "feature_count": 59,
+      "features": "raw_plus_semantic_minus_evidence",
+      "inference_latency_ms": 0.00020158633671405222,
+      "inference_seconds": 0.02380895905662328,
+      "metrics": {
+        "alert_rate": 0.2500677346157754,
+        "f1": 0.16262388761570284,
+        "false_negatives": 1332,
+        "false_positives": 26803,
+        "pr_auc": 0.18430043283808498,
+        "precision": 0.09250042322668021,
+        "recall": 0.672244094488189,
+        "roc_auc": 0.7949962118330071,
+        "true_negatives": 87241,
+        "true_positives": 2732
+      },
+      "peak_rss_bytes": 1191870464,
+      "training_seconds": 13.213178707985207
+    },
+    {
+      "dropped_feature_count": 6,
+      "dropped_group": "lifecycle",
+      "feature_count": 59,
+      "features": "raw_plus_semantic_minus_lifecycle",
+      "inference_latency_ms": 0.0002188441935653149,
+      "inference_seconds": 0.02584725001361221,
+      "metrics": {
+        "alert_rate": 0.24702814373285467,
+        "f1": 0.1651022864019254,
+        "false_negatives": 1320,
+        "false_positives": 26432,
+        "pr_auc": 0.1868525558172946,
+        "precision": 0.09404990403071017,
+        "recall": 0.6751968503937008,
+        "roc_auc": 0.7933719347978554,
+        "true_negatives": 87612,
+        "true_positives": 2744
+      },
+      "peak_rss_bytes": 1191870464,
+      "training_seconds": 12.231555209029466
+    },
+    {
+      "dropped_feature_count": 4,
+      "dropped_group": "roles",
+      "feature_count": 61,
+      "features": "raw_plus_semantic_minus_roles",
+      "inference_latency_ms": 0.00019887271772009172,
+      "inference_seconds": 0.02348845894448459,
+      "metrics": {
+        "alert_rate": 0.24514850814508754,
+        "f1": 0.1665152341147253,
+        "false_negatives": 1315,
+        "false_positives": 26205,
+        "pr_auc": 0.18491708505249818,
+        "precision": 0.09494370380603716,
+        "recall": 0.6764271653543307,
+        "roc_auc": 0.7987105128922474,
+        "true_negatives": 87839,
+        "true_positives": 2749
+      },
+      "peak_rss_bytes": 1191870464,
+      "training_seconds": 11.975713375024498
+    },
+    {
+      "dropped_feature_count": 5,
+      "dropped_group": "scenarios",
+      "feature_count": 60,
+      "features": "raw_plus_semantic_minus_scenarios",
+      "inference_latency_ms": 0.0001731215584418832,
+      "inference_seconds": 0.020447041024453938,
+      "metrics": {
+        "alert_rate": 0.2520913062620652,
+        "f1": 0.16135705419942076,
+        "false_negatives": 1334,
+        "false_positives": 27044,
+        "pr_auc": 0.17751825129779944,
+        "precision": 0.09169073688453012,
+        "recall": 0.671751968503937,
+        "roc_auc": 0.7930827950315211,
+        "true_negatives": 87000,
+        "true_positives": 2730
+      },
+      "peak_rss_bytes": 1191870464,
+      "training_seconds": 12.685811041970737
+    },
+    {
+      "dropped_feature_count": 19,
+      "dropped_group": "semantic_objects",
+      "feature_count": 46,
+      "features": "raw_plus_semantic_minus_semantic_objects",
+      "inference_latency_ms": 0.00016676333497793496,
+      "inference_seconds": 0.01969608396757394,
+      "metrics": {
+        "alert_rate": 0.2511430216412097,
+        "f1": 0.16070687303564016,
+        "false_negatives": 1354,
+        "false_positives": 26952,
+        "pr_auc": 0.18538136989516618,
+        "precision": 0.0913626862652552,
+        "recall": 0.6668307086614174,
+        "roc_auc": 0.7947739279106808,
+        "true_negatives": 87092,
+        "true_positives": 2710
+      },
+      "peak_rss_bytes": 1191870464,
+      "training_seconds": 11.606442707940005
+    }
+  ],
+  "arms": {
+    "raw": {
+      "feature_count": 15,
+      "features": "raw",
+      "inference_latency_ms": 0.0001139363293644289,
+      "inference_seconds": 0.013456791988573968,
+      "metrics": {
+        "alert_rate": 0.23328648355742201,
+        "f1": 0.16503779612233924,
+        "false_negatives": 1455,
+        "false_positives": 24944,
+        "pr_auc": 0.179563139943878,
+        "precision": 0.09469023336841723,
+        "recall": 0.6419783464566929,
+        "roc_auc": 0.7887674408181868,
+        "true_negatives": 89100,
+        "true_positives": 2609
+      },
+      "peak_rss_bytes": 549568512,
+      "training_seconds": 8.97836104198359
+    },
+    "raw_plus_semantic": {
+      "feature_count": 65,
+      "features": "raw_plus_semantic",
+      "inference_latency_ms": 0.00013810312626338038,
+      "inference_seconds": 0.01631108403671533,
+      "metrics": {
+        "alert_rate": 0.24944965624682494,
+        "f1": 0.16315695281274234,
+        "false_negatives": 1329,
+        "false_positives": 26727,
+        "pr_auc": 0.18346689475054345,
+        "precision": 0.09283144389382934,
+        "recall": 0.6729822834645669,
+        "roc_auc": 0.795350399362368,
+        "true_negatives": 87317,
+        "true_positives": 2735
+      },
+      "peak_rss_bytes": 717012992,
+      "training_seconds": 12.431435125065036
+    },
+    "semantic": {
+      "feature_count": 50,
+      "features": "semantic",
+      "inference_latency_ms": 0.00015224554654612391,
+      "inference_seconds": 0.017981417011469603,
+      "metrics": {
+        "alert_rate": 0.2654604260507332,
+        "f1": 0.1445068752294096,
+        "false_negatives": 1505,
+        "false_positives": 28794,
+        "pr_auc": 0.12038384057155932,
+        "precision": 0.08161898382929864,
+        "recall": 0.6296751968503937,
+        "roc_auc": 0.7540125696926756,
+        "true_negatives": 85250,
+        "true_positives": 2559
+      },
+      "peak_rss_bytes": 717012992,
+      "training_seconds": 11.569717874983326
+    }
+  },
+  "correlation": [
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.07288622385505461,
+      "r": 0.07288622385505461,
+      "semantic_feature": "sem_NoEstablishedCardHistory"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.0771848950326232,
+      "r": -0.0771848950326232,
+      "semantic_feature": "sem_AmountRegime"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.06770458861611259,
+      "r": -0.06770458861611259,
+      "semantic_feature": "sem_TempoRegime"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.21091857454190271,
+      "r": 0.21091857454190271,
+      "semantic_feature": "sem_DeviceRegime"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.29100933651291433,
+      "r": -0.29100933651291433,
+      "semantic_feature": "sem_ChannelRegime"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.2428770335887339,
+      "r": 0.2428770335887339,
+      "semantic_feature": "sem_FirstDeviceContact"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.296235829838245,
+      "r": 0.296235829838245,
+      "semantic_feature": "sem_RecentlyLinkedDevice"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.7966573406255375,
+      "r": 0.7966573406255375,
+      "semantic_feature": "sem_EstablishedDeviceRelationship"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.22823255606013076,
+      "r": 0.22823255606013076,
+      "semantic_feature": "sem_NonInformativeDeviceNovelty"
+    },
+    {
+      "closest_raw_feature": "raw_amount",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.45264117881634164,
+      "r": -0.45264117881634164,
+      "semantic_feature": "sem_RoutineSpendingAmount"
+    },
+    {
+      "closest_raw_feature": "raw_amount",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.4884734808136598,
+      "r": 0.4884734808136598,
+      "semantic_feature": "sem_ExpectedHighValueSpend"
+    },
+    {
+      "closest_raw_feature": "raw_amount",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.24275649186906112,
+      "r": 0.24275649186906112,
+      "semantic_feature": "sem_UnexpectedSpendingAmount"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.07288622385505461,
+      "r": 0.07288622385505461,
+      "semantic_feature": "sem_UnscaledSpendingAmount"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.03634835693528053,
+      "r": 0.03634835693528053,
+      "semantic_feature": "sem_MinimalTestAmount"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.04564335513329311,
+      "r": 0.04564335513329311,
+      "semantic_feature": "sem_UnexpectedBillingRegion"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.12421350041049897,
+      "r": 0.12421350041049897,
+      "semantic_feature": "sem_TempoRegimeShift"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.9999999999999895,
+      "r": -0.9999999999999895,
+      "semantic_feature": "sem_UnverifiedDeviceContext"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.7476330149905078,
+      "r": 0.7476330149905078,
+      "semantic_feature": "sem_SharedClientSignatureExposure"
+    },
+    {
+      "closest_raw_feature": "",
+      "constant": 1,
+      "group": "semantic_objects",
+      "max_abs_pearson_r": 0.0,
+      "r": 0.0,
+      "semantic_feature": "sem_CoverageGap"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.027818591276776748,
+      "r": 0.027818591276776748,
+      "semantic_feature": "beh_CardTestingBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.008198212971447308,
+      "r": 0.008198212971447308,
+      "semantic_feature": "beh_DeviceRotationBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.09376270159772077,
+      "r": 0.09376270159772077,
+      "semantic_feature": "beh_VelocityBurstBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.05022066220931273,
+      "r": 0.05022066220931273,
+      "semantic_feature": "beh_CompromisedCardBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.11291068276993814,
+      "r": 0.11291068276993814,
+      "semantic_feature": "beh_UnexpectedSpendingBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.036620547230675815,
+      "r": 0.036620547230675815,
+      "semantic_feature": "beh_DormantCardReactivation"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.7314724751713809,
+      "r": 0.7314724751713809,
+      "semantic_feature": "beh_TrustedDeviceBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.1405313634036778,
+      "r": -0.1405313634036778,
+      "semantic_feature": "beh_NormalSpendingBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.0034082411307971806,
+      "r": -0.0034082411307971806,
+      "semantic_feature": "beh_ExpectedVelocityBehaviour"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "behaviours",
+      "max_abs_pearson_r": 0.07288622385505461,
+      "r": 0.07288622385505461,
+      "semantic_feature": "beh_InsufficientCardHistory"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "scenarios",
+      "max_abs_pearson_r": 0.033884221796970405,
+      "r": 0.033884221796970405,
+      "semantic_feature": "scn_CardTestingRun"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "scenarios",
+      "max_abs_pearson_r": 0.03553610131787606,
+      "r": 0.03553610131787606,
+      "semantic_feature": "scn_DeviceTakeoverPattern"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "scenarios",
+      "max_abs_pearson_r": 0.19032187441342,
+      "r": -0.19032187441342,
+      "semantic_feature": "scn_RoutineConsumerPattern"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "scenarios",
+      "max_abs_pearson_r": 0.019902964044411643,
+      "r": 0.019902964044411643,
+      "semantic_feature": "scn_DormancyAfterBurst"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "scenarios",
+      "max_abs_pearson_r": 0.11619628368899333,
+      "r": 0.11619628368899333,
+      "semantic_feature": "scn_DeviceRotationRun"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "roles",
+      "max_abs_pearson_r": 0.04875541430506701,
+      "r": 0.04875541430506701,
+      "semantic_feature": "role_code"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "roles",
+      "max_abs_pearson_r": 0.06339231834452244,
+      "r": -0.06339231834452244,
+      "semantic_feature": "role_confidence"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "roles",
+      "max_abs_pearson_r": 0.02460441339599229,
+      "r": -0.02460441339599229,
+      "semantic_feature": "role_tenure_minutes"
+    },
+    {
+      "closest_raw_feature": "raw_transaction_dt",
+      "constant": 0,
+      "group": "roles",
+      "max_abs_pearson_r": 0.03414531424063253,
+      "r": 0.03414531424063253,
+      "semantic_feature": "role_transition_count"
+    },
+    {
+      "closest_raw_feature": "raw_transaction_dt",
+      "constant": 0,
+      "group": "lifecycle",
+      "max_abs_pearson_r": 0.4353819753771259,
+      "r": 0.4353819753771259,
+      "semantic_feature": "lifecycle_age_minutes"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "lifecycle",
+      "max_abs_pearson_r": 0.06487357929275449,
+      "r": 0.06487357929275449,
+      "semantic_feature": "lifecycle_idle_minutes"
+    },
+    {
+      "closest_raw_feature": "raw_transaction_dt",
+      "constant": 0,
+      "group": "lifecycle",
+      "max_abs_pearson_r": 0.038390737910217354,
+      "r": 0.038390737910217354,
+      "semantic_feature": "lifecycle_observed_events"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "lifecycle",
+      "max_abs_pearson_r": 0.42576039379789554,
+      "r": 0.42576039379789554,
+      "semantic_feature": "lifecycle_distinct_devices"
+    },
+    {
+      "closest_raw_feature": "raw_transaction_dt",
+      "constant": 0,
+      "group": "lifecycle",
+      "max_abs_pearson_r": 0.06717436090383408,
+      "r": 0.06717436090383408,
+      "semantic_feature": "lifecycle_buckets_active"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "lifecycle",
+      "max_abs_pearson_r": 0.0536464045001761,
+      "r": -0.0536464045001761,
+      "semantic_feature": "lifecycle_horizons_filled"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "evidence",
+      "max_abs_pearson_r": 0.1902994328532314,
+      "r": 0.1902994328532314,
+      "semantic_feature": "evidence_risk_count"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "evidence",
+      "max_abs_pearson_r": 0.6146518755408373,
+      "r": 0.6146518755408373,
+      "semantic_feature": "evidence_mitigation_count"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "evidence",
+      "max_abs_pearson_r": 0.22336236197936468,
+      "r": 0.22336236197936468,
+      "semantic_feature": "evidence_conflict_count"
+    },
+    {
+      "closest_raw_feature": "raw_amount",
+      "constant": 0,
+      "group": "evidence",
+      "max_abs_pearson_r": 0.1606012202056613,
+      "r": 0.1606012202056613,
+      "semantic_feature": "evidence_unqualified_topics"
+    },
+    {
+      "closest_raw_feature": "raw_amount",
+      "constant": 0,
+      "group": "evidence",
+      "max_abs_pearson_r": 0.20312141643334763,
+      "r": 0.20312141643334763,
+      "semantic_feature": "evidence_effective_risk"
+    },
+    {
+      "closest_raw_feature": "raw_has_identity",
+      "constant": 0,
+      "group": "evidence",
+      "max_abs_pearson_r": 0.13726946685101418,
+      "r": 0.13726946685101418,
+      "semantic_feature": "evidence_strongest_risk"
+    }
+  ],
+  "experiment_version": "ieee-cis-semantic-transfer/1.0",
+  "feature_generation": {
+    "raw_feature_seconds": 3.9085619539255276,
+    "semantic_feature_seconds": 113.17142665130086,
+    "total_feature_seconds": 147.46540520805866
+  },
+  "feature_group_contribution": {
+    "raw": {
+      "raw": {
+        "absolute": 99.99999999999997,
+        "share": 1.0
+      }
+    },
+    "raw_plus_semantic": {
+      "behaviours": {
+        "absolute": 1.2059703486430065,
+        "share": 0.012059703486430064
+      },
+      "evidence": {
+        "absolute": 0.49548817370742126,
+        "share": 0.004954881737074213
+      },
+      "lifecycle": {
+        "absolute": 10.367446824427127,
+        "share": 0.10367446824427126
+      },
+      "raw": {
+        "absolute": 74.68606499500346,
+        "share": 0.7468606499500346
+      },
+      "roles": {
+        "absolute": 2.9468401402988307,
+        "share": 0.029468401402988308
+      },
+      "scenarios": {
+        "absolute": 0.08701832487834865,
+        "share": 0.0008701832487834865
+      },
+      "semantic_objects": {
+        "absolute": 10.211171193041805,
+        "share": 0.10211171193041806
+      }
+    },
+    "semantic": {
+      "behaviours": {
+        "absolute": 4.167597118413989,
+        "share": 0.04167597118413987
+      },
+      "evidence": {
+        "absolute": 1.6851349050904143,
+        "share": 0.016851349050904137
+      },
+      "lifecycle": {
+        "absolute": 29.656560141107423,
+        "share": 0.29656560141107413
+      },
+      "roles": {
+        "absolute": 7.181048244110042,
+        "share": 0.07181048244110039
+      },
+      "scenarios": {
+        "absolute": 0.4329285220354249,
+        "share": 0.004329285220354247
+      },
+      "semantic_objects": {
+        "absolute": 56.876731069242744,
+        "share": 0.5687673106924273
+      }
+    }
+  },
+  "feature_group_shap": {
+    "raw": {
+      "raw": {
+        "absolute": 1.8947046383264445,
+        "share": 1.0
+      }
+    },
+    "raw_plus_semantic": {
+      "behaviours": {
+        "absolute": 0.025705755917326115,
+        "share": 0.011039070725816148
+      },
+      "evidence": {
+        "absolute": 0.01161097712206651,
+        "share": 0.004986213907054712
+      },
+      "lifecycle": {
+        "absolute": 0.30360009627926476,
+        "share": 0.13037791792508435
+      },
+      "raw": {
+        "absolute": 1.6972299793283443,
+        "share": 0.728857841801602
+      },
+      "roles": {
+        "absolute": 0.10470655887604172,
+        "share": 0.04496514759600537
+      },
+      "scenarios": {
+        "absolute": 0.0018098627319727114,
+        "share": 0.0007772268112449973
+      },
+      "semantic_objects": {
+        "absolute": 0.18395269728046207,
+        "share": 0.07899658123319239
+      }
+    },
+    "semantic": {
+      "behaviours": {
+        "absolute": 0.08057144098535818,
+        "share": 0.041094687293018274
+      },
+      "evidence": {
+        "absolute": 0.03425622271694223,
+        "share": 0.01747205639090596
+      },
+      "lifecycle": {
+        "absolute": 0.5944707946005279,
+        "share": 0.3032041019767817
+      },
+      "roles": {
+        "absolute": 0.16945180633231555,
+        "share": 0.08642726141299935
+      },
+      "scenarios": {
+        "absolute": 0.0025633203283746448,
+        "share": 0.0013073968398496884
+      },
+      "semantic_objects": {
+        "absolute": 1.0793155448035001,
+        "share": 0.550494496086445
+      }
+    }
+  },
+  "feature_importance": {
+    "raw": [
+      [
+        "raw_amount",
+        16.784915439781628
+      ],
+      [
+        "raw_transaction_dt",
+        11.061246799914748
+      ],
+      [
+        "raw_purchaser_email_domain",
+        10.105795645248175
+      ],
+      [
+        "raw_card_identity",
+        9.47753525882418
+      ],
+      [
+        "raw_product_channel",
+        9.24057183765857
+      ],
+      [
+        "raw_recipient_email_domain",
+        8.5464886557393
+      ],
+      [
+        "raw_card_type",
+        8.540665853343546
+      ],
+      [
+        "raw_billing_region",
+        6.259430124039361
+      ],
+      [
+        "raw_billing_country",
+        4.730268716685527
+      ],
+      [
+        "raw_device_type",
+        4.121243516824256
+      ],
+      [
+        "raw_dist1",
+        3.046889262599337
+      ],
+      [
+        "raw_network",
+        2.9214057418242323
+      ],
+      [
+        "raw_client_signature",
+        2.5426442533973383
+      ],
+      [
+        "raw_has_identity",
+        1.9202500030082266
+      ],
+      [
+        "raw_dist2",
+        0.70064889111157
+      ]
+    ],
+    "raw_plus_semantic": [
+      [
+        "raw_amount",
+        12.904486090001699
+      ],
+      [
+        "raw_recipient_email_domain",
+        10.333508252507428
+      ],
+      [
+        "raw_card_type",
+        7.654366523879002
+      ],
+      [
+        "raw_purchaser_email_domain",
+        7.222199545924897
+      ],
+      [
+        "raw_transaction_dt",
+        5.967030207277035
+      ],
+      [
+        "raw_product_channel",
+        5.758798672689399
+      ],
+      [
+        "raw_card_identity",
+        5.324476329129482
+      ],
+      [
+        "raw_billing_country",
+        5.152630789819016
+      ],
+      [
+        "raw_billing_region",
+        4.190854463544184
+      ],
+      [
+        "lifecycle_idle_minutes",
+        3.865326757093259
+      ],
+      [
+        "sem_SharedClientSignatureExposure",
+        3.0074972002884954
+      ],
+      [
+        "lifecycle_age_minutes",
+        2.924986857951936
+      ],
+      [
+        "raw_client_signature",
+        2.7528019980398106
+      ],
+      [
+        "raw_dist1",
+        2.5532879813482827
+      ],
+      [
+        "raw_device_type",
+        2.3981181878374764
+      ],
+      [
+        "sem_ChannelRegime",
+        2.3928771996625047
+      ],
+      [
+        "sem_DeviceRegime",
+        2.079345833672389
+      ],
+      [
+        "role_transition_count",
+        2.027851343831094
+      ],
+      [
+        "lifecycle_distinct_devices",
+        1.6882990611994257
+      ],
+      [
+        "sem_TempoRegime",
+        1.3029690456126135
+      ],
+      [
+        "raw_has_identity",
+        1.0828948672289782
+      ],
+      [
+        "lifecycle_observed_events",
+        1.033008926426162
+      ],
+      [
+        "raw_network",
+        0.8900748136695046
+      ],
+      [
+        "beh_NormalSpendingBehaviour",
+        0.732497139544093
+      ],
+      [
+        "lifecycle_buckets_active",
+        0.6349236753894815
+      ],
+      [
+        "role_tenure_minutes",
+        0.5534228202023485
+      ],
+      [
+        "sem_AmountRegime",
+        0.5016069785057857
+      ],
+      [
+        "raw_dist2",
+        0.5005362721072805
+      ],
+      [
+        "sem_TempoRegimeShift",
+        0.288635138145137
+      ],
+      [
+        "evidence_mitigation_count",
+        0.22871805051717686
+      ],
+      [
+        "role_code",
+        0.22251397939715664
+      ],
+      [
+        "lifecycle_horizons_filled",
+        0.22090154636686413
+      ],
+      [
+        "sem_EstablishedDeviceRelationship",
+        0.18115935984751272
+      ],
+      [
+        "beh_TrustedDeviceBehaviour",
+        0.16771011956089596
+      ],
+      [
+        "beh_ExpectedVelocityBehaviour",
+        0.15141124308577256
+      ],
+      [
+        "role_confidence",
+        0.14305199686823175
+      ],
+      [
+        "sem_UnexpectedBillingRegion",
+        0.13860149037455607
+      ],
+      [
+        "sem_MinimalTestAmount",
+        0.1363608024578557
+      ],
+      [
+        "beh_VelocityBurstBehaviour",
+        0.09693910480575971
+      ],
+      [
+        "sem_UnscaledSpendingAmount",
+        0.0895241094656919
+      ],
+      [
+        "scn_RoutineConsumerPattern",
+        0.08430380521063162
+      ],
+      [
+        "sem_RoutineSpendingAmount",
+        0.07454763438217832
+      ],
+      [
+        "evidence_conflict_count",
+        0.0661497756726959
+      ],
+      [
+        "evidence_strongest_risk",
+        0.06286296216368345
+      ],
+      [
+        "beh_UnexpectedSpendingBehaviour",
+        0.057412741646485146
+      ],
+      [
+        "evidence_risk_count",
+        0.054837908504381326
+      ],
+      [
+        "evidence_effective_risk",
+        0.048943265693656646
+      ],
+      [
+        "evidence_unqualified_topics",
+        0.03397621115582711
+      ],
+      [
+        "sem_ExpectedHighValueSpend",
+        0.015778116765094913
+      ],
+      [
+        "scn_DeviceTakeoverPattern",
+        0.002714519667717034
+      ],
+      [
+        "sem_UnexpectedSpendingAmount",
+        0.0016060080432397938
+      ],
+      [
+        "sem_FirstDeviceContact",
+        0.0006622758187486003
+      ],
+      [
+        "sem_NoEstablishedCardHistory",
+        0.0
+      ],
+      [
+        "sem_RecentlyLinkedDevice",
+        0.0
+      ],
+      [
+        "sem_NonInformativeDeviceNovelty",
+        0.0
+      ],
+      [
+        "sem_UnverifiedDeviceContext",
+        0.0
+      ],
+      [
+        "sem_CoverageGap",
+        0.0
+      ],
+      [
+        "beh_CardTestingBehaviour",
+        0.0
+      ],
+      [
+        "beh_DeviceRotationBehaviour",
+        0.0
+      ],
+      [
+        "beh_CompromisedCardBehaviour",
+        0.0
+      ],
+      [
+        "beh_DormantCardReactivation",
+        0.0
+      ],
+      [
+        "beh_InsufficientCardHistory",
+        0.0
+      ],
+      [
+        "scn_CardTestingRun",
+        0.0
+      ],
+      [
+        "scn_DormancyAfterBurst",
+        0.0
+      ],
+      [
+        "scn_DeviceRotationRun",
+        0.0
+      ]
+    ],
+    "semantic": [
+      [
+        "sem_UnverifiedDeviceContext",
+        24.849969648203228
+      ],
+      [
+        "lifecycle_age_minutes",
+        12.776046464216899
+      ],
+      [
+        "sem_ChannelRegime",
+        9.889380619026934
+      ],
+      [
+        "sem_DeviceRegime",
+        8.858300339661856
+      ],
+      [
+        "lifecycle_distinct_devices",
+        6.363464650697237
+      ],
+      [
+        "lifecycle_idle_minutes",
+        5.168888041469322
+      ],
+      [
+        "role_transition_count",
+        4.105120673415186
+      ],
+      [
+        "sem_SharedClientSignatureExposure",
+        3.9136866386745903
+      ],
+      [
+        "sem_ExpectedHighValueSpend",
+        3.1622557916832106
+      ],
+      [
+        "lifecycle_observed_events",
+        2.83045909123046
+      ],
+      [
+        "sem_TempoRegime",
+        2.2964896745574266
+      ],
+      [
+        "lifecycle_buckets_active",
+        2.1107522235076703
+      ],
+      [
+        "role_tenure_minutes",
+        1.6151498396513564
+      ],
+      [
+        "beh_TrustedDeviceBehaviour",
+        1.5688145150915296
+      ],
+      [
+        "beh_NormalSpendingBehaviour",
+        1.5088898261241568
+      ],
+      [
+        "sem_EstablishedDeviceRelationship",
+        1.4949116596881515
+      ],
+      [
+        "sem_RoutineSpendingAmount",
+        1.0743311167324432
+      ],
+      [
+        "role_confidence",
+        0.8877543167468486
+      ],
+      [
+        "beh_ExpectedVelocityBehaviour",
+        0.5795041717497837
+      ],
+      [
+        "role_code",
+        0.5730234142966512
+      ],
+      [
+        "evidence_risk_count",
+        0.4707163163149442
+      ],
+      [
+        "evidence_mitigation_count",
+        0.459806032670263
+      ],
+      [
+        "sem_UnexpectedBillingRegion",
+        0.42526355401030286
+      ],
+      [
+        "lifecycle_horizons_filled",
+        0.406949669985835
+      ],
+      [
+        "sem_AmountRegime",
+        0.4029087194885377
+      ],
+      [
+        "scn_RoutineConsumerPattern",
+        0.39654120666069204
+      ],
+      [
+        "evidence_strongest_risk",
+        0.32357008317394975
+      ],
+      [
+        "beh_VelocityBurstBehaviour",
+        0.3085603744607847
+      ],
+      [
+        "sem_MinimalTestAmount",
+        0.18477119131471179
+      ],
+      [
+        "sem_FirstDeviceContact",
+        0.16166144568350577
+      ],
+      [
+        "evidence_unqualified_topics",
+        0.15574355368237414
+      ],
+      [
+        "evidence_effective_risk",
+        0.15510819470491985
+      ],
+      [
+        "sem_TempoRegimeShift",
+        0.1242782322395713
+      ],
+      [
+        "evidence_conflict_count",
+        0.12019072454396362
+      ],
+      [
+        "beh_InsufficientCardHistory",
+        0.10285396048535224
+      ],
+      [
+        "beh_UnexpectedSpendingBehaviour",
+        0.07448651467619144
+      ],
+      [
+        "sem_NonInformativeDeviceNovelty",
+        0.027617604926475525
+      ],
+      [
+        "beh_DormantCardReactivation",
+        0.02448775582618954
+      ],
+      [
+        "scn_DormancyAfterBurst",
+        0.01992938354429302
+      ],
+      [
+        "scn_DeviceRotationRun",
+        0.010711221140718638
+      ],
+      [
+        "sem_RecentlyLinkedDevice",
+        0.009047899118030759
+      ],
+      [
+        "scn_DeviceTakeoverPattern",
+        0.005746710689721193
+      ],
+      [
+        "sem_UnexpectedSpendingAmount",
+        0.001856934233775451
+      ],
+      [
+        "sem_NoEstablishedCardHistory",
+        0.0
+      ],
+      [
+        "sem_UnscaledSpendingAmount",
+        0.0
+      ],
+      [
+        "sem_CoverageGap",
+        0.0
+      ],
+      [
+        "beh_CardTestingBehaviour",
+        0.0
+      ],
+      [
+        "beh_DeviceRotationBehaviour",
+        0.0
+      ],
+      [
+        "beh_CompromisedCardBehaviour",
+        0.0
+      ],
+      [
+        "scn_CardTestingRun",
+        0.0
+      ]
+    ]
+  },
+  "peak_rss_bytes": 1191870464,
+  "protocol": {
+    "catboost": {
+      "depth": 6,
+      "iterations": 200,
+      "learning_rate": 0.05,
+      "random_seed": 20260804,
+      "scale_pos_weight": "(n - positives) / positives in the shared chronological training partition",
+      "thread_count": 4
+    },
+    "chronology": "input row order verified non-decreasing TransactionDT; chronological 80/20 split",
+    "dataset": "IEEE-CIS train_transaction + train_identity",
+    "evaluation_positives": 4064,
+    "evaluation_rows": 118108,
+    "excluded": "Unlabelled later Kaggle test partition is not read",
+    "raw_category_cardinalities": {
+      "raw_billing_country": 71,
+      "raw_billing_region": 329,
+      "raw_card_identity": 13792,
+      "raw_card_type": 5,
+      "raw_client_signature": 1761,
+      "raw_device_type": 3,
+      "raw_network": 5,
+      "raw_product_channel": 5,
+      "raw_purchaser_email_domain": 60,
+      "raw_recipient_email_domain": 61
+    },
+    "raw_category_encoding": "training-prefix-only ordinal codes; no labels and no evaluation rows participate in vocabulary fitting",
+    "shap": {
+      "evaluation_prefix_rows": 25000,
+      "implementation": "CatBoost exact TreeSHAP"
+    },
+    "source_rows": 590540,
+    "threshold": 0.5,
+    "training_positives": 16599,
+    "training_rows": 472432
+  },
+  "shap": {
+    "raw": [
+      [
+        "raw_amount",
+        0.31176464348945504
+      ],
+      [
+        "raw_card_type",
+        0.30238052542237337
+      ],
+      [
+        "raw_recipient_email_domain",
+        0.26224314243481606
+      ],
+      [
+        "raw_product_channel",
+        0.252618244761191
+      ],
+      [
+        "raw_device_type",
+        0.14788027247259264
+      ],
+      [
+        "raw_purchaser_email_domain",
+        0.14612919278013323
+      ],
+      [
+        "raw_card_identity",
+        0.08553908474780496
+      ],
+      [
+        "raw_transaction_dt",
+        0.07042687193960892
+      ],
+      [
+        "raw_billing_country",
+        0.0689397220002151
+      ],
+      [
+        "raw_dist1",
+        0.06789815015026364
+      ],
+      [
+        "raw_network",
+        0.06360950909845758
+      ],
+      [
+        "raw_billing_region",
+        0.049352132627786975
+      ],
+      [
+        "raw_has_identity",
+        0.04024425998623
+      ],
+      [
+        "raw_client_signature",
+        0.021641836963566398
+      ],
+      [
+        "raw_dist2",
+        0.004037049451949531
+      ]
+    ],
+    "raw_plus_semantic": [
+      [
+        "raw_card_type",
+        0.29833903030823317
+      ],
+      [
+        "raw_amount",
+        0.28373526919613296
+      ],
+      [
+        "raw_recipient_email_domain",
+        0.2445809332950706
+      ],
+      [
+        "raw_product_channel",
+        0.18322687844220342
+      ],
+      [
+        "lifecycle_idle_minutes",
+        0.1627096077870742
+      ],
+      [
+        "raw_purchaser_email_domain",
+        0.1360847234920353
+      ],
+      [
+        "raw_device_type",
+        0.1087543385391669
+      ],
+      [
+        "raw_billing_country",
+        0.08207125216780807
+      ],
+      [
+        "raw_transaction_dt",
+        0.07322279816547296
+      ],
+      [
+        "lifecycle_distinct_devices",
+        0.05912150298655506
+      ],
+      [
+        "raw_card_identity",
+        0.05746883152570942
+      ],
+      [
+        "sem_DeviceRegime",
+        0.05695230134603528
+      ],
+      [
+        "raw_dist1",
+        0.056948810185336894
+      ],
+      [
+        "raw_billing_region",
+        0.05320635203263621
+      ],
+      [
+        "raw_has_identity",
+        0.05062241078997852
+      ],
+      [
+        "role_tenure_minutes",
+        0.04784029877015311
+      ],
+      [
+        "role_transition_count",
+        0.04646662790040935
+      ],
+      [
+        "raw_client_signature",
+        0.043301328321230105
+      ],
+      [
+        "sem_ChannelRegime",
+        0.040960443552312306
+      ],
+      [
+        "lifecycle_observed_events",
+        0.03727428206624412
+      ],
+      [
+        "sem_TempoRegime",
+        0.035890886204403706
+      ],
+      [
+        "lifecycle_age_minutes",
+        0.03158833362055877
+      ],
+      [
+        "raw_network",
+        0.021525122885314114
+      ],
+      [
+        "sem_SharedClientSignatureExposure",
+        0.021283410038721487
+      ],
+      [
+        "beh_NormalSpendingBehaviour",
+        0.018243883175750767
+      ],
+      [
+        "sem_AmountRegime",
+        0.009933971440315633
+      ],
+      [
+        "lifecycle_buckets_active",
+        0.00951989268198663
+      ],
+      [
+        "sem_TempoRegimeShift",
+        0.007241162642125895
+      ],
+      [
+        "role_confidence",
+        0.00524268598209162
+      ],
+      [
+        "role_code",
+        0.005156946223387642
+      ],
+      [
+        "raw_dist2",
+        0.004141899982016059
+      ],
+      [
+        "beh_TrustedDeviceBehaviour",
+        0.00399519160497222
+      ],
+      [
+        "evidence_risk_count",
+        0.0038353539447768467
+      ],
+      [
+        "sem_EstablishedDeviceRelationship",
+        0.0038220114220443805
+      ],
+      [
+        "lifecycle_horizons_filled",
+        0.003386477136846019
+      ],
+      [
+        "evidence_mitigation_count",
+        0.003026922683468534
+      ],
+      [
+        "evidence_conflict_count",
+        0.002830700863159286
+      ],
+      [
+        "sem_UnexpectedBillingRegion",
+        0.00276735036490747
+      ],
+      [
+        "sem_RoutineSpendingAmount",
+        0.002092363959972062
+      ],
+      [
+        "beh_VelocityBurstBehaviour",
+        0.002074286142705736
+      ],
+      [
+        "scn_RoutineConsumerPattern",
+        0.0017471967206487437
+      ],
+      [
+        "sem_UnscaledSpendingAmount",
+        0.0014530255549241454
+      ],
+      [
+        "evidence_strongest_risk",
+        0.0013520798005635774
+      ],
+      [
+        "sem_ExpectedHighValueSpend",
+        0.0010438725876688209
+      ],
+      [
+        "beh_UnexpectedSpendingBehaviour",
+        0.0010304170987831612
+      ],
+      [
+        "sem_MinimalTestAmount",
+        0.00044648541157398165
+      ],
+      [
+        "beh_ExpectedVelocityBehaviour",
+        0.00036197789511423293
+      ],
+      [
+        "evidence_unqualified_topics",
+        0.00033001086565553314
+      ],
+      [
+        "evidence_effective_risk",
+        0.00023590896444273057
+      ],
+      [
+        "scn_DeviceTakeoverPattern",
+        6.266601132396766e-05
+      ],
+      [
+        "sem_FirstDeviceContact",
+        3.8551004516697696e-05
+      ],
+      [
+        "sem_UnexpectedSpendingAmount",
+        2.686175094020035e-05
+      ],
+      [
+        "sem_NoEstablishedCardHistory",
+        0.0
+      ],
+      [
+        "sem_RecentlyLinkedDevice",
+        0.0
+      ],
+      [
+        "sem_NonInformativeDeviceNovelty",
+        0.0
+      ],
+      [
+        "sem_UnverifiedDeviceContext",
+        0.0
+      ],
+      [
+        "sem_CoverageGap",
+        0.0
+      ],
+      [
+        "beh_CardTestingBehaviour",
+        0.0
+      ],
+      [
+        "beh_DeviceRotationBehaviour",
+        0.0
+      ],
+      [
+        "beh_CompromisedCardBehaviour",
+        0.0
+      ],
+      [
+        "beh_DormantCardReactivation",
+        0.0
+      ],
+      [
+        "beh_InsufficientCardHistory",
+        0.0
+      ],
+      [
+        "scn_CardTestingRun",
+        0.0
+      ],
+      [
+        "scn_DormancyAfterBurst",
+        0.0
+      ],
+      [
+        "scn_DeviceRotationRun",
+        0.0
+      ]
+    ],
+    "semantic": [
+      [
+        "sem_UnverifiedDeviceContext",
+        0.4368464556168865
+      ],
+      [
+        "sem_DeviceRegime",
+        0.2631898310247579
+      ],
+      [
+        "lifecycle_idle_minutes",
+        0.17453902411355085
+      ],
+      [
+        "lifecycle_distinct_devices",
+        0.1401179154543421
+      ],
+      [
+        "sem_ChannelRegime",
+        0.1345120457149294
+      ],
+      [
+        "lifecycle_age_minutes",
+        0.11473435995834862
+      ],
+      [
+        "sem_ExpectedHighValueSpend",
+        0.09260857225913861
+      ],
+      [
+        "lifecycle_observed_events",
+        0.0875438146719029
+      ],
+      [
+        "lifecycle_buckets_active",
+        0.07069444687594449
+      ],
+      [
+        "sem_TempoRegime",
+        0.0686446204242242
+      ],
+      [
+        "role_tenure_minutes",
+        0.0619891507104945
+      ],
+      [
+        "beh_NormalSpendingBehaviour",
+        0.05902274533634996
+      ],
+      [
+        "role_transition_count",
+        0.05615845231283451
+      ],
+      [
+        "role_confidence",
+        0.04418222480946203
+      ],
+      [
+        "sem_RoutineSpendingAmount",
+        0.040451703299166815
+      ],
+      [
+        "evidence_risk_count",
+        0.013430451382444007
+      ],
+      [
+        "sem_SharedClientSignatureExposure",
+        0.013168240480859067
+      ],
+      [
+        "sem_EstablishedDeviceRelationship",
+        0.011383492225601801
+      ],
+      [
+        "beh_TrustedDeviceBehaviour",
+        0.009365314243766841
+      ],
+      [
+        "evidence_strongest_risk",
+        0.007876544044425149
+      ],
+      [
+        "beh_VelocityBurstBehaviour",
+        0.0077716601625769455
+      ],
+      [
+        "sem_AmountRegime",
+        0.007585258799551721
+      ],
+      [
+        "role_code",
+        0.007121978499524505
+      ],
+      [
+        "lifecycle_horizons_filled",
+        0.0068412335264388625
+      ],
+      [
+        "sem_UnexpectedBillingRegion",
+        0.006596247836898103
+      ],
+      [
+        "evidence_conflict_count",
+        0.005610437415402897
+      ],
+      [
+        "evidence_mitigation_count",
+        0.004549425531471878
+      ],
+      [
+        "scn_RoutineConsumerPattern",
+        0.0023562076731672155
+      ],
+      [
+        "evidence_unqualified_topics",
+        0.0019020289824583907
+      ],
+      [
+        "sem_TempoRegimeShift",
+        0.001658495846454268
+      ],
+      [
+        "beh_UnexpectedSpendingBehaviour",
+        0.00156292685732358
+      ],
+      [
+        "beh_InsufficientCardHistory",
+        0.0013124037032001036
+      ],
+      [
+        "sem_FirstDeviceContact",
+        0.0012475217012263428
+      ],
+      [
+        "beh_ExpectedVelocityBehaviour",
+        0.001206635359923684
+      ],
+      [
+        "evidence_effective_risk",
+        0.0008873353607399149
+      ],
+      [
+        "sem_RecentlyLinkedDevice",
+        0.0005377869599465637
+      ],
+      [
+        "sem_NonInformativeDeviceNovelty",
+        0.000535607776512511
+      ],
+      [
+        "sem_MinimalTestAmount",
+        0.00033115316532204164
+      ],
+      [
+        "beh_DormantCardReactivation",
+        0.0003297553222170555
+      ],
+      [
+        "scn_DeviceTakeoverPattern",
+        8.371190412308156e-05
+      ],
+      [
+        "scn_DeviceRotationRun",
+        7.525129210944636e-05
+      ],
+      [
+        "scn_DormancyAfterBurst",
+        4.814945897490107e-05
+      ],
+      [
+        "sem_UnexpectedSpendingAmount",
+        1.8511672024125837e-05
+      ],
+      [
+        "sem_NoEstablishedCardHistory",
+        0.0
+      ],
+      [
+        "sem_UnscaledSpendingAmount",
+        0.0
+      ],
+      [
+        "sem_CoverageGap",
+        0.0
+      ],
+      [
+        "beh_CardTestingBehaviour",
+        0.0
+      ],
+      [
+        "beh_DeviceRotationBehaviour",
+        0.0
+      ],
+      [
+        "beh_CompromisedCardBehaviour",
+        0.0
+      ],
+      [
+        "scn_CardTestingRun",
+        0.0
+      ]
+    ]
+  },
+  "shap_seconds": {
+    "raw": 0.33560795802623034,
+    "raw_plus_semantic": 0.46670404192991555,
+    "semantic": 0.439501375076361
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "conflicts": [],
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "SEM-P20"
+    ],
+    "rationale": "Allow when the semantic reading is determined and no unqualified corroboration remains."
+  },
+  "evidence": [
+    {
+      "confidence": 0.52619,
+      "direction": "mitigation",
+      "explanation": "The value sits inside the party's own established regime. (Value sits inside the party's own established regime. Supporting: amount 11045.68 Canadian Dollar; own prior max 3555882.29; own p90 741147.62.)",
+      "id": "E-e2790d45b430",
+      "metadata": {
+        "semantic_object_id": "SO-722c473c90cbdaa7",
+        "semantic_type": "RoutineValueTransfer"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M05-ROUTINE-VALUE",
+      "source": "semantic-context/RoutineValueTransfer",
+      "source_reliability": 0.85,
+      "supporting_facts": [
+        "SF-aa1c2978dcd9"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "value_regime"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.52619,
+      "explanation": "Value sits inside the party's own established regime. Supporting: amount 11045.68 Canadian Dollar; own prior max 3555882.29; own p90 741147.62.",
+      "id": "SF-aa1c2978dcd9",
+      "provenance": "semantic-object/SI-RoutineValueTransfer",
+      "semantic_object_id": "SO-722c473c90cbdaa7",
+      "subject_id": "IBM-ML-00408795",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "RoutineValueTransfer"
+    }
+  ],
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-e2790d45b430"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "context_state_hash": "c55042a40357fb67bef3887f2bc790cd",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "1a74ca608f1a7a8fcb05e8bec721bb4c776dd16a82b1c79536dec5248d74c077",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "semantic_object_set_hash": "6e88b93545878f972b8c21d0f373e9384314701ad880b065fcac85f43c1505c5",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "c55042a40357fb67bef3887f2bc790cd",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "beneficiary_jurisdiction": "Mexico",
+          "originator_jurisdiction": "Canada",
+          "window": "prior-only"
+        },
+        "confidence": 0.44,
+        "confidence_explanation": "prior 0.88 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.440000",
+        "created_at": "2022-09-01T02:55:00#408793",
+        "id": "SO-8e58ff34419886d6",
+        "meaning": "The booking jurisdictions of the two legs differ.",
+        "object_class": "event",
+        "origin": "SI-CrossJurisdictionTransfer",
+        "subject_id": "IBM-ML-00408795",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800C4D680",
+          "acct:8:807E78F40",
+          "juris:Canada",
+          "cust:800C5AA70",
+          "acct:213:80918B0E0",
+          "juris:Mexico"
+        ],
+        "supporting_facts": [
+          "Canada -> Mexico"
+        ],
+        "supporting_relationships": [],
+        "type": "CrossJurisdictionTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 1,
+          "prior_distinct_counterparties": 4,
+          "window": "prior-only"
+        },
+        "confidence": 0.083333,
+        "confidence_explanation": "prior 0.75 x support 0.1111 (n=1, k=8) x coverage 1.00 = 0.083333",
+        "created_at": "2022-09-01T02:55:00#408793",
+        "id": "SO-795a915cf929c6d9",
+        "meaning": "A counterparty relationship formed within the observed window.",
+        "object_class": "relationship",
+        "origin": "SI-RecentlyCreatedRelationship",
+        "subject_id": "rel:8:807E78F40->213:80918B0E0",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800C4D680",
+          "acct:8:807E78F40",
+          "juris:Canada",
+          "cust:800C5AA70",
+          "acct:213:80918B0E0",
+          "juris:Mexico"
+        ],
+        "supporting_facts": [
+          "1 prior payments on this pair"
+        ],
+        "supporting_relationships": [
+          "rel:8:807E78F40->213:80918B0E0"
+        ],
+        "type": "RecentlyCreatedRelationship",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 11045.68,
+          "break_multiple": 4.0,
+          "currency": "Canadian Dollar",
+          "high_mark": 741147.62,
+          "prior_events": 13,
+          "prior_max": 3555882.29,
+          "window": "prior-only"
+        },
+        "confidence": 0.52619,
+        "confidence_explanation": "prior 0.85 x support 0.6190 (n=13, k=8) x coverage 1.00 = 0.526190",
+        "created_at": "2022-09-01T02:55:00#408793",
+        "id": "SO-722c473c90cbdaa7",
+        "meaning": "Value sits inside the party's own established regime.",
+        "object_class": "event",
+        "origin": "SI-RoutineValueTransfer",
+        "subject_id": "IBM-ML-00408795",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800C4D680",
+          "acct:8:807E78F40",
+          "juris:Canada",
+          "cust:800C5AA70",
+          "acct:213:80918B0E0",
+          "juris:Mexico"
+        ],
+        "supporting_facts": [
+          "amount 11045.68 Canadian Dollar",
+          "own prior max 3555882.29",
+          "own p90 741147.62"
+        ],
+        "supporting_relationships": [],
+        "type": "RoutineValueTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "mean_bucket_rate": 4.333333,
+          "prior_outbound_events": 13,
+          "window": "prior-only"
+        },
+        "confidence": 0.557143,
+        "confidence_explanation": "prior 0.90 x support 0.6190 (n=13, k=8) x coverage 1.00 = 0.557143",
+        "created_at": "2022-09-01T02:55:00#408793",
+        "id": "SO-483e030cbf19289e",
+        "meaning": "The party's own observed transaction tempo.",
+        "object_class": "profile",
+        "origin": "SI-TempoRegime",
+        "subject_id": "8:807E78F40",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800C4D680",
+          "acct:8:807E78F40",
+          "juris:Canada",
+          "cust:800C5AA70",
+          "acct:213:80918B0E0",
+          "juris:Mexico"
+        ],
+        "supporting_facts": [
+          "mean 4.333 outbound events per 60-minute bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "TempoRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "currency": "Canadian Dollar",
+          "high_mark": 741147.62,
+          "prior_events": 13,
+          "prior_max": 3555882.29,
+          "window": "prior-only"
+        },
+        "confidence": 0.588095,
+        "confidence_explanation": "prior 0.95 x support 0.6190 (n=13, k=8) x coverage 1.00 = 0.588095",
+        "created_at": "2022-09-01T02:55:00#408793",
+        "id": "SO-d01444ceb2ddb127",
+        "meaning": "The party's own observed operating scale in one currency.",
+        "object_class": "profile",
+        "origin": "SI-ValueRegime",
+        "subject_id": "8:807E78F40|Canadian Dollar",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800C4D680",
+          "acct:8:807E78F40",
+          "juris:Canada",
+          "cust:800C5AA70",
+          "acct:213:80918B0E0",
+          "juris:Mexico"
+        ],
+        "supporting_facts": [
+          "prior max 3555882.29, p90 741147.62 Canadian Dollar"
+        ],
+        "supporting_relationships": [],
+        "type": "ValueRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Reading: CrossJurisdictionTransfer, RoutineValueTransfer.",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 11045.68,
+    "beneficiary_account_id": "213:80918B0E0",
+    "country_id": "",
+    "currency": "Canadian Dollar",
+    "id": "IBM-ML-00408795",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "11045.68",
+      "from_bank": "8",
+      "payment_currency": "Canadian Dollar",
+      "to_bank": "213"
+    },
+    "originator_account_id": "8:807E78F40",
+    "payment_type": "Cheque",
+    "timestamp": "2022-09-01T02:55:00"
+  }
+}

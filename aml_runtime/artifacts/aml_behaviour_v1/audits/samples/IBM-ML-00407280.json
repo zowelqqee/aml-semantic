@@ -1,0 +1,491 @@
+{
+  "behaviour": {
+    "behaviours": [
+      {
+        "causal_explanation": "No behavioural claim is supportable for this account yet.",
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "counter_evidence": [
+          "0 outbound and 0 inbound events exist but do not reach the minimum"
+        ],
+        "created_at": "2022-09-01T02:52:00#407278",
+        "direction": "none",
+        "id": "BO-bad0adf06909c21d",
+        "interval": {
+          "end_minute": 27699832,
+          "horizon": "minutes",
+          "span_minutes": 0,
+          "start_minute": 27699832
+        },
+        "meaning": "Too few observations exist for any behavioural claim about this account.",
+        "origin": "BI-InsufficientBehaviouralHistory",
+        "subject_id": "154662:8143383C1",
+        "supporting_entities": [
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset"
+        ],
+        "supporting_observations": [
+          "0 prior observations (< 6)"
+        ],
+        "supporting_relationships": [
+          "rel:154662:8143383C1->154662:8143383C1"
+        ],
+        "supporting_semantic_objects": [
+          "SO-7cc5f59398c1a045"
+        ],
+        "topic": "behaviour_coverage",
+        "type": "InsufficientBehaviouralHistory",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      }
+    ],
+    "layer_version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0",
+    "lifecycle": {
+      "age_minutes": 0,
+      "buckets_active": 0,
+      "distinct_counterparties": 0,
+      "first_seen_minute": -1,
+      "horizons_filled": [],
+      "horizons_unfillable": [
+        "days",
+        "weeks"
+      ],
+      "id": "LC-2768b3a593c790b6",
+      "idle_minutes": 0,
+      "observed_events": 0,
+      "subject_id": "154662:8143383C1"
+    },
+    "ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "ontology_version": "aml-behaviour-ontology/1.0",
+    "role": {
+      "confidence": 0.0,
+      "explanation": "Role Unknown follows from lifecycle state",
+      "id": "RO-2ca927f7588fa959",
+      "previous_role": "Unknown",
+      "role": "Unknown",
+      "since_minute": 27699832,
+      "subject_id": "154662:8143383C1",
+      "supporting_behaviours": [],
+      "tenure_minutes": 0,
+      "transition_count": 0,
+      "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+    },
+    "scenarios": [],
+    "stage": "Settle",
+    "subject_id": "154662:8143383C1",
+    "transaction_id": "IBM-ML-00407280",
+    "transition": null,
+    "withheld": [
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "SeasonalBusinessCycle"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "MonthlySalaryCadence"
+      },
+      {
+        "missing_inputs": [
+          "multi_week_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "LongTermDormancyReactivation"
+      },
+      {
+        "missing_inputs": [
+          "multi_year_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "AnnualTaxCycle"
+      }
+    ]
+  },
+  "behaviour_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Role: Unknown. Behaviour: InsufficientBehaviouralHistory. Scenario: none matched.",
+  "behaviour_runtime_version": "aml-behaviour-runtime/1.0",
+  "conflicts": [
+    {
+      "dimensions": [
+        "positive_negative",
+        "confidence_asymmetry",
+        "source_strength_asymmetry",
+        "old_vs_recent"
+      ],
+      "explanation": "Risk evidence is qualified: the event is a self-posting with no counterparty. Risk confidence=0.40, source reliability=0.80; mitigating confidence=0.49, source reliability=0.99. Conflict dimensions: positive_negative, confidence_asymmetry, source_strength_asymmetry, old_vs_recent.",
+      "id": "C-38d83c663e0e",
+      "kind": "structural_explanation",
+      "mitigating_confidence": 0.495,
+      "mitigating_evidence_id": "E-cf71024c9f1c",
+      "mitigating_source_reliability": 0.99,
+      "risk_confidence": 0.4,
+      "risk_evidence_id": "E-068db0823929",
+      "risk_source_reliability": 0.8
+    }
+  ],
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "SEM-P20"
+    ],
+    "rationale": "Allow when the semantic reading is determined and no unqualified corroboration remains."
+  },
+  "evidence": [
+    {
+      "confidence": 0.495,
+      "direction": "mitigation",
+      "explanation": "The event is a self-posting; there is no counterparty. (Originator and beneficiary are the same booking location; no counterparty exists. Supporting: originator == beneficiary == 154662:8143383C1.)",
+      "id": "E-cf71024c9f1c",
+      "metadata": {
+        "semantic_object_id": "SO-9211e763a611b324",
+        "semantic_type": "InternalBookEntry"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M01-BOOK-ENTRY",
+      "source": "semantic-context/InternalBookEntry",
+      "source_reliability": 0.99,
+      "supporting_facts": [
+        "SF-bd014447f4ec"
+      ],
+      "timestamp": "2022-09-01T02:52:00",
+      "topic": "structural_explanation"
+    },
+    {
+      "confidence": 0.4,
+      "direction": "risk",
+      "explanation": "A leg is booked at a virtual-asset venue. (One leg is booked at a virtual-asset venue. Supporting: one leg is booked at a virtual-asset venue.)",
+      "id": "E-068db0823929",
+      "metadata": {
+        "semantic_object_id": "SO-d2855b8399520ab9",
+        "semantic_type": "VirtualAssetExposure"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-R05-VIRTUAL-ASSET",
+      "source": "semantic-context/VirtualAssetExposure",
+      "source_reliability": 0.8,
+      "supporting_facts": [
+        "SF-231e27782026"
+      ],
+      "timestamp": "2022-09-01T02:52:00",
+      "topic": "virtual_asset"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.495,
+      "explanation": "Originator and beneficiary are the same booking location; no counterparty exists. Supporting: originator == beneficiary == 154662:8143383C1.",
+      "id": "SF-bd014447f4ec",
+      "provenance": "semantic-object/SI-InternalBookEntry",
+      "semantic_object_id": "SO-9211e763a611b324",
+      "subject_id": "154662:8143383C1",
+      "timestamp": "2022-09-01T02:52:00",
+      "type": "InternalBookEntry"
+    },
+    {
+      "confidence": 0.4,
+      "explanation": "One leg is booked at a virtual-asset venue. Supporting: one leg is booked at a virtual-asset venue.",
+      "id": "SF-231e27782026",
+      "provenance": "semantic-object/SI-VirtualAssetExposure",
+      "semantic_object_id": "SO-d2855b8399520ab9",
+      "subject_id": "IBM-ML-00407280",
+      "timestamp": "2022-09-01T02:52:00",
+      "type": "VirtualAssetExposure"
+    }
+  ],
+  "frozen_runtime_decision": "ALLOW",
+  "laundering_label_evaluation_only": 0,
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 1,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 1,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-cf71024c9f1c",
+        "E-068db0823929"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 1,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 1,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "behaviour_layer_hash": "062fec68c82db5c8c247bd80367be9d280783b00f077d6c49c8cfbcf434620c4",
+    "behaviour_object_set_hash": "0f10a47478a045bded6d06337a630c10d1a65c9ba6f4bd7152ef24f56ac52995",
+    "behaviour_ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "behaviour_projection_hash": "de388fc9392ad5123dc110741efb722bb1fdfba87a445c45cbdf85b41906cf3b",
+    "context_state_hash": "8d2ec2d387728e75a3d06b47238bc34a",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "1a314b8fd02c55b046c427cfd6a5c3f72cd95aa1bcd2991daa1a3a4596106371",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "role_state_hash": "deb3794961f2f2278803c2b4280e07522c2f9a18694a5df0c98f4d2f30cd7003",
+    "semantic_object_set_hash": "f3220fcfcf1fa000b089df07699601631635a780b10787d0e548dd04d35f3833",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "8d2ec2d387728e75a3d06b47238bc34a",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "payment_format": "Bitcoin",
+          "self_posting": true,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#407278",
+        "id": "SO-9211e763a611b324",
+        "meaning": "Originator and beneficiary are the same booking location; no counterparty exists.",
+        "object_class": "event",
+        "origin": "SI-InternalBookEntry",
+        "subject_id": "154662:8143383C1",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset",
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset"
+        ],
+        "supporting_facts": [
+          "originator == beneficiary == 154662:8143383C1"
+        ],
+        "supporting_relationships": [],
+        "type": "InternalBookEntry",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "baseline_minimum": 5,
+          "prior_outbound_events": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#407278",
+        "id": "SO-7cc5f59398c1a045",
+        "meaning": "Too little history exists for any claim about this party's normal behaviour.",
+        "object_class": "profile",
+        "origin": "SI-NoEstablishedBaseline",
+        "subject_id": "154662:8143383C1",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset",
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset"
+        ],
+        "supporting_facts": [
+          "0 prior outbound events (< 5)"
+        ],
+        "supporting_relationships": [],
+        "type": "NoEstablishedBaseline",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 2.393649,
+          "currency": "Bitcoin",
+          "prior_same_currency_events": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#407278",
+        "id": "SO-aec356ec64676ad5",
+        "meaning": "A magnitude observed with no reference frame; explicit ignorance, not a finding.",
+        "object_class": "event",
+        "origin": "SI-UnscaledValue",
+        "subject_id": "IBM-ML-00407280",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset",
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset"
+        ],
+        "supporting_facts": [
+          "amount 2.39 Bitcoin observed with 0 prior same-currency events"
+        ],
+        "supporting_relationships": [],
+        "type": "UnscaledValue",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "beneficiary_bank": "154662",
+          "originator_bank": "154662",
+          "window": "prior-only"
+        },
+        "confidence": 0.4,
+        "confidence_explanation": "prior 0.80 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.400000",
+        "created_at": "2022-09-01T02:52:00#407278",
+        "id": "SO-d2855b8399520ab9",
+        "meaning": "One leg is booked at a virtual-asset venue.",
+        "object_class": "event",
+        "origin": "SI-VirtualAssetExposure",
+        "subject_id": "IBM-ML-00407280",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset",
+          "cust:8001C0480",
+          "acct:154662:8143383C1",
+          "juris:virtual-asset"
+        ],
+        "supporting_facts": [
+          "one leg is booked at a virtual-asset venue"
+        ],
+        "supporting_relationships": [],
+        "type": "VirtualAssetExposure",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Reading: InternalBookEntry, UnscaledValue, VirtualAssetExposure.",
+  "semantic_runtime_decision": "ALLOW",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 2.393649,
+    "beneficiary_account_id": "154662:8143383C1",
+    "country_id": "",
+    "currency": "Bitcoin",
+    "id": "IBM-ML-00407280",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "2.393649",
+      "from_bank": "154662",
+      "payment_currency": "Bitcoin",
+      "to_bank": "154662"
+    },
+    "originator_account_id": "154662:8143383C1",
+    "payment_type": "Bitcoin",
+    "timestamp": "2022-09-01T02:52:00"
+  }
+}

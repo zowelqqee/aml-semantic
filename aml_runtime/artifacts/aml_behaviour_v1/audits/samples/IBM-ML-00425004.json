@@ -1,0 +1,714 @@
+{
+  "behaviour": {
+    "behaviours": [
+      {
+        "causal_explanation": "One-to-many payment shape persisting across more than one time bucket.",
+        "confidence": 0.772374,
+        "confidence_explanation": "prior 0.85 x support 0.9087 (n=199, k=20) x coverage 1.00 = 0.772374",
+        "counter_evidence": [
+          "3 inbound counterparties are not negligible"
+        ],
+        "created_at": "2022-09-01T03:24:00#425002",
+        "direction": "risk",
+        "id": "BO-2e00654403364ada",
+        "interval": {
+          "end_minute": 27699864,
+          "horizon": "hours",
+          "span_minutes": 60,
+          "start_minute": 27699804
+        },
+        "meaning": "Sustained one-to-many payment shape across more than one time bucket.",
+        "origin": "BI-DistributionBehaviour",
+        "subject_id": "70:100428738",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States"
+        ],
+        "supporting_observations": [
+          "199 distinct beneficiaries against 3 distinct payers",
+          "shape held across 3 hour buckets"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428738->24:803CD14B0"
+        ],
+        "supporting_semantic_objects": [
+          "SO-f24e18fdbf13e00f"
+        ],
+        "topic": "behaviour_shape",
+        "type": "DistributionBehaviour",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      },
+      {
+        "causal_explanation": "A wide fan-out concentrated inside one short bucket.",
+        "confidence": 0.452174,
+        "confidence_explanation": "prior 0.80 x support 0.5652 (n=13, k=10) x coverage 1.00 = 0.452174",
+        "counter_evidence": [],
+        "created_at": "2022-09-01T03:24:00#425002",
+        "direction": "risk",
+        "id": "BO-8f4a46f864475f32",
+        "interval": {
+          "end_minute": 27699864,
+          "horizon": "minutes",
+          "span_minutes": 15,
+          "start_minute": 27699849
+        },
+        "meaning": "Many distinct beneficiaries paid inside a single short bucket.",
+        "origin": "BI-FanOutDistribution",
+        "subject_id": "70:100428738",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States"
+        ],
+        "supporting_observations": [
+          "13 new beneficiaries inside the trailing 15-minute window"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428738->24:803CD14B0"
+        ],
+        "supporting_semantic_objects": [],
+        "topic": "behaviour_shape",
+        "type": "FanOutDistribution",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      }
+    ],
+    "layer_version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0",
+    "lifecycle": {
+      "age_minutes": 204,
+      "buckets_active": 3,
+      "distinct_counterparties": 202,
+      "first_seen_minute": 27699660,
+      "horizons_filled": [
+        "minutes",
+        "hours"
+      ],
+      "horizons_unfillable": [
+        "days",
+        "weeks"
+      ],
+      "id": "LC-c7c5f96c3f82af23",
+      "idle_minutes": 1,
+      "observed_events": 414,
+      "subject_id": "70:100428738"
+    },
+    "ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "ontology_version": "aml-behaviour-ontology/1.0",
+    "role": {
+      "confidence": 0.772374,
+      "explanation": "Role Distributor follows from DistributionBehaviour, FanOutDistribution",
+      "id": "RO-6bac1eb285807e24",
+      "previous_role": "Distributor",
+      "role": "Distributor",
+      "since_minute": 27699750,
+      "subject_id": "70:100428738",
+      "supporting_behaviours": [
+        "BO-2e00654403364ada",
+        "BO-8f4a46f864475f32"
+      ],
+      "tenure_minutes": 114,
+      "transition_count": 7,
+      "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+    },
+    "scenarios": [],
+    "stage": "Split",
+    "subject_id": "70:100428738",
+    "transaction_id": "IBM-ML-00425004",
+    "transition": null,
+    "withheld": [
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "SeasonalBusinessCycle"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "MonthlySalaryCadence"
+      },
+      {
+        "missing_inputs": [
+          "multi_week_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "LongTermDormancyReactivation"
+      },
+      {
+        "missing_inputs": [
+          "multi_year_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "AnnualTaxCycle"
+      }
+    ]
+  },
+  "behaviour_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Role: Distributor. Behaviour: DistributionBehaviour, FanOutDistribution. Scenario: none matched.",
+  "behaviour_runtime_version": "aml-behaviour-runtime/1.0",
+  "conflicts": [],
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "SEM-P20"
+    ],
+    "rationale": "Allow when the semantic reading is determined and no unqualified corroboration remains."
+  },
+  "evidence": [
+    {
+      "confidence": 0.817808,
+      "direction": "mitigation",
+      "explanation": "The burst matches the party's own distribution shape. (High tempo that matches the party's own operational shape. Supporting: 27 outbound events in the current 60-minute bucket; own mean 102.750 events per bucket.)",
+      "id": "E-8d6b5735f3ff",
+      "metadata": {
+        "semantic_object_id": "SO-bcaea819bb515861",
+        "semantic_type": "NormalOperationalBurst"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M03-OPERATIONAL-BURST",
+      "source": "semantic-context/NormalOperationalBurst",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-1194a14c4c78"
+      ],
+      "timestamp": "2022-09-01T03:24:00",
+      "topic": "tempo_regime"
+    },
+    {
+      "confidence": 0.755556,
+      "direction": "mitigation",
+      "explanation": "The value sits inside the party's own established regime. (Value sits inside the party's own established regime. Supporting: amount 170985.24 Yen; own prior max 1438190153.80; own p90 5806643.43.)",
+      "id": "E-9a9e6b3fb53a",
+      "metadata": {
+        "semantic_object_id": "SO-6bbcec88d90fd079",
+        "semantic_type": "RoutineValueTransfer"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M05-ROUTINE-VALUE",
+      "source": "semantic-context/RoutineValueTransfer",
+      "source_reliability": 0.85,
+      "supporting_facts": [
+        "SF-3751ba9a8e11"
+      ],
+      "timestamp": "2022-09-01T03:24:00",
+      "topic": "value_regime"
+    },
+    {
+      "confidence": 0.772374,
+      "direction": "risk",
+      "explanation": "Sustained one-to-many payment shape across more than one time bucket. (One-to-many payment shape persisting across more than one time bucket.)",
+      "id": "E-2c7f41938a89",
+      "metadata": {
+        "behaviour_object_id": "BO-2e00654403364ada",
+        "behaviour_type": "DistributionBehaviour",
+        "horizon": "hours",
+        "interval_span_minutes": "60"
+      },
+      "recency_days": 0,
+      "rule_id": "BEH-DistributionBehaviour",
+      "source": "behaviour-layer/DistributionBehaviour",
+      "source_reliability": 0.85,
+      "supporting_facts": [
+        "BF-2c840df303f1"
+      ],
+      "timestamp": "2022-09-01T03:24:00",
+      "topic": "behaviour_shape"
+    },
+    {
+      "confidence": 0.452174,
+      "direction": "risk",
+      "explanation": "Many distinct beneficiaries paid inside a single short bucket. (A wide fan-out concentrated inside one short bucket.)",
+      "id": "E-ca44193baf31",
+      "metadata": {
+        "behaviour_object_id": "BO-8f4a46f864475f32",
+        "behaviour_type": "FanOutDistribution",
+        "horizon": "minutes",
+        "interval_span_minutes": "15"
+      },
+      "recency_days": 0,
+      "rule_id": "BEH-FanOutDistribution",
+      "source": "behaviour-layer/FanOutDistribution",
+      "source_reliability": 0.8,
+      "supporting_facts": [
+        "BF-c663c1262b5d"
+      ],
+      "timestamp": "2022-09-01T03:24:00",
+      "topic": "behaviour_shape"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.817808,
+      "explanation": "High tempo that matches the party's own operational shape. Supporting: 27 outbound events in the current 60-minute bucket; own mean 102.750 events per bucket.",
+      "id": "SF-1194a14c4c78",
+      "provenance": "semantic-object/SI-NormalOperationalBurst",
+      "semantic_object_id": "SO-bcaea819bb515861",
+      "subject_id": "70:100428738",
+      "timestamp": "2022-09-01T03:24:00",
+      "type": "NormalOperationalBurst"
+    },
+    {
+      "confidence": 0.755556,
+      "explanation": "Value sits inside the party's own established regime. Supporting: amount 170985.24 Yen; own prior max 1438190153.80; own p90 5806643.43.",
+      "id": "SF-3751ba9a8e11",
+      "provenance": "semantic-object/SI-RoutineValueTransfer",
+      "semantic_object_id": "SO-6bbcec88d90fd079",
+      "subject_id": "IBM-ML-00425004",
+      "timestamp": "2022-09-01T03:24:00",
+      "type": "RoutineValueTransfer"
+    },
+    {
+      "behaviour_object_id": "BO-2e00654403364ada",
+      "confidence": 0.772374,
+      "explanation": "One-to-many payment shape persisting across more than one time bucket. Observed: 199 distinct beneficiaries against 3 distinct payers; shape held across 3 hour buckets. Against: 3 inbound counterparties are not negligible.",
+      "id": "BF-2c840df303f1",
+      "provenance": "behaviour-object/BI-DistributionBehaviour",
+      "subject_id": "70:100428738",
+      "timestamp": "2022-09-01T03:24:00",
+      "type": "DistributionBehaviour"
+    },
+    {
+      "behaviour_object_id": "BO-8f4a46f864475f32",
+      "confidence": 0.452174,
+      "explanation": "A wide fan-out concentrated inside one short bucket. Observed: 13 new beneficiaries inside the trailing 15-minute window.",
+      "id": "BF-c663c1262b5d",
+      "provenance": "behaviour-object/BI-FanOutDistribution",
+      "subject_id": "70:100428738",
+      "timestamp": "2022-09-01T03:24:00",
+      "type": "FanOutDistribution"
+    }
+  ],
+  "frozen_runtime_decision": "REVIEW",
+  "laundering_label_evaluation_only": 1,
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [
+        "E-2c7f41938a89",
+        "E-ca44193baf31"
+      ],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.875301,
+        "independent_unqualified_topics": 1,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.772374,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-2c7f41938a89",
+        "E-ca44193baf31"
+      ],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.875301,
+        "independent_unqualified_topics": 1,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.772374,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-8d6b5735f3ff",
+        "E-9a9e6b3fb53a",
+        "E-2c7f41938a89",
+        "E-ca44193baf31"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.875301,
+        "independent_unqualified_topics": 1,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.772374,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.875301,
+        "independent_unqualified_topics": 1,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.772374,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "behaviour_layer_hash": "062fec68c82db5c8c247bd80367be9d280783b00f077d6c49c8cfbcf434620c4",
+    "behaviour_object_set_hash": "dfea615af66f5bce8137e8b970d91c5d0e4e7ec6bbb4d26472baae4aa66dc62d",
+    "behaviour_ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "behaviour_projection_hash": "de388fc9392ad5123dc110741efb722bb1fdfba87a445c45cbdf85b41906cf3b",
+    "context_state_hash": "c55626a8428794467efbc7e67f1418c8",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "7acba55438075f5ce9864b6b83f7ed6c7c64c4c0dec21f97bba5956b3d33b4ad",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "role_state_hash": "3a81c670e9741b5c7ba4c0938096d10fcf4f3b9527688b7c3b1fbdd1b43420fa",
+    "semantic_object_set_hash": "6e5d9b7b715bb38eddbdee6ce8f6ca19b34a6736c0761826579d7e1faa3da663",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "c55626a8428794467efbc7e67f1418c8",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "prior_distinct_counterparties": 199,
+          "window": "prior-only"
+        },
+        "confidence": 0.865217,
+        "confidence_explanation": "prior 0.90 x support 0.9614 (n=199, k=8) x coverage 1.00 = 0.865217",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-49b988787031b57e",
+        "meaning": "The counterparty set the party normally uses.",
+        "object_class": "profile",
+        "origin": "SI-CounterpartyRegime",
+        "subject_id": "70:100428738",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "199 distinct prior counterparties"
+        ],
+        "supporting_relationships": [],
+        "type": "CounterpartyRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "beneficiary_jurisdiction": "Japan",
+          "originator_jurisdiction": "United States",
+          "window": "prior-only"
+        },
+        "confidence": 0.44,
+        "confidence_explanation": "prior 0.88 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.440000",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-fbe5168ee509256e",
+        "meaning": "The booking jurisdictions of the two legs differ.",
+        "object_class": "event",
+        "origin": "SI-CrossJurisdictionTransfer",
+        "subject_id": "IBM-ML-00425004",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "United States -> Japan"
+        ],
+        "supporting_relationships": [],
+        "type": "CrossJurisdictionTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "in_distinct": 3,
+          "out_distinct": 199,
+          "window": "prior-only"
+        },
+        "confidence": 0.835982,
+        "confidence_explanation": "prior 0.92 x support 0.9087 (n=199, k=20) x coverage 1.00 = 0.835982",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-f24e18fdbf13e00f",
+        "meaning": "One-to-many payer: a settlement or payroll-operator shape.",
+        "object_class": "profile",
+        "origin": "SI-DistributionNode",
+        "subject_id": "70:100428738",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "out-degree 199 vs in-degree 3"
+        ],
+        "supporting_relationships": [],
+        "type": "DistributionNode",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "burst": 27,
+          "mean_bucket_rate": 102.75,
+          "prior_outbound_events": 411,
+          "shift_multiple": 4.0,
+          "window": "prior-only"
+        },
+        "confidence": 0.817808,
+        "confidence_explanation": "prior 0.90 x support 0.9087 (n=199, k=20) x coverage 1.00 = 0.817808",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-bcaea819bb515861",
+        "meaning": "High tempo that matches the party's own operational shape.",
+        "object_class": "event",
+        "origin": "SI-NormalOperationalBurst",
+        "subject_id": "70:100428738",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "27 outbound events in the current 60-minute bucket",
+          "own mean 102.750 events per bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "NormalOperationalBurst",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 1,
+          "prior_distinct_counterparties": 199,
+          "window": "prior-only"
+        },
+        "confidence": 0.083333,
+        "confidence_explanation": "prior 0.75 x support 0.1111 (n=1, k=8) x coverage 1.00 = 0.083333",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-12e604c695de1a97",
+        "meaning": "A counterparty relationship formed within the observed window.",
+        "object_class": "relationship",
+        "origin": "SI-RecentlyCreatedRelationship",
+        "subject_id": "rel:70:100428738->24:803CD14B0",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "1 prior payments on this pair"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428738->24:803CD14B0"
+        ],
+        "type": "RecentlyCreatedRelationship",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 170985.24,
+          "break_multiple": 4.0,
+          "currency": "Yen",
+          "high_mark": 5806643.43,
+          "prior_events": 64,
+          "prior_max": 1438190153.8,
+          "window": "prior-only"
+        },
+        "confidence": 0.755556,
+        "confidence_explanation": "prior 0.85 x support 0.8889 (n=64, k=8) x coverage 1.00 = 0.755556",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-6bbcec88d90fd079",
+        "meaning": "Value sits inside the party's own established regime.",
+        "object_class": "event",
+        "origin": "SI-RoutineValueTransfer",
+        "subject_id": "IBM-ML-00425004",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "amount 170985.24 Yen",
+          "own prior max 1438190153.80",
+          "own p90 5806643.43"
+        ],
+        "supporting_relationships": [],
+        "type": "RoutineValueTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "mean_bucket_rate": 102.75,
+          "prior_outbound_events": 411,
+          "window": "prior-only"
+        },
+        "confidence": 0.882816,
+        "confidence_explanation": "prior 0.90 x support 0.9809 (n=411, k=8) x coverage 1.00 = 0.882816",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-6f885dc009184603",
+        "meaning": "The party's own observed transaction tempo.",
+        "object_class": "profile",
+        "origin": "SI-TempoRegime",
+        "subject_id": "70:100428738",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "mean 102.750 outbound events per 60-minute bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "TempoRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "currency": "Yen",
+          "high_mark": 5806643.43,
+          "prior_events": 64,
+          "prior_max": 1438190153.8,
+          "window": "prior-only"
+        },
+        "confidence": 0.844444,
+        "confidence_explanation": "prior 0.95 x support 0.8889 (n=64, k=8) x coverage 1.00 = 0.844444",
+        "created_at": "2022-09-01T03:24:00#425002",
+        "id": "SO-9038ba9ec32ce741",
+        "meaning": "The party's own observed operating scale in one currency.",
+        "object_class": "profile",
+        "origin": "SI-ValueRegime",
+        "subject_id": "70:100428738|Yen",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800A6A740",
+          "acct:70:100428738",
+          "juris:United States",
+          "cust:800A3C540",
+          "acct:24:803CD14B0",
+          "juris:Japan"
+        ],
+        "supporting_facts": [
+          "prior max 1438190153.80, p90 5806643.43 Yen"
+        ],
+        "supporting_relationships": [],
+        "type": "ValueRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Reading: CrossJurisdictionTransfer, NormalOperationalBurst, RoutineValueTransfer.",
+  "semantic_runtime_decision": "ALLOW",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 170985.24,
+    "beneficiary_account_id": "24:803CD14B0",
+    "country_id": "",
+    "currency": "Yen",
+    "id": "IBM-ML-00425004",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "170985.24",
+      "from_bank": "70",
+      "payment_currency": "Yen",
+      "to_bank": "24"
+    },
+    "originator_account_id": "70:100428738",
+    "payment_type": "Cheque",
+    "timestamp": "2022-09-01T03:24:00"
+  }
+}

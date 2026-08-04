@@ -1,0 +1,296 @@
+{
+  "conflicts": [],
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "SEM-P20"
+    ],
+    "rationale": "Allow when the semantic reading is determined and no unqualified corroboration remains."
+  },
+  "evidence": [
+    {
+      "confidence": 0.495,
+      "direction": "mitigation",
+      "explanation": "The event is a self-posting; there is no counterparty. (Originator and beneficiary are the same booking location; no counterparty exists. Supporting: originator == beneficiary == 328658:80A6BFE10.)",
+      "id": "E-2b98e0ca7748",
+      "metadata": {
+        "semantic_object_id": "SO-f3a876a8b3e7cff4",
+        "semantic_type": "InternalBookEntry"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M01-BOOK-ENTRY",
+      "source": "semantic-context/InternalBookEntry",
+      "source_reliability": 0.99,
+      "supporting_facts": [
+        "SF-e5bc2432e062"
+      ],
+      "timestamp": "2022-09-01T02:52:00",
+      "topic": "structural_explanation"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.495,
+      "explanation": "Originator and beneficiary are the same booking location; no counterparty exists. Supporting: originator == beneficiary == 328658:80A6BFE10.",
+      "id": "SF-e5bc2432e062",
+      "provenance": "semantic-object/SI-InternalBookEntry",
+      "semantic_object_id": "SO-f3a876a8b3e7cff4",
+      "subject_id": "328658:80A6BFE10",
+      "timestamp": "2022-09-01T02:52:00",
+      "type": "InternalBookEntry"
+    }
+  ],
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-2b98e0ca7748"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "structural",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "context_state_hash": "b4f8441b380ea1f3b3ec241338790fbe",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "c14e4da2489be6d456b8a56c9d301fa517612a3d02ac292c6d4b9de86373231e",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "semantic_object_set_hash": "ffa0f210cc8d4dee0f09d0a65b871f14fc058fb96d222c148a2d5ac7754698d7",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "b4f8441b380ea1f3b3ec241338790fbe",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "payment_format": "Reinvestment",
+          "self_posting": true,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#406839",
+        "id": "SO-f3a876a8b3e7cff4",
+        "meaning": "Originator and beneficiary are the same booking location; no counterparty exists.",
+        "object_class": "event",
+        "origin": "SI-InternalBookEntry",
+        "subject_id": "328658:80A6BFE10",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009E8AA0",
+          "acct:328658:80A6BFE10",
+          "juris:United States",
+          "cust:8009E8AA0",
+          "acct:328658:80A6BFE10",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "originator == beneficiary == 328658:80A6BFE10"
+        ],
+        "supporting_relationships": [],
+        "type": "InternalBookEntry",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "baseline_minimum": 5,
+          "prior_outbound_events": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#406839",
+        "id": "SO-b4524308746e9e86",
+        "meaning": "Too little history exists for any claim about this party's normal behaviour.",
+        "object_class": "profile",
+        "origin": "SI-NoEstablishedBaseline",
+        "subject_id": "328658:80A6BFE10",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009E8AA0",
+          "acct:328658:80A6BFE10",
+          "juris:United States",
+          "cust:8009E8AA0",
+          "acct:328658:80A6BFE10",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "0 prior outbound events (< 5)"
+        ],
+        "supporting_relationships": [],
+        "type": "NoEstablishedBaseline",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 8815.53,
+          "currency": "US Dollar",
+          "prior_same_currency_events": 0,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T02:52:00#406839",
+        "id": "SO-55358c52a3e34f2e",
+        "meaning": "A magnitude observed with no reference frame; explicit ignorance, not a finding.",
+        "object_class": "event",
+        "origin": "SI-UnscaledValue",
+        "subject_id": "IBM-ML-00406841",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:8009E8AA0",
+          "acct:328658:80A6BFE10",
+          "juris:United States",
+          "cust:8009E8AA0",
+          "acct:328658:80A6BFE10",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "amount 8815.53 US Dollar observed with 0 prior same-currency events"
+        ],
+        "supporting_relationships": [],
+        "type": "UnscaledValue",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Reading: InternalBookEntry, UnscaledValue.",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 8815.53,
+    "beneficiary_account_id": "328658:80A6BFE10",
+    "country_id": "",
+    "currency": "US Dollar",
+    "id": "IBM-ML-00406841",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "8815.53",
+      "from_bank": "328658",
+      "payment_currency": "US Dollar",
+      "to_bank": "328658"
+    },
+    "originator_account_id": "328658:80A6BFE10",
+    "payment_type": "Reinvestment",
+    "timestamp": "2022-09-01T02:52:00"
+  }
+}

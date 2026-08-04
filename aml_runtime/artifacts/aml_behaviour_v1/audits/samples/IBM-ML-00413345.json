@@ -1,0 +1,521 @@
+{
+  "behaviour": {
+    "behaviours": [
+      {
+        "causal_explanation": "Activity resumed after an idle period long relative to this account's own tempo.",
+        "confidence": 0.273333,
+        "confidence_explanation": "prior 0.82 x support 0.3333 (n=2, k=4) x coverage 1.00 = 0.273333",
+        "counter_evidence": [],
+        "created_at": "2022-09-01T03:03:00#413343",
+        "direction": "risk",
+        "id": "BO-5f0825462e297492",
+        "interval": {
+          "end_minute": 27699843,
+          "horizon": "hours",
+          "span_minutes": 60,
+          "start_minute": 27699783
+        },
+        "meaning": "Activity resumed after an idle period long relative to the account's own tempo.",
+        "origin": "BI-DormantAccountActivation",
+        "subject_id": "287:806157A10",
+        "supporting_entities": [
+          "cust:800B44480",
+          "acct:287:806157A10",
+          "juris:Russia"
+        ],
+        "supporting_observations": [
+          "idle 151 minutes against own mean gap 15.5 minutes"
+        ],
+        "supporting_relationships": [
+          "rel:287:806157A10->16787:8061FBC50"
+        ],
+        "supporting_semantic_objects": [],
+        "topic": "behaviour_lifecycle",
+        "type": "DormantAccountActivation",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      }
+    ],
+    "layer_version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0",
+    "lifecycle": {
+      "age_minutes": 182,
+      "buckets_active": 0,
+      "distinct_counterparties": 2,
+      "first_seen_minute": 27699661,
+      "horizons_filled": [
+        "minutes"
+      ],
+      "horizons_unfillable": [
+        "days",
+        "weeks"
+      ],
+      "id": "LC-48d456ae516a1983",
+      "idle_minutes": 151,
+      "observed_events": 6,
+      "subject_id": "287:806157A10"
+    },
+    "ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "ontology_version": "aml-behaviour-ontology/1.0",
+    "role": {
+      "confidence": 0.5,
+      "explanation": "Role Dormant follows from lifecycle state",
+      "id": "RO-740f94494d5cb9a9",
+      "previous_role": "Unknown",
+      "role": "Dormant",
+      "since_minute": 27699843,
+      "subject_id": "287:806157A10",
+      "supporting_behaviours": [],
+      "tenure_minutes": 0,
+      "transition_count": 2,
+      "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+    },
+    "scenarios": [],
+    "stage": "Forward",
+    "subject_id": "287:806157A10",
+    "transaction_id": "IBM-ML-00413345",
+    "transition": {
+      "at_event": "IBM-ML-00413345",
+      "at_minute": 27699843,
+      "caused_by": [],
+      "explanation": "Unknown -> Dormant: no behavioural support; the role follows from lifecycle state alone",
+      "from_role": "Unknown",
+      "id": "RT-523d4740f8a8a9d4",
+      "subject_id": "287:806157A10",
+      "to_role": "Dormant"
+    },
+    "withheld": [
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "SeasonalBusinessCycle"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "MonthlySalaryCadence"
+      },
+      {
+        "missing_inputs": [
+          "multi_week_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "LongTermDormancyReactivation"
+      },
+      {
+        "missing_inputs": [
+          "multi_year_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "AnnualTaxCycle"
+      }
+    ]
+  },
+  "behaviour_rationale": "REVIEW: Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own. Role: Dormant. Behaviour: DormantAccountActivation. Scenario: none matched.",
+  "behaviour_runtime_version": "aml-behaviour-runtime/1.0",
+  "conflicts": [],
+  "decision": {
+    "decision": "REVIEW",
+    "policy_ids": [
+      "SEM-P10"
+    ],
+    "rationale": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own."
+  },
+  "evidence": [
+    {
+      "confidence": 0.45,
+      "direction": "mitigation",
+      "explanation": "Novelty observed against no counterparty baseline carries no information. (Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 1 known counterparty, below the 5 needed for a counterparty baseline.)",
+      "id": "E-1aa34f419128",
+      "metadata": {
+        "semantic_object_id": "SO-d8f94fadfc4d5ad6",
+        "semantic_type": "NonInformativeNovelty"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M06-UNINFORMATIVE-NOVELTY",
+      "source": "semantic-context/NonInformativeNovelty",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-ff18599f3dfc"
+      ],
+      "timestamp": "2022-09-01T03:03:00",
+      "topic": "counterparty_regime"
+    },
+    {
+      "confidence": 0.45,
+      "direction": "risk",
+      "explanation": "A leg is booked in an enhanced-scrutiny jurisdiction. (One leg is booked in a jurisdiction on the configured enhanced-scrutiny list. Supporting: leg booked in Russia.)",
+      "id": "E-dddac9166110",
+      "metadata": {
+        "semantic_object_id": "SO-6505e76c906b36f6",
+        "semantic_type": "HighRiskJurisdictionExposure"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-R04-JURISDICTION",
+      "source": "semantic-context/HighRiskJurisdictionExposure",
+      "source_reliability": 0.95,
+      "supporting_facts": [
+        "SF-dc9129c596ec"
+      ],
+      "timestamp": "2022-09-01T03:03:00",
+      "topic": "jurisdiction"
+    },
+    {
+      "confidence": 0.273333,
+      "direction": "risk",
+      "explanation": "Activity resumed after an idle period long relative to the account's own tempo. (Activity resumed after an idle period long relative to this account's own tempo.)",
+      "id": "E-1b883246344b",
+      "metadata": {
+        "behaviour_object_id": "BO-5f0825462e297492",
+        "behaviour_type": "DormantAccountActivation",
+        "horizon": "hours",
+        "interval_span_minutes": "60"
+      },
+      "recency_days": 0,
+      "rule_id": "BEH-DormantAccountActivation",
+      "source": "behaviour-layer/DormantAccountActivation",
+      "source_reliability": 0.82,
+      "supporting_facts": [
+        "BF-07e28f5d8f52"
+      ],
+      "timestamp": "2022-09-01T03:03:00",
+      "topic": "behaviour_lifecycle"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.45,
+      "explanation": "One leg is booked in a jurisdiction on the configured enhanced-scrutiny list. Supporting: leg booked in Russia.",
+      "id": "SF-dc9129c596ec",
+      "provenance": "semantic-object/SI-HighRiskJurisdictionExposure",
+      "semantic_object_id": "SO-6505e76c906b36f6",
+      "subject_id": "IBM-ML-00413345",
+      "timestamp": "2022-09-01T03:03:00",
+      "type": "HighRiskJurisdictionExposure"
+    },
+    {
+      "confidence": 0.45,
+      "explanation": "Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 1 known counterparty, below the 5 needed for a counterparty baseline.",
+      "id": "SF-ff18599f3dfc",
+      "provenance": "semantic-object/SI-NonInformativeNovelty",
+      "semantic_object_id": "SO-d8f94fadfc4d5ad6",
+      "subject_id": "rel:287:806157A10->16787:8061FBC50",
+      "timestamp": "2022-09-01T03:03:00",
+      "type": "NonInformativeNovelty"
+    },
+    {
+      "behaviour_object_id": "BO-5f0825462e297492",
+      "confidence": 0.273333,
+      "explanation": "Activity resumed after an idle period long relative to this account's own tempo. Observed: idle 151 minutes against own mean gap 15.5 minutes.",
+      "id": "BF-07e28f5d8f52",
+      "provenance": "behaviour-object/BI-DormantAccountActivation",
+      "subject_id": "287:806157A10",
+      "timestamp": "2022-09-01T03:03:00",
+      "type": "DormantAccountActivation"
+    }
+  ],
+  "frozen_runtime_decision": "BLOCK",
+  "laundering_label_evaluation_only": 0,
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [
+        "E-dddac9166110",
+        "E-1b883246344b"
+      ],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.600333,
+        "independent_unqualified_topics": 2,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.45,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-dddac9166110",
+        "E-1b883246344b"
+      ],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.600333,
+        "independent_unqualified_topics": 2,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.45,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [
+        "E-1aa34f419128",
+        "E-dddac9166110",
+        "E-1b883246344b"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.600333,
+        "independent_unqualified_topics": 2,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.45,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.600333,
+        "independent_unqualified_topics": 2,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "undetermined",
+        "strongest_unqualified_confidence": 0.45,
+        "unqualified_risk_count": 2
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "behaviour_layer_hash": "062fec68c82db5c8c247bd80367be9d280783b00f077d6c49c8cfbcf434620c4",
+    "behaviour_object_set_hash": "745b936b537228bb1cc92b58c6738bbac090822ad3302ce94124ced74a3e3f06",
+    "behaviour_ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "behaviour_projection_hash": "de388fc9392ad5123dc110741efb722bb1fdfba87a445c45cbdf85b41906cf3b",
+    "context_state_hash": "cfe8b0ec94062504d3f654db2190a626",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "8e011b3470308c6a305fa3b72b4cfd42521961effb2168220b1a0f7505b5abd2",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "role_state_hash": "782c7aaedad9f0cecc1ca471f331145a453f179657df7e62c5786a23853b6a12",
+    "semantic_object_set_hash": "85a40f60a4aad32c52c0dae66971f6d72888ebd751206d41cb03a29bb1fe8678",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "cfe8b0ec94062504d3f654db2190a626",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "exposed_jurisdiction": "Russia",
+          "list": "ENHANCED_SCRUTINY_JURISDICTIONS",
+          "window": "prior-only"
+        },
+        "confidence": 0.45,
+        "confidence_explanation": "prior 0.90 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.450000",
+        "created_at": "2022-09-01T03:03:00#413343",
+        "id": "SO-6505e76c906b36f6",
+        "meaning": "One leg is booked in a jurisdiction on the configured enhanced-scrutiny list.",
+        "object_class": "event",
+        "origin": "SI-HighRiskJurisdictionExposure",
+        "subject_id": "IBM-ML-00413345",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B44480",
+          "acct:287:806157A10",
+          "juris:Russia",
+          "cust:800B49C40",
+          "acct:16787:8061FBC50",
+          "juris:Russia"
+        ],
+        "supporting_facts": [
+          "leg booked in Russia"
+        ],
+        "supporting_relationships": [],
+        "type": "HighRiskJurisdictionExposure",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "baseline_minimum": 5,
+          "prior_outbound_events": 3,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T03:03:00#413343",
+        "id": "SO-8ff3e06ad45b18cb",
+        "meaning": "Too little history exists for any claim about this party's normal behaviour.",
+        "object_class": "profile",
+        "origin": "SI-NoEstablishedBaseline",
+        "subject_id": "287:806157A10",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B44480",
+          "acct:287:806157A10",
+          "juris:Russia",
+          "cust:800B49C40",
+          "acct:16787:8061FBC50",
+          "juris:Russia"
+        ],
+        "supporting_facts": [
+          "3 prior outbound events (< 5)"
+        ],
+        "supporting_relationships": [],
+        "type": "NoEstablishedBaseline",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 0,
+          "prior_distinct_counterparties": 1,
+          "window": "prior-only"
+        },
+        "confidence": 0.45,
+        "confidence_explanation": "prior 0.90 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.450000",
+        "created_at": "2022-09-01T03:03:00#413343",
+        "id": "SO-d8f94fadfc4d5ad6",
+        "meaning": "Novelty observed against no counterparty baseline; the default state of the world, not a signal.",
+        "object_class": "relationship",
+        "origin": "SI-NonInformativeNovelty",
+        "subject_id": "rel:287:806157A10->16787:8061FBC50",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B44480",
+          "acct:287:806157A10",
+          "juris:Russia",
+          "cust:800B49C40",
+          "acct:16787:8061FBC50",
+          "juris:Russia"
+        ],
+        "supporting_facts": [
+          "0 prior payments on this pair",
+          "originator has 1 known counterparty, below the 5 needed for a counterparty baseline"
+        ],
+        "supporting_relationships": [
+          "rel:287:806157A10->16787:8061FBC50"
+        ],
+        "type": "NonInformativeNovelty",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 60161.38,
+          "currency": "Ruble",
+          "prior_same_currency_events": 3,
+          "window": "prior-only"
+        },
+        "confidence": 0.495,
+        "confidence_explanation": "prior 0.99 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.495000",
+        "created_at": "2022-09-01T03:03:00#413343",
+        "id": "SO-8574d995d3c1bf24",
+        "meaning": "A magnitude observed with no reference frame; explicit ignorance, not a finding.",
+        "object_class": "event",
+        "origin": "SI-UnscaledValue",
+        "subject_id": "IBM-ML-00413345",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B44480",
+          "acct:287:806157A10",
+          "juris:Russia",
+          "cust:800B49C40",
+          "acct:16787:8061FBC50",
+          "juris:Russia"
+        ],
+        "supporting_facts": [
+          "amount 60161.38 Ruble observed with 3 prior same-currency events"
+        ],
+        "supporting_relationships": [],
+        "type": "UnscaledValue",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ABSTAIN: Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame. Reading: HighRiskJurisdictionExposure, UnscaledValue.",
+  "semantic_runtime_decision": "ABSTAIN",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 60161.38,
+    "beneficiary_account_id": "16787:8061FBC50",
+    "country_id": "",
+    "currency": "Ruble",
+    "id": "IBM-ML-00413345",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "60161.38",
+      "from_bank": "287",
+      "payment_currency": "Ruble",
+      "to_bank": "16787"
+    },
+    "originator_account_id": "287:806157A10",
+    "payment_type": "Cheque",
+    "timestamp": "2022-09-01T03:03:00"
+  }
+}

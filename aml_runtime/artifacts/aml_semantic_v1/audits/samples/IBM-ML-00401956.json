@@ -1,0 +1,396 @@
+{
+  "conflicts": [],
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "SEM-P20"
+    ],
+    "rationale": "Allow when the semantic reading is determined and no unqualified corroboration remains."
+  },
+  "evidence": [
+    {
+      "confidence": 0.326923,
+      "direction": "mitigation",
+      "explanation": "The value sits inside the party's own established regime. (Value sits inside the party's own established regime. Supporting: amount 61.57 Euro; own prior max 73027.75; own p90 7996.75.)",
+      "id": "E-d25b6977f901",
+      "metadata": {
+        "semantic_object_id": "SO-e0349b5152799ed1",
+        "semantic_type": "RoutineValueTransfer"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M05-ROUTINE-VALUE",
+      "source": "semantic-context/RoutineValueTransfer",
+      "source_reliability": 0.85,
+      "supporting_facts": [
+        "SF-a3237c212f8b"
+      ],
+      "timestamp": "2022-09-01T02:43:00",
+      "topic": "value_regime"
+    },
+    {
+      "confidence": 0.45,
+      "direction": "mitigation",
+      "explanation": "Novelty observed against no counterparty baseline carries no information. (Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 3 known counterparties, below the 5 needed for a counterparty baseline.)",
+      "id": "E-9ef99d96fa07",
+      "metadata": {
+        "semantic_object_id": "SO-096dc824f0b15371",
+        "semantic_type": "NonInformativeNovelty"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M06-UNINFORMATIVE-NOVELTY",
+      "source": "semantic-context/NonInformativeNovelty",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-39412ca20bce"
+      ],
+      "timestamp": "2022-09-01T02:43:00",
+      "topic": "counterparty_regime"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.45,
+      "explanation": "Novelty observed against no counterparty baseline; the default state of the world, not a signal. Supporting: 0 prior payments on this pair; originator has 3 known counterparties, below the 5 needed for a counterparty baseline.",
+      "id": "SF-39412ca20bce",
+      "provenance": "semantic-object/SI-NonInformativeNovelty",
+      "semantic_object_id": "SO-096dc824f0b15371",
+      "subject_id": "rel:1299:800D621B0->210575:8057461F0",
+      "timestamp": "2022-09-01T02:43:00",
+      "type": "NonInformativeNovelty"
+    },
+    {
+      "confidence": 0.326923,
+      "explanation": "Value sits inside the party's own established regime. Supporting: amount 61.57 Euro; own prior max 73027.75; own p90 7996.75.",
+      "id": "SF-a3237c212f8b",
+      "provenance": "semantic-object/SI-RoutineValueTransfer",
+      "semantic_object_id": "SO-e0349b5152799ed1",
+      "subject_id": "IBM-ML-00401956",
+      "timestamp": "2022-09-01T02:43:00",
+      "type": "RoutineValueTransfer"
+    }
+  ],
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-d25b6977f901",
+        "E-9ef99d96fa07"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.0,
+        "independent_unqualified_topics": 0,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.0,
+        "unqualified_risk_count": 0
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "context_state_hash": "e572f690e3ec5558b6f55cd991c50343",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "e742ef54d9eb32fd0b7e42a506e9f6471343a648431753f349a1370f2641b3cf",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "semantic_object_set_hash": "b1a21faf4d156f2b518d4590cf1b6a7106466cdb25fea994496db3f221bb6dd2",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "e572f690e3ec5558b6f55cd991c50343",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "beneficiary_jurisdiction": "Germany",
+          "originator_jurisdiction": "France",
+          "window": "prior-only"
+        },
+        "confidence": 0.44,
+        "confidence_explanation": "prior 0.88 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.440000",
+        "created_at": "2022-09-01T02:43:00#401954",
+        "id": "SO-48822b1960b82693",
+        "meaning": "The booking jurisdictions of the two legs differ.",
+        "object_class": "event",
+        "origin": "SI-CrossJurisdictionTransfer",
+        "subject_id": "IBM-ML-00401956",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800842F70",
+          "acct:1299:800D621B0",
+          "juris:France",
+          "cust:800723E70",
+          "acct:210575:8057461F0",
+          "juris:Germany"
+        ],
+        "supporting_facts": [
+          "France -> Germany"
+        ],
+        "supporting_relationships": [],
+        "type": "CrossJurisdictionTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 0,
+          "prior_distinct_counterparties": 3,
+          "window": "prior-only"
+        },
+        "confidence": 0.45,
+        "confidence_explanation": "prior 0.90 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.450000",
+        "created_at": "2022-09-01T02:43:00#401954",
+        "id": "SO-096dc824f0b15371",
+        "meaning": "Novelty observed against no counterparty baseline; the default state of the world, not a signal.",
+        "object_class": "relationship",
+        "origin": "SI-NonInformativeNovelty",
+        "subject_id": "rel:1299:800D621B0->210575:8057461F0",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800842F70",
+          "acct:1299:800D621B0",
+          "juris:France",
+          "cust:800723E70",
+          "acct:210575:8057461F0",
+          "juris:Germany"
+        ],
+        "supporting_facts": [
+          "0 prior payments on this pair",
+          "originator has 3 known counterparties, below the 5 needed for a counterparty baseline"
+        ],
+        "supporting_relationships": [
+          "rel:1299:800D621B0->210575:8057461F0"
+        ],
+        "type": "NonInformativeNovelty",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 61.57,
+          "break_multiple": 4.0,
+          "currency": "Euro",
+          "high_mark": 7996.75,
+          "prior_events": 5,
+          "prior_max": 73027.75,
+          "window": "prior-only"
+        },
+        "confidence": 0.326923,
+        "confidence_explanation": "prior 0.85 x support 0.3846 (n=5, k=8) x coverage 1.00 = 0.326923",
+        "created_at": "2022-09-01T02:43:00#401954",
+        "id": "SO-e0349b5152799ed1",
+        "meaning": "Value sits inside the party's own established regime.",
+        "object_class": "event",
+        "origin": "SI-RoutineValueTransfer",
+        "subject_id": "IBM-ML-00401956",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800842F70",
+          "acct:1299:800D621B0",
+          "juris:France",
+          "cust:800723E70",
+          "acct:210575:8057461F0",
+          "juris:Germany"
+        ],
+        "supporting_facts": [
+          "amount 61.57 Euro",
+          "own prior max 73027.75",
+          "own p90 7996.75"
+        ],
+        "supporting_relationships": [],
+        "type": "RoutineValueTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "mean_bucket_rate": 2.5,
+          "prior_outbound_events": 5,
+          "window": "prior-only"
+        },
+        "confidence": 0.346154,
+        "confidence_explanation": "prior 0.90 x support 0.3846 (n=5, k=8) x coverage 1.00 = 0.346154",
+        "created_at": "2022-09-01T02:43:00#401954",
+        "id": "SO-3206e4f027d36224",
+        "meaning": "The party's own observed transaction tempo.",
+        "object_class": "profile",
+        "origin": "SI-TempoRegime",
+        "subject_id": "1299:800D621B0",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800842F70",
+          "acct:1299:800D621B0",
+          "juris:France",
+          "cust:800723E70",
+          "acct:210575:8057461F0",
+          "juris:Germany"
+        ],
+        "supporting_facts": [
+          "mean 2.500 outbound events per 60-minute bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "TempoRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "currency": "Euro",
+          "high_mark": 7996.75,
+          "prior_events": 5,
+          "prior_max": 73027.75,
+          "window": "prior-only"
+        },
+        "confidence": 0.365385,
+        "confidence_explanation": "prior 0.95 x support 0.3846 (n=5, k=8) x coverage 1.00 = 0.365385",
+        "created_at": "2022-09-01T02:43:00#401954",
+        "id": "SO-4a3a8196d70e914f",
+        "meaning": "The party's own observed operating scale in one currency.",
+        "object_class": "profile",
+        "origin": "SI-ValueRegime",
+        "subject_id": "1299:800D621B0|Euro",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800842F70",
+          "acct:1299:800D621B0",
+          "juris:France",
+          "cust:800723E70",
+          "acct:210575:8057461F0",
+          "juris:Germany"
+        ],
+        "supporting_facts": [
+          "prior max 73027.75, p90 7996.75 Euro"
+        ],
+        "supporting_relationships": [],
+        "type": "ValueRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "ALLOW: Allow when the semantic reading is determined and no unqualified corroboration remains. Reading: CrossJurisdictionTransfer, RoutineValueTransfer.",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 61.57,
+    "beneficiary_account_id": "210575:8057461F0",
+    "country_id": "",
+    "currency": "Euro",
+    "id": "IBM-ML-00401956",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "61.57",
+      "from_bank": "1299",
+      "payment_currency": "Euro",
+      "to_bank": "210575"
+    },
+    "originator_account_id": "1299:800D621B0",
+    "payment_type": "Cheque",
+    "timestamp": "2022-09-01T02:43:00"
+  }
+}

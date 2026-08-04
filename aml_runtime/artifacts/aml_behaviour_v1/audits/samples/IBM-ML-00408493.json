@@ -1,0 +1,816 @@
+{
+  "behaviour": {
+    "behaviours": [
+      {
+        "causal_explanation": "One-to-many payment shape persisting across more than one time bucket.",
+        "confidence": 0.842434,
+        "confidence_explanation": "prior 0.85 x support 0.9911 (n=2227, k=20) x coverage 1.00 = 0.842434",
+        "counter_evidence": [
+          "2 inbound counterparties are not negligible"
+        ],
+        "created_at": "2022-09-01T02:55:00#408491",
+        "direction": "risk",
+        "id": "BO-9aa9fe8fe3bb35ea",
+        "interval": {
+          "end_minute": 27699835,
+          "horizon": "hours",
+          "span_minutes": 60,
+          "start_minute": 27699775
+        },
+        "meaning": "Sustained one-to-many payment shape across more than one time bucket.",
+        "origin": "BI-DistributionBehaviour",
+        "subject_id": "70:100428660",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States"
+        ],
+        "supporting_observations": [
+          "2227 distinct beneficiaries against 2 distinct payers",
+          "shape held across 2 hour buckets"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428660->37969:810511640"
+        ],
+        "supporting_semantic_objects": [
+          "SO-2dba1f08678b2e8f"
+        ],
+        "topic": "behaviour_shape",
+        "type": "DistributionBehaviour",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      },
+      {
+        "causal_explanation": "A wide fan-out concentrated inside one short bucket.",
+        "confidence": 0.763964,
+        "confidence_explanation": "prior 0.80 x support 0.9550 (n=212, k=10) x coverage 1.00 = 0.763964",
+        "counter_evidence": [],
+        "created_at": "2022-09-01T02:55:00#408491",
+        "direction": "risk",
+        "id": "BO-a909a0d5fe0ec1e0",
+        "interval": {
+          "end_minute": 27699835,
+          "horizon": "minutes",
+          "span_minutes": 15,
+          "start_minute": 27699820
+        },
+        "meaning": "Many distinct beneficiaries paid inside a single short bucket.",
+        "origin": "BI-FanOutDistribution",
+        "subject_id": "70:100428660",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States"
+        ],
+        "supporting_observations": [
+          "212 new beneficiaries inside the trailing 15-minute window"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428660->37969:810511640"
+        ],
+        "supporting_semantic_objects": [],
+        "topic": "behaviour_shape",
+        "type": "FanOutDistribution",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      },
+      {
+        "causal_explanation": "A previously stable value or tempo regime has broken.",
+        "confidence": 0.858117,
+        "confidence_explanation": "prior 0.86 x support 0.9978 (n=4558, k=10) x coverage 1.00 = 0.858117",
+        "counter_evidence": [],
+        "created_at": "2022-09-01T02:55:00#408491",
+        "direction": "risk",
+        "id": "BO-100ffcdda7fa8d4d",
+        "interval": {
+          "end_minute": 27699835,
+          "horizon": "hours",
+          "span_minutes": 60,
+          "start_minute": 27699775
+        },
+        "meaning": "A previously stable value or tempo regime has broken.",
+        "origin": "BI-UnexpectedBusinessCycle",
+        "subject_id": "70:100428660",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States"
+        ],
+        "supporting_observations": [
+          "a regime that held for 4558 observations has just broken"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428660->37969:810511640"
+        ],
+        "supporting_semantic_objects": [
+          "SO-6901bc5e5ac6fe9c"
+        ],
+        "topic": "behaviour_stability",
+        "type": "UnexpectedBusinessCycle",
+        "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+      }
+    ],
+    "layer_version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0",
+    "lifecycle": {
+      "age_minutes": 175,
+      "buckets_active": 2,
+      "distinct_counterparties": 2229,
+      "first_seen_minute": 27699660,
+      "horizons_filled": [
+        "minutes",
+        "hours"
+      ],
+      "horizons_unfillable": [
+        "days",
+        "weeks"
+      ],
+      "id": "LC-6e2e11a22c3575a9",
+      "idle_minutes": 0,
+      "observed_events": 4591,
+      "subject_id": "70:100428660"
+    },
+    "ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "ontology_version": "aml-behaviour-ontology/1.0",
+    "role": {
+      "confidence": 0.842434,
+      "explanation": "Role Distributor follows from DistributionBehaviour, FanOutDistribution",
+      "id": "RO-9bf0650764477cae",
+      "previous_role": "Distributor",
+      "role": "Distributor",
+      "since_minute": 27699660,
+      "subject_id": "70:100428660",
+      "supporting_behaviours": [
+        "BO-9aa9fe8fe3bb35ea",
+        "BO-a909a0d5fe0ec1e0"
+      ],
+      "tenure_minutes": 175,
+      "transition_count": 3,
+      "version": "aml-behaviour-ontology/1.0+aml-behaviour-inference/1.0"
+    },
+    "scenarios": [],
+    "stage": "Split",
+    "subject_id": "70:100428660",
+    "transaction_id": "IBM-ML-00408493",
+    "transition": null,
+    "withheld": [
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "SeasonalBusinessCycle"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "MonthlySalaryCadence"
+      },
+      {
+        "missing_inputs": [
+          "multi_week_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "LongTermDormancyReactivation"
+      },
+      {
+        "missing_inputs": [
+          "multi_year_history"
+        ],
+        "reason": "The observed window cannot supply this input; asserting the behaviour would fabricate a history.",
+        "type": "AnnualTaxCycle"
+      }
+    ]
+  },
+  "behaviour_rationale": "REVIEW: Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own. Role: Distributor. Behaviour: DistributionBehaviour, FanOutDistribution, UnexpectedBusinessCycle. Scenario: none matched.",
+  "behaviour_runtime_version": "aml-behaviour-runtime/1.0",
+  "conflicts": [],
+  "decision": {
+    "decision": "REVIEW",
+    "policy_ids": [
+      "SEM-P10"
+    ],
+    "rationale": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own."
+  },
+  "evidence": [
+    {
+      "confidence": 0.891989,
+      "direction": "mitigation",
+      "explanation": "The burst matches the party's own distribution shape. (High tempo that matches the party's own operational shape. Supporting: 809 outbound events in the current 60-minute bucket; own mean 1529.667 events per bucket.)",
+      "id": "E-97f9caf63131",
+      "metadata": {
+        "semantic_object_id": "SO-89e76696ffffbf34",
+        "semantic_type": "NormalOperationalBurst"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-M03-OPERATIONAL-BURST",
+      "source": "semantic-context/NormalOperationalBurst",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-8998ef76fdb1"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "tempo_regime"
+    },
+    {
+      "confidence": 0.817778,
+      "direction": "risk",
+      "explanation": "Value left the party's own established regime. (Value is materially outside the party's own established regime. Supporting: amount 11483117.77 US Dollar; own prior max 1940949.28; own p90 40056.93.)",
+      "id": "E-c268322e748d",
+      "metadata": {
+        "semantic_object_id": "SO-6901bc5e5ac6fe9c",
+        "semantic_type": "UnexpectedLargeTransfer"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-R01-VALUE-REGIME-BREAK",
+      "source": "semantic-context/UnexpectedLargeTransfer",
+      "source_reliability": 0.9,
+      "supporting_facts": [
+        "SF-79b9673e3da5"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "value_regime"
+    },
+    {
+      "confidence": 0.425,
+      "direction": "risk",
+      "explanation": "Settlement carries no counterparty audit trail. (Settlement instrument carries no counterparty audit trail. Supporting: payment format Cash.)",
+      "id": "E-d9b010d66bb4",
+      "metadata": {
+        "semantic_object_id": "SO-d4e10cb4e33c4766",
+        "semantic_type": "CashInstrumentSettlement"
+      },
+      "recency_days": 0,
+      "rule_id": "SEM-R07-CASH-INSTRUMENT",
+      "source": "semantic-context/CashInstrumentSettlement",
+      "source_reliability": 0.6,
+      "supporting_facts": [
+        "SF-897dbd629df7"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "settlement_instrument"
+    },
+    {
+      "confidence": 0.842434,
+      "direction": "risk",
+      "explanation": "Sustained one-to-many payment shape across more than one time bucket. (One-to-many payment shape persisting across more than one time bucket.)",
+      "id": "E-52d6eed39cec",
+      "metadata": {
+        "behaviour_object_id": "BO-9aa9fe8fe3bb35ea",
+        "behaviour_type": "DistributionBehaviour",
+        "horizon": "hours",
+        "interval_span_minutes": "60"
+      },
+      "recency_days": 0,
+      "rule_id": "BEH-DistributionBehaviour",
+      "source": "behaviour-layer/DistributionBehaviour",
+      "source_reliability": 0.85,
+      "supporting_facts": [
+        "BF-728dcb6f25d4"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "behaviour_shape"
+    },
+    {
+      "confidence": 0.763964,
+      "direction": "risk",
+      "explanation": "Many distinct beneficiaries paid inside a single short bucket. (A wide fan-out concentrated inside one short bucket.)",
+      "id": "E-af45c0e80269",
+      "metadata": {
+        "behaviour_object_id": "BO-a909a0d5fe0ec1e0",
+        "behaviour_type": "FanOutDistribution",
+        "horizon": "minutes",
+        "interval_span_minutes": "15"
+      },
+      "recency_days": 0,
+      "rule_id": "BEH-FanOutDistribution",
+      "source": "behaviour-layer/FanOutDistribution",
+      "source_reliability": 0.8,
+      "supporting_facts": [
+        "BF-114021aa2a64"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "behaviour_shape"
+    },
+    {
+      "confidence": 0.858117,
+      "direction": "risk",
+      "explanation": "A previously stable value or tempo regime has broken. (A previously stable value or tempo regime has broken.)",
+      "id": "E-9570bf0163e1",
+      "metadata": {
+        "behaviour_object_id": "BO-100ffcdda7fa8d4d",
+        "behaviour_type": "UnexpectedBusinessCycle",
+        "horizon": "hours",
+        "interval_span_minutes": "60"
+      },
+      "recency_days": 0,
+      "rule_id": "BEH-UnexpectedBusinessCycle",
+      "source": "behaviour-layer/UnexpectedBusinessCycle",
+      "source_reliability": 0.86,
+      "supporting_facts": [
+        "BF-2477410c17a1"
+      ],
+      "timestamp": "2022-09-01T02:55:00",
+      "topic": "behaviour_stability"
+    }
+  ],
+  "facts": [
+    {
+      "confidence": 0.425,
+      "explanation": "Settlement instrument carries no counterparty audit trail. Supporting: payment format Cash.",
+      "id": "SF-897dbd629df7",
+      "provenance": "semantic-object/SI-CashInstrumentSettlement",
+      "semantic_object_id": "SO-d4e10cb4e33c4766",
+      "subject_id": "IBM-ML-00408493",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "CashInstrumentSettlement"
+    },
+    {
+      "confidence": 0.891989,
+      "explanation": "High tempo that matches the party's own operational shape. Supporting: 809 outbound events in the current 60-minute bucket; own mean 1529.667 events per bucket.",
+      "id": "SF-8998ef76fdb1",
+      "provenance": "semantic-object/SI-NormalOperationalBurst",
+      "semantic_object_id": "SO-89e76696ffffbf34",
+      "subject_id": "70:100428660",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "NormalOperationalBurst"
+    },
+    {
+      "confidence": 0.817778,
+      "explanation": "Value is materially outside the party's own established regime. Supporting: amount 11483117.77 US Dollar; own prior max 1940949.28; own p90 40056.93.",
+      "id": "SF-79b9673e3da5",
+      "provenance": "semantic-object/SI-UnexpectedLargeTransfer",
+      "semantic_object_id": "SO-6901bc5e5ac6fe9c",
+      "subject_id": "IBM-ML-00408493",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "UnexpectedLargeTransfer"
+    },
+    {
+      "behaviour_object_id": "BO-9aa9fe8fe3bb35ea",
+      "confidence": 0.842434,
+      "explanation": "One-to-many payment shape persisting across more than one time bucket. Observed: 2227 distinct beneficiaries against 2 distinct payers; shape held across 2 hour buckets. Against: 2 inbound counterparties are not negligible.",
+      "id": "BF-728dcb6f25d4",
+      "provenance": "behaviour-object/BI-DistributionBehaviour",
+      "subject_id": "70:100428660",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "DistributionBehaviour"
+    },
+    {
+      "behaviour_object_id": "BO-a909a0d5fe0ec1e0",
+      "confidence": 0.763964,
+      "explanation": "A wide fan-out concentrated inside one short bucket. Observed: 212 new beneficiaries inside the trailing 15-minute window.",
+      "id": "BF-114021aa2a64",
+      "provenance": "behaviour-object/BI-FanOutDistribution",
+      "subject_id": "70:100428660",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "FanOutDistribution"
+    },
+    {
+      "behaviour_object_id": "BO-100ffcdda7fa8d4d",
+      "confidence": 0.858117,
+      "explanation": "A previously stable value or tempo regime has broken. Observed: a regime that held for 4558 observations has just broken.",
+      "id": "BF-2477410c17a1",
+      "provenance": "behaviour-object/BI-UnexpectedBusinessCycle",
+      "subject_id": "70:100428660",
+      "timestamp": "2022-09-01T02:55:00",
+      "type": "UnexpectedBusinessCycle"
+    }
+  ],
+  "frozen_runtime_decision": "BLOCK",
+  "laundering_label_evaluation_only": 0,
+  "ml_evidence": null,
+  "policies": [
+    {
+      "evidence_ids": [
+        "E-c268322e748d",
+        "E-d9b010d66bb4",
+        "E-52d6eed39cec",
+        "E-af45c0e80269",
+        "E-9570bf0163e1"
+      ],
+      "explanation": "Block a network layering motif corroborated by an independent semantic topic.",
+      "metrics": {
+        "effective_risk": 0.999447,
+        "independent_unqualified_topics": 4,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.858117,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "BLOCK",
+      "policy_id": "SEM-P01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-c268322e748d",
+        "E-d9b010d66bb4",
+        "E-52d6eed39cec",
+        "E-af45c0e80269",
+        "E-9570bf0163e1"
+      ],
+      "explanation": "Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own.",
+      "metrics": {
+        "effective_risk": 0.999447,
+        "independent_unqualified_topics": 4,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.858117,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "REVIEW",
+      "policy_id": "SEM-P10",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [
+        "E-97f9caf63131",
+        "E-c268322e748d",
+        "E-d9b010d66bb4",
+        "E-52d6eed39cec",
+        "E-af45c0e80269",
+        "E-9570bf0163e1"
+      ],
+      "explanation": "Allow when the semantic reading is determined and no unqualified corroboration remains.",
+      "metrics": {
+        "effective_risk": 0.999447,
+        "independent_unqualified_topics": 4,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.858117,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "ALLOW",
+      "policy_id": "SEM-P20",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the semantic state is undetermined: no baseline exists for this party, or the value has no reference frame.",
+      "metrics": {
+        "effective_risk": 0.999447,
+        "independent_unqualified_topics": 4,
+        "policy_version": "aml-semantic-policy/1.0",
+        "qualified_risk_count": 0,
+        "semantic_state": "determined",
+        "strongest_unqualified_confidence": 0.858117,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "SEM-P00",
+      "triggered": false
+    }
+  ],
+  "replay_pins": {
+    "behaviour_layer_hash": "062fec68c82db5c8c247bd80367be9d280783b00f077d6c49c8cfbcf434620c4",
+    "behaviour_object_set_hash": "53896b3749d28648c546f4c93209d9e71cf55138d243defdfc2aa210c240ddce",
+    "behaviour_ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "behaviour_projection_hash": "de388fc9392ad5123dc110741efb722bb1fdfba87a445c45cbdf85b41906cf3b",
+    "context_state_hash": "5f1d7626574a8d2f7ee4501eb010402c",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "inference_rules_hash": "b9aa7f1d7ccef3d2422b1aba3565f14935f0821109b9295c0ea5baa9210db4bf",
+    "input_snapshot_hash": "7064e519553e2b49268da718e474e8ea05074b56471fb8515beee9e7095e2621",
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "policy_hash": "55a1438aefb33b3ef8beaf064f63a07fe07221e01377a03ed31fa3578773d5b5",
+    "role_state_hash": "2c68344a6f91fad72ee2cfc5aa160362af75934dcf06d4494367a60a57c9b869",
+    "semantic_object_set_hash": "e97a1a7ecd3192907646e1729da10cf4ef96a5d6a545848a3ff54e03889feb85",
+    "semantic_rules_hash": "8b62a3250619d4213da97da9402660e402223d59524d5eb487378932d2a469b8"
+  },
+  "routed_to_ml": false,
+  "semantic": {
+    "context_state_hash": "5f1d7626574a8d2f7ee4501eb010402c",
+    "context_version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0",
+    "coverage_gaps": [
+      "sar_feed",
+      "kyc_dates",
+      "sanctions_list",
+      "source_of_funds",
+      "declared_activity",
+      "multi_month_history"
+    ],
+    "objects": [
+      {
+        "causal_evidence": {
+          "payment_format": "Cash",
+          "window": "prior-only"
+        },
+        "confidence": 0.425,
+        "confidence_explanation": "prior 0.85 x support 0.5000 (n=1, k=1) x coverage 1.00 = 0.425000",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-d4e10cb4e33c4766",
+        "meaning": "Settlement instrument carries no counterparty audit trail.",
+        "object_class": "event",
+        "origin": "SI-CashInstrumentSettlement",
+        "subject_id": "IBM-ML-00408493",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "payment format Cash"
+        ],
+        "supporting_relationships": [],
+        "type": "CashInstrumentSettlement",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "prior_distinct_counterparties": 2227,
+          "window": "prior-only"
+        },
+        "confidence": 0.896779,
+        "confidence_explanation": "prior 0.90 x support 0.9964 (n=2227, k=8) x coverage 1.00 = 0.896779",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-713f6a1b8062981e",
+        "meaning": "The counterparty set the party normally uses.",
+        "object_class": "profile",
+        "origin": "SI-CounterpartyRegime",
+        "subject_id": "70:100428660",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "2227 distinct prior counterparties"
+        ],
+        "supporting_relationships": [],
+        "type": "CounterpartyRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "in_distinct": 2,
+          "out_distinct": 2227,
+          "window": "prior-only"
+        },
+        "confidence": 0.911811,
+        "confidence_explanation": "prior 0.92 x support 0.9911 (n=2227, k=20) x coverage 1.00 = 0.911811",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-2dba1f08678b2e8f",
+        "meaning": "One-to-many payer: a settlement or payroll-operator shape.",
+        "object_class": "profile",
+        "origin": "SI-DistributionNode",
+        "subject_id": "70:100428660",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "out-degree 2227 vs in-degree 2"
+        ],
+        "supporting_relationships": [],
+        "type": "DistributionNode",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "burst": 809,
+          "mean_bucket_rate": 1529.666667,
+          "prior_outbound_events": 4589,
+          "shift_multiple": 4.0,
+          "window": "prior-only"
+        },
+        "confidence": 0.891989,
+        "confidence_explanation": "prior 0.90 x support 0.9911 (n=2227, k=20) x coverage 1.00 = 0.891989",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-89e76696ffffbf34",
+        "meaning": "High tempo that matches the party's own operational shape.",
+        "object_class": "event",
+        "origin": "SI-NormalOperationalBurst",
+        "subject_id": "70:100428660",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "809 outbound events in the current 60-minute bucket",
+          "own mean 1529.667 events per bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "NormalOperationalBurst",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "pair_prior_count": 2,
+          "prior_distinct_counterparties": 2227,
+          "window": "prior-only"
+        },
+        "confidence": 0.15,
+        "confidence_explanation": "prior 0.75 x support 0.2000 (n=2, k=8) x coverage 1.00 = 0.150000",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-a688a9dbc415d743",
+        "meaning": "A counterparty relationship formed within the observed window.",
+        "object_class": "relationship",
+        "origin": "SI-RecentlyCreatedRelationship",
+        "subject_id": "rel:70:100428660->37969:810511640",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "2 prior payments on this pair"
+        ],
+        "supporting_relationships": [
+          "rel:70:100428660->37969:810511640"
+        ],
+        "type": "RecentlyCreatedRelationship",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "mean_bucket_rate": 1529.666667,
+          "prior_outbound_events": 4589,
+          "window": "prior-only"
+        },
+        "confidence": 0.898434,
+        "confidence_explanation": "prior 0.90 x support 0.9983 (n=4589, k=8) x coverage 1.00 = 0.898434",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-9ca77e464a430b00",
+        "meaning": "The party's own observed transaction tempo.",
+        "object_class": "profile",
+        "origin": "SI-TempoRegime",
+        "subject_id": "70:100428660",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "mean 1529.667 outbound events per 60-minute bucket"
+        ],
+        "supporting_relationships": [],
+        "type": "TempoRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "amount": 11483117.77,
+          "break_multiple": 4.0,
+          "currency": "US Dollar",
+          "high_mark": 40056.93,
+          "prior_events": 64,
+          "prior_max": 1940949.28,
+          "window": "prior-only"
+        },
+        "confidence": 0.817778,
+        "confidence_explanation": "prior 0.92 x support 0.8889 (n=64, k=8) x coverage 1.00 = 0.817778",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-6901bc5e5ac6fe9c",
+        "meaning": "Value is materially outside the party's own established regime.",
+        "object_class": "event",
+        "origin": "SI-UnexpectedLargeTransfer",
+        "subject_id": "IBM-ML-00408493",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "amount 11483117.77 US Dollar",
+          "own prior max 1940949.28",
+          "own p90 40056.93"
+        ],
+        "supporting_relationships": [],
+        "type": "UnexpectedLargeTransfer",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      },
+      {
+        "causal_evidence": {
+          "currency": "US Dollar",
+          "high_mark": 40056.93,
+          "prior_events": 64,
+          "prior_max": 1940949.28,
+          "window": "prior-only"
+        },
+        "confidence": 0.844444,
+        "confidence_explanation": "prior 0.95 x support 0.8889 (n=64, k=8) x coverage 1.00 = 0.844444",
+        "created_at": "2022-09-01T02:55:00#408491",
+        "id": "SO-823eed043d7d75a7",
+        "meaning": "The party's own observed operating scale in one currency.",
+        "object_class": "profile",
+        "origin": "SI-ValueRegime",
+        "subject_id": "70:100428660|US Dollar",
+        "supersedes": "",
+        "supporting_entities": [
+          "cust:800B93710",
+          "acct:70:100428660",
+          "juris:United States",
+          "cust:8005B6050",
+          "acct:37969:810511640",
+          "juris:United States"
+        ],
+        "supporting_facts": [
+          "prior max 1940949.28, p90 40056.93 US Dollar"
+        ],
+        "supporting_relationships": [],
+        "type": "ValueRegime",
+        "version": "aml-semantic-ontology/1.0+aml-semantic-inference/1.0"
+      }
+    ],
+    "ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "ontology_version": "aml-semantic-ontology/1.0",
+    "withheld": [
+      {
+        "missing_inputs": [
+          "payroll_calendar",
+          "employment_relationship"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SalaryDistribution"
+      },
+      {
+        "missing_inputs": [
+          "loan_account",
+          "amortisation_schedule"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "MortgagePayment"
+      },
+      {
+        "missing_inputs": [
+          "tax_authority_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "TaxPayment"
+      },
+      {
+        "missing_inputs": [
+          "shareholder_registry"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DividendDistribution"
+      },
+      {
+        "missing_inputs": [
+          "multi_month_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "DormantRelationshipReactivated"
+      },
+      {
+        "missing_inputs": [
+          "multi_season_history"
+        ],
+        "reason": "Input absent from this source; asserting the type would fabricate meaning.",
+        "type": "SeasonalBusiness"
+      }
+    ]
+  },
+  "semantic_rationale": "REVIEW: Review when at least two independent semantic topics remain unqualified, or a single high-concern topic is strong on its own. Reading: CashInstrumentSettlement, NormalOperationalBurst, UnexpectedLargeTransfer.",
+  "semantic_runtime_decision": "REVIEW",
+  "semantic_runtime_version": "aml-semantic-runtime/1.0",
+  "transaction": {
+    "alert_id": "",
+    "amount": 11483117.77,
+    "beneficiary_account_id": "37969:810511640",
+    "country_id": "",
+    "currency": "US Dollar",
+    "id": "IBM-ML-00408493",
+    "is_sar": false,
+    "metadata": {
+      "amount_paid": "11483117.77",
+      "from_bank": "70",
+      "payment_currency": "US Dollar",
+      "to_bank": "37969"
+    },
+    "originator_account_id": "70:100428660",
+    "payment_type": "Cash",
+    "timestamp": "2022-09-01T02:55:00"
+  }
+}
