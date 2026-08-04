@@ -1,0 +1,263 @@
+{
+  "audit_id": "AUD-802b03f83857",
+  "conflicts": [],
+  "dataset_fingerprint": "57135ae8ec8e8ad1cb99ceaed63d9aa8e3134357831c14bba9ebf5c861a002a2",
+  "decision": {
+    "decision": "BLOCK",
+    "policy_ids": [
+      "AML-01",
+      "AML-02"
+    ],
+    "rationale": "Block an unqualified known-SAR originator."
+  },
+  "evidence": [
+    {
+      "confidence": 0.91,
+      "direction": "risk",
+      "explanation": "Large-transfer rule matched: LargeTransfer.",
+      "id": "E-bcb032d81ebc",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R01-LARGE",
+      "source": "AML-R01-LARGE",
+      "source_reliability": 0.98,
+      "supporting_facts": [
+        "F-37b10789747c"
+      ],
+      "timestamp": "2026-07-26T08:00:00",
+      "topic": "transaction_value"
+    },
+    {
+      "confidence": 0.95,
+      "direction": "risk",
+      "explanation": "High-risk-jurisdiction rule matched: HighRiskCountry.",
+      "id": "E-7cee544334cc",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R02-JURISDICTION",
+      "source": "AML-R02-JURISDICTION",
+      "source_reliability": 0.99,
+      "supporting_facts": [
+        "F-cd2bffba7ec7"
+      ],
+      "timestamp": "2026-07-26T08:00:00",
+      "topic": "jurisdiction"
+    },
+    {
+      "confidence": 0.99,
+      "direction": "risk",
+      "explanation": "Known-suspicious-account rule matched: PreviousSAR.",
+      "id": "E-35ea90c30793",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R04-SAR",
+      "source": "AML-R04-SAR",
+      "source_reliability": 0.99,
+      "supporting_facts": [
+        "F-e39e5ee426b7"
+      ],
+      "timestamp": "2026-07-26T08:00:00",
+      "topic": "known_suspicion"
+    },
+    {
+      "confidence": 0.98,
+      "direction": "risk",
+      "explanation": "Connection-to-SAR rule matched: ConnectedToSAR.",
+      "id": "E-ba7f331f39ee",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R05-SAR-CONNECTION",
+      "source": "AML-R05-SAR-CONNECTION",
+      "source_reliability": 0.86,
+      "supporting_facts": [
+        "F-8195db5160a1"
+      ],
+      "timestamp": "2026-07-26T08:00:00",
+      "topic": "known_suspicion"
+    },
+    {
+      "confidence": 0.86,
+      "direction": "risk",
+      "explanation": "Stale-KYC rule matched: OldKYC.",
+      "id": "E-8219c38af84b",
+      "metadata": {},
+      "recency_days": 1302,
+      "rule_id": "AML-R06-KYC",
+      "source": "AML-R06-KYC",
+      "source_reliability": 0.78,
+      "supporting_facts": [
+        "F-76391d911f74"
+      ],
+      "timestamp": "2026-07-26T08:00:00",
+      "topic": "kyc_recency"
+    }
+  ],
+  "execution_time_model": "deterministic-logical-clock",
+  "execution_time_ms": 0,
+  "facts": [
+    {
+      "confidence": 0.98,
+      "explanation": "Beneficiary is connected to a SAR-flagged account by path B-400.",
+      "id": "F-8195db5160a1",
+      "provenance": "transaction-graph",
+      "subject_id": "TX-1006",
+      "timestamp": "2026-07-26T08:00:00",
+      "type": "ConnectedToSAR",
+      "value": "B-400"
+    },
+    {
+      "confidence": 0.95,
+      "explanation": "Destination jurisdiction IR is on the configured high-risk jurisdiction list.",
+      "id": "F-cd2bffba7ec7",
+      "provenance": "jurisdiction-list/v1",
+      "subject_id": "TX-1006",
+      "timestamp": "2026-07-26T08:00:00",
+      "type": "HighRiskCountry",
+      "value": "IR"
+    },
+    {
+      "confidence": 0.91,
+      "explanation": "Amount 75000.00 exceeds the 50000 monitoring threshold.",
+      "id": "F-37b10789747c",
+      "provenance": "transaction.amount",
+      "subject_id": "TX-1006",
+      "timestamp": "2026-07-26T08:00:00",
+      "type": "LargeTransfer",
+      "value": "75000.00"
+    },
+    {
+      "confidence": 0.86,
+      "explanation": "KYC was last updated 1302 days before this transaction.",
+      "id": "F-76391d911f74",
+      "provenance": "account.kyc_updated_at",
+      "subject_id": "TX-1006",
+      "timestamp": "2026-07-26T08:00:00",
+      "type": "OldKYC",
+      "value": "1302"
+    },
+    {
+      "confidence": 0.99,
+      "explanation": "The originator account has a known SAR/laundering flag in the supplied AMLSim data.",
+      "id": "F-e39e5ee426b7",
+      "provenance": "account.is_sar",
+      "subject_id": "TX-1006",
+      "timestamp": "2026-07-26T08:00:00",
+      "type": "PreviousSAR",
+      "value": "A-500"
+    }
+  ],
+  "policies": [
+    {
+      "evidence_ids": [
+        "E-35ea90c30793"
+      ],
+      "explanation": "Block an unqualified known-SAR originator.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 1.0,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "BLOCK",
+      "policy_id": "AML-01",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [
+        "E-ba7f331f39ee",
+        "E-bcb032d81ebc"
+      ],
+      "explanation": "Block an unqualified SAR connection corroborated by transfer severity.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 1.0,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "BLOCK",
+      "policy_id": "AML-02",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [
+        "E-bcb032d81ebc"
+      ],
+      "explanation": "Block only when large value, velocity, and behavioural evidence independently corroborate a high effective-risk score.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 1.0,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "BLOCK",
+      "policy_id": "AML-20",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-bcb032d81ebc",
+        "E-7cee544334cc",
+        "E-35ea90c30793",
+        "E-ba7f331f39ee",
+        "E-8219c38af84b"
+      ],
+      "explanation": "Review material unqualified risk; isolated low-severity behavioural novelty is not sufficient.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 1.0,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "REVIEW",
+      "policy_id": "AML-21",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-bcb032d81ebc",
+        "E-7cee544334cc",
+        "E-35ea90c30793",
+        "E-ba7f331f39ee",
+        "E-8219c38af84b"
+      ],
+      "explanation": "Allow when available evidence remains below the review threshold after explicit conflict qualification.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 1.0,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "ALLOW",
+      "policy_id": "AML-22",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the supplied data yields neither risk nor control evidence.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 1.0,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 5
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "AML-00",
+      "triggered": false
+    }
+  ],
+  "rules": [
+    "AML-R01-LARGE",
+    "AML-R02-JURISDICTION",
+    "AML-R04-SAR",
+    "AML-R05-SAR-CONNECTION",
+    "AML-R06-KYC"
+  ],
+  "runtime_version": "aml-decision-runtime/0.2.0",
+  "transaction_id": "TX-1006"
+}

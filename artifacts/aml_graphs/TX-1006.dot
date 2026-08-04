@@ -1,0 +1,36 @@
+digraph aml_decision {
+  rankdir=LR;
+  graph [fontname=Helvetica];
+  node [fontname=Helvetica];
+  tx [shape=box, style="rounded,filled", fillcolor="#dbeafe", label="Transaction\nTX-1006\n$75,000.00"];
+  origin [shape=ellipse, label="Account\nA-500"];
+  beneficiary [shape=ellipse, label="Account\nB-400"];
+  origin -> tx [label=originates];
+  tx -> beneficiary [label=beneficiary];
+  fact_0 [shape=note, fillcolor="#fef3c7", style=filled, label="Fact\nConnectedToSAR"];
+  tx -> fact_0;
+  fact_1 [shape=note, fillcolor="#fef3c7", style=filled, label="Fact\nHighRiskCountry"];
+  tx -> fact_1;
+  fact_2 [shape=note, fillcolor="#fef3c7", style=filled, label="Fact\nLargeTransfer"];
+  tx -> fact_2;
+  fact_3 [shape=note, fillcolor="#fef3c7", style=filled, label="Fact\nOldKYC"];
+  tx -> fact_3;
+  fact_4 [shape=note, fillcolor="#fef3c7", style=filled, label="Fact\nPreviousSAR"];
+  tx -> fact_4;
+  evidence_0 [shape=component, fillcolor="#fee2e2", style=filled, label="Evidence\nAML-R01-LARGE"];
+  fact_2 -> evidence_0;
+  evidence_1 [shape=component, fillcolor="#fee2e2", style=filled, label="Evidence\nAML-R02-JURISDICTION"];
+  fact_1 -> evidence_1;
+  evidence_2 [shape=component, fillcolor="#fee2e2", style=filled, label="Evidence\nAML-R04-SAR"];
+  fact_4 -> evidence_2;
+  evidence_3 [shape=component, fillcolor="#fee2e2", style=filled, label="Evidence\nAML-R05-SAR-CONNECTION"];
+  fact_0 -> evidence_3;
+  evidence_4 [shape=component, fillcolor="#fee2e2", style=filled, label="Evidence\nAML-R06-KYC"];
+  fact_3 -> evidence_4;
+  decision [shape=doubleoctagon, style="filled,bold", fillcolor="#ddd6fe", label="Decision\nBLOCK"];
+  evidence_0 -> decision;
+  evidence_1 -> decision;
+  evidence_2 -> decision;
+  evidence_3 -> decision;
+  evidence_4 -> decision;
+}

@@ -1,0 +1,543 @@
+{
+  "causality": {
+    "edges_committed_after_decision": true,
+    "laundering_labels_passed_to_runtime": false,
+    "transactions_processed_in_chronological_order": true
+  },
+  "chronological_sample": {
+    "first_timestamp": "2022-09-01T00:00:00",
+    "graph_nodes": 105585,
+    "last_timestamp": "2022-09-01T00:09:00",
+    "processed_transactions": 100000,
+    "requested_transactions": 100000,
+    "temporal_edge_events": 100000,
+    "unique_accounts": 105585,
+    "unique_undirected_account_edges": 57994
+  },
+  "dataset": {
+    "accepted_rows": 5078345,
+    "account_file": "data/ibm_aml_data/HI-Small_accounts.csv",
+    "file_size_bytes": 475664283,
+    "rejected_rows": 0,
+    "rejection_reasons": {},
+    "schema": [
+      "Timestamp",
+      "From Bank",
+      "Account",
+      "To Bank",
+      "Account",
+      "Amount Received",
+      "Receiving Currency",
+      "Amount Paid",
+      "Payment Currency",
+      "Payment Format",
+      "Is Laundering"
+    ],
+    "source_account_rows": 518581,
+    "source_rows": 5078345,
+    "source_sha256": "049388cefc464bb7d6de37bd8c2a0df4ecb0586fee1e1eda465918ebbe6c1987",
+    "transaction_file": "data/ibm_aml_data/HI-Small_Trans.csv"
+  },
+  "evaluation": {
+    "audit_records_produced": 100000,
+    "conflicts_produced": 0,
+    "confusion_style_table": [
+      {
+        "ABSTAIN": 0,
+        "ALLOW": 2,
+        "BLOCK": 0,
+        "REVIEW": 5,
+        "laundering_label": "laundering"
+      },
+      {
+        "ABSTAIN": 4381,
+        "ALLOW": 70295,
+        "BLOCK": 590,
+        "REVIEW": 24727,
+        "laundering_label": "non_laundering"
+      }
+    ],
+    "decision_distribution": {
+      "ABSTAIN": 4381,
+      "ALLOW": 70297,
+      "BLOCK": 590,
+      "REVIEW": 24732
+    },
+    "decision_distribution_by_laundering_label": {
+      "laundering": {
+        "ABSTAIN": 0,
+        "ALLOW": 2,
+        "BLOCK": 0,
+        "REVIEW": 5
+      },
+      "non_laundering": {
+        "ABSTAIN": 4381,
+        "ALLOW": 70295,
+        "BLOCK": 590,
+        "REVIEW": 24727
+      }
+    },
+    "laundering_label_distribution": {
+      "laundering": 7,
+      "non_laundering": 99993
+    },
+    "representative_cases": [
+      {
+        "amount": 34254.65,
+        "conflict_count": 0,
+        "decision": "ALLOW",
+        "fact_types": [
+          "NewBeneficiary"
+        ],
+        "laundering_label": "laundering",
+        "timestamp": "2022-09-01T00:04:00",
+        "transaction_id": "IBM-AML-DATA-00318129"
+      },
+      {
+        "amount": 792.92,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "NewBeneficiary",
+          "VelocityIncrease"
+        ],
+        "laundering_label": "laundering",
+        "timestamp": "2022-09-01T00:01:00",
+        "transaction_id": "IBM-AML-DATA-00069154"
+      },
+      {
+        "amount": 99986.94,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00000160"
+      },
+      {
+        "amount": 6630.59,
+        "conflict_count": 0,
+        "decision": "ABSTAIN",
+        "fact_types": [],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00002953"
+      },
+      {
+        "amount": 145397.31,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00000589"
+      },
+      {
+        "amount": 65669.07,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00000610"
+      },
+      {
+        "amount": 560045.98,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00000679"
+      },
+      {
+        "amount": 350954.69,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00000832"
+      },
+      {
+        "amount": 324859.13,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00001296"
+      },
+      {
+        "amount": 64643.09,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00001358"
+      }
+    ],
+    "representative_cases_by_category": {
+      "abstained": {
+        "amount": 6630.59,
+        "conflict_count": 0,
+        "decision": "ABSTAIN",
+        "fact_types": [],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00002953"
+      },
+      "laundering_allowed": {
+        "amount": 34254.65,
+        "conflict_count": 0,
+        "decision": "ALLOW",
+        "fact_types": [
+          "NewBeneficiary"
+        ],
+        "laundering_label": "laundering",
+        "timestamp": "2022-09-01T00:04:00",
+        "transaction_id": "IBM-AML-DATA-00318129"
+      },
+      "laundering_reviewed": {
+        "amount": 792.92,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "NewBeneficiary",
+          "VelocityIncrease"
+        ],
+        "laundering_label": "laundering",
+        "timestamp": "2022-09-01T00:01:00",
+        "transaction_id": "IBM-AML-DATA-00069154"
+      },
+      "non_laundering_reviewed_or_blocked": {
+        "amount": 99986.94,
+        "conflict_count": 0,
+        "decision": "REVIEW",
+        "fact_types": [
+          "LargeTransfer",
+          "NewBeneficiary"
+        ],
+        "laundering_label": "non_laundering",
+        "timestamp": "2022-09-01T00:00:00",
+        "transaction_id": "IBM-AML-DATA-00000160"
+      }
+    },
+    "rules_triggered": 119582,
+    "unavailable_representative_categories": [
+      "laundering_blocked",
+      "conflict"
+    ]
+  },
+  "performance": {
+    "average_latency_ms": 0.25011745028,
+    "end_to_end_seconds": 44.744295999989845,
+    "p95_latency_ms": 0.33975,
+    "peak_memory_bytes": 271695872,
+    "runtime_seconds": 26.97763083409518,
+    "scan_and_selection_seconds": 17.19528091698885
+  },
+  "research_artifacts": {
+    "chart_path": "artifacts/ibm_aml_data_v02_charts.svg",
+    "publication_report_path": "docs/aml_runtime_v0_2_report.md"
+  },
+  "research_metrics": {
+    "average_audit_size_bytes": 4430.82099,
+    "average_decision_depth": 3.39164,
+    "average_evidence_count": 1.19582,
+    "average_evidence_graph_edges": 3.58746,
+    "average_evidence_graph_nodes": 5.39164,
+    "conflict_dimensions": {},
+    "conflict_frequency": 0.0,
+    "conflicts_by_kind": {},
+    "contribution_definition": "Rule present in a decision evidence set; observational co-occurrence, not causal attribution.",
+    "decision_depth_definition": "facts + evidence + conflicts + triggered policies",
+    "decision_distribution": {
+      "ABSTAIN": 4381,
+      "ALLOW": 70297,
+      "BLOCK": 590,
+      "REVIEW": 24732
+    },
+    "evidence_count_distribution": {
+      "0": 4381,
+      "1": 72246,
+      "2": 22783,
+      "3": 590
+    },
+    "evidence_count_entropy_bits": 1.06641,
+    "evidence_distribution": {
+      "AML-R01-LARGE": 23772,
+      "AML-R03-VELOCITY": 2323,
+      "AML-R07-BEHAVIOUR": 93487
+    },
+    "evidence_entropy_bits": 0.851432,
+    "policy_activation_counts": {
+      "AML-00": 4381,
+      "AML-20": 590,
+      "AML-21": 24732,
+      "AML-22": 70297
+    },
+    "policy_activation_frequency": {
+      "AML-00": 0.04381,
+      "AML-20": 0.0059,
+      "AML-21": 0.24732,
+      "AML-22": 0.70297
+    },
+    "rule_activation_frequency": {
+      "AML-R01-LARGE": 0.23772,
+      "AML-R02-JURISDICTION": 0.0,
+      "AML-R03-VELOCITY": 0.02323,
+      "AML-R04-SAR": 0.0,
+      "AML-R05-SAR-CONNECTION": 0.0,
+      "AML-R06-KYC": 0.0,
+      "AML-R07-BEHAVIOUR": 0.93487,
+      "AML-R08-SOURCE-FUNDS": 0.0,
+      "AML-R09-MANUAL-KYC": 0.0,
+      "AML-R10-PAYROLL": 0.0
+    },
+    "rule_contribution": {
+      "AML-R01-LARGE": {
+        "activation_count": 23772,
+        "average_confidence": 0.91,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 590,
+        "contribution_to_review": 23182
+      },
+      "AML-R02-JURISDICTION": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      },
+      "AML-R03-VELOCITY": {
+        "activation_count": 2323,
+        "average_confidence": 0.88,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 590,
+        "contribution_to_review": 1733
+      },
+      "AML-R04-SAR": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      },
+      "AML-R05-SAR-CONNECTION": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      },
+      "AML-R06-KYC": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      },
+      "AML-R07-BEHAVIOUR": {
+        "activation_count": 93487,
+        "average_confidence": 0.84,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 70297,
+        "contribution_to_block": 590,
+        "contribution_to_review": 22600
+      },
+      "AML-R08-SOURCE-FUNDS": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      },
+      "AML-R09-MANUAL-KYC": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      },
+      "AML-R10-PAYROLL": {
+        "activation_count": 0,
+        "average_confidence": 0.0,
+        "contribution_to_abstain": 0,
+        "contribution_to_allow": 0,
+        "contribution_to_block": 0,
+        "contribution_to_review": 0
+      }
+    },
+    "rule_interactions": [
+      {
+        "coactivation_count": 22013,
+        "rule_a": "AML-R01-LARGE",
+        "rule_b": "AML-R07-BEHAVIOUR"
+      },
+      {
+        "coactivation_count": 1767,
+        "rule_a": "AML-R03-VELOCITY",
+        "rule_b": "AML-R07-BEHAVIOUR"
+      },
+      {
+        "coactivation_count": 773,
+        "rule_a": "AML-R01-LARGE",
+        "rule_b": "AML-R03-VELOCITY"
+      }
+    ],
+    "transactions_measured": 100000
+  },
+  "smoke_transactions": [
+    {
+      "evaluation_laundering_label": false,
+      "occurred_at": "2022-09-01T00:20:00",
+      "source_line": 2,
+      "transaction": {
+        "alert_id": "",
+        "amount": 3697.34,
+        "beneficiary_account_id": "10:8000EBD30",
+        "country_id": "",
+        "currency": "US Dollar",
+        "id": "IBM-AML-DATA-00000002",
+        "is_sar": false,
+        "metadata": {
+          "amount_paid": "3697.34",
+          "from_bank": "10",
+          "payment_currency": "US Dollar",
+          "receiving_currency": "US Dollar",
+          "to_bank": "10"
+        },
+        "originator_account_id": "10:8000EBD30",
+        "payment_type": "Reinvestment",
+        "timestamp": "2022-09-01T00:20:00"
+      }
+    },
+    {
+      "evaluation_laundering_label": false,
+      "occurred_at": "2022-09-01T00:20:00",
+      "source_line": 3,
+      "transaction": {
+        "alert_id": "",
+        "amount": 0.01,
+        "beneficiary_account_id": "1:8000F5340",
+        "country_id": "",
+        "currency": "US Dollar",
+        "id": "IBM-AML-DATA-00000003",
+        "is_sar": false,
+        "metadata": {
+          "amount_paid": "0.01",
+          "from_bank": "3208",
+          "payment_currency": "US Dollar",
+          "receiving_currency": "US Dollar",
+          "to_bank": "1"
+        },
+        "originator_account_id": "3208:8000F4580",
+        "payment_type": "Cheque",
+        "timestamp": "2022-09-01T00:20:00"
+      }
+    },
+    {
+      "evaluation_laundering_label": false,
+      "occurred_at": "2022-09-01T00:00:00",
+      "source_line": 4,
+      "transaction": {
+        "alert_id": "",
+        "amount": 14675.57,
+        "beneficiary_account_id": "3209:8000F4670",
+        "country_id": "",
+        "currency": "US Dollar",
+        "id": "IBM-AML-DATA-00000004",
+        "is_sar": false,
+        "metadata": {
+          "amount_paid": "14675.57",
+          "from_bank": "3209",
+          "payment_currency": "US Dollar",
+          "receiving_currency": "US Dollar",
+          "to_bank": "3209"
+        },
+        "originator_account_id": "3209:8000F4670",
+        "payment_type": "Reinvestment",
+        "timestamp": "2022-09-01T00:00:00"
+      }
+    },
+    {
+      "evaluation_laundering_label": false,
+      "occurred_at": "2022-09-01T00:02:00",
+      "source_line": 5,
+      "transaction": {
+        "alert_id": "",
+        "amount": 2806.97,
+        "beneficiary_account_id": "12:8000F5030",
+        "country_id": "",
+        "currency": "US Dollar",
+        "id": "IBM-AML-DATA-00000005",
+        "is_sar": false,
+        "metadata": {
+          "amount_paid": "2806.97",
+          "from_bank": "12",
+          "payment_currency": "US Dollar",
+          "receiving_currency": "US Dollar",
+          "to_bank": "12"
+        },
+        "originator_account_id": "12:8000F5030",
+        "payment_type": "Reinvestment",
+        "timestamp": "2022-09-01T00:02:00"
+      }
+    },
+    {
+      "evaluation_laundering_label": false,
+      "occurred_at": "2022-09-01T00:06:00",
+      "source_line": 6,
+      "transaction": {
+        "alert_id": "",
+        "amount": 36682.97,
+        "beneficiary_account_id": "10:8000F5200",
+        "country_id": "",
+        "currency": "US Dollar",
+        "id": "IBM-AML-DATA-00000006",
+        "is_sar": false,
+        "metadata": {
+          "amount_paid": "36682.97",
+          "from_bank": "10",
+          "payment_currency": "US Dollar",
+          "receiving_currency": "US Dollar",
+          "to_bank": "10"
+        },
+        "originator_account_id": "10:8000F5200",
+        "payment_type": "Reinvestment",
+        "timestamp": "2022-09-01T00:06:00"
+      }
+    }
+  ]
+}

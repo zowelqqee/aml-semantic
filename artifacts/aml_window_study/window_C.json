@@ -1,0 +1,3967 @@
+{
+  "arms": {
+    "frozen_runtime_control": {
+      "decision_distribution": {
+        "ABSTAIN": 156,
+        "ALLOW": 38760,
+        "BLOCK": 7037,
+        "REVIEW": 54047
+      },
+      "metrics": {
+        "alert_rate": 0.61084,
+        "alert_volume": 61084,
+        "f1": 0.0036193488432756738,
+        "false_positive_rate": 0.6112765296199384,
+        "fn": 142,
+        "fp": 60973,
+        "fp_per_tp": 549.3063063063063,
+        "pr_auc": 0.0022026896287327047,
+        "precision": 0.0018171697989653591,
+        "recall": 0.43873517786561267,
+        "roc_auc": 0.41159059297493006,
+        "tn": 38774,
+        "tp": 111
+      }
+    },
+    "hybrid/CatBoost": {
+      "decision_distribution": {
+        "ABSTAIN": 8242,
+        "ALLOW": 64570,
+        "BLOCK": 10064,
+        "REVIEW": 17124
+      },
+      "metrics": {
+        "alert_rate": 0.27188,
+        "alert_volume": 27188,
+        "f1": 0.010130826136073759,
+        "false_positive_rate": 0.27117607547094147,
+        "fn": 114,
+        "fp": 27049,
+        "fp_per_tp": 194.59712230215828,
+        "pr_auc": 0.005293934929776031,
+        "precision": 0.005112549654259232,
+        "recall": 0.549407114624506,
+        "roc_auc": 0.7452844629719516,
+        "tn": 72698,
+        "tp": 139
+      },
+      "ml_inferences": 9033
+    },
+    "hybrid/LightGBM": {
+      "decision_distribution": {
+        "ABSTAIN": 4413,
+        "ALLOW": 64570,
+        "BLOCK": 10064,
+        "REVIEW": 20953
+      },
+      "metrics": {
+        "alert_rate": 0.31017,
+        "alert_volume": 31017,
+        "f1": 0.01272785417332907,
+        "false_positive_rate": 0.3089616730327729,
+        "fn": 54,
+        "fp": 30818,
+        "fp_per_tp": 154.8643216080402,
+        "pr_auc": 0.024853651769625663,
+        "precision": 0.006415836476770803,
+        "recall": 0.7865612648221344,
+        "roc_auc": 0.8125667622880353,
+        "tn": 68929,
+        "tp": 199
+      },
+      "ml_inferences": 9033
+    },
+    "hybrid/XGBoost": {
+      "decision_distribution": {
+        "ABSTAIN": 8661,
+        "ALLOW": 64570,
+        "BLOCK": 10064,
+        "REVIEW": 16705
+      },
+      "metrics": {
+        "alert_rate": 0.26769,
+        "alert_volume": 26769,
+        "f1": 0.009769817185996595,
+        "false_positive_rate": 0.26704562543234384,
+        "fn": 121,
+        "fp": 26637,
+        "fp_per_tp": 201.79545454545453,
+        "pr_auc": 0.005000498868030993,
+        "precision": 0.004931076992043035,
+        "recall": 0.5217391304347826,
+        "roc_auc": 0.7254192831183051,
+        "tn": 73110,
+        "tp": 132
+      },
+      "ml_inferences": 9033
+    },
+    "ml_only/CatBoost": {
+      "metrics": {
+        "alert_rate": 0.06498,
+        "alert_volume": 6498,
+        "f1": 0.06606428677233002,
+        "false_positive_rate": 0.06290916017524337,
+        "fn": 30,
+        "fp": 6275,
+        "fp_per_tp": 28.1390134529148,
+        "pr_auc": 0.318763565825378,
+        "precision": 0.034318251769775314,
+        "recall": 0.8814229249011858,
+        "roc_auc": 0.9670636473122851,
+        "tn": 93472,
+        "tp": 223
+      }
+    },
+    "ml_only/LightGBM": {
+      "metrics": {
+        "alert_rate": 0.22427,
+        "alert_volume": 22427,
+        "f1": 0.019223985890652558,
+        "false_positive_rate": 0.22265331288159043,
+        "fn": 35,
+        "fp": 22209,
+        "fp_per_tp": 101.87614678899082,
+        "pr_auc": 0.00872570326986229,
+        "precision": 0.0097204262719044,
+        "recall": 0.8616600790513834,
+        "roc_auc": 0.8194811925555053,
+        "tn": 77538,
+        "tp": 218
+      }
+    },
+    "ml_only/XGBoost": {
+      "metrics": {
+        "alert_rate": 0.03999,
+        "alert_volume": 3999,
+        "f1": 0.08701787394167451,
+        "false_positive_rate": 0.03823673894954234,
+        "fn": 68,
+        "fp": 3814,
+        "fp_per_tp": 20.616216216216216,
+        "pr_auc": 0.4463467283430728,
+        "precision": 0.046261565391347834,
+        "recall": 0.7312252964426877,
+        "roc_auc": 0.9656166068532834,
+        "tn": 95933,
+        "tp": 185
+      }
+    },
+    "semantic_behaviour_runtime": {
+      "decision_distribution": {
+        "ABSTAIN": 9033,
+        "ALLOW": 64570,
+        "BLOCK": 10064,
+        "REVIEW": 16333
+      },
+      "metrics": {
+        "alert_rate": 0.26397,
+        "alert_volume": 26397,
+        "f1": 0.002701688555347092,
+        "false_positive_rate": 0.26427862492105025,
+        "fn": 217,
+        "fp": 26361,
+        "fp_per_tp": 732.25,
+        "pr_auc": 0.002113890994388005,
+        "precision": 0.0013637913399249914,
+        "recall": 0.1422924901185771,
+        "roc_auc": 0.42403159440023575,
+        "tn": 73386,
+        "tp": 36
+      }
+    },
+    "semantic_runtime": {
+      "decision_distribution": {
+        "ABSTAIN": 9345,
+        "ALLOW": 89531,
+        "BLOCK": 1,
+        "REVIEW": 1123
+      },
+      "metrics": {
+        "alert_rate": 0.01124,
+        "alert_volume": 1124,
+        "f1": 0.0014524328249818446,
+        "false_positive_rate": 0.011258483964430008,
+        "fn": 252,
+        "fp": 1123,
+        "fp_per_tp": 1123.0,
+        "pr_auc": 0.002347398515286398,
+        "precision": 0.0008896797153024911,
+        "recall": 0.003952569169960474,
+        "roc_auc": 0.48465013717907884,
+        "tn": 98624,
+        "tp": 1
+      }
+    }
+  },
+  "behaviour_census": {
+    "BurstActivityBehaviour": 10597,
+    "CashConcentrationBehaviour": 10075,
+    "CircularMoneyMovement": 1,
+    "CollectionBehaviour": 51,
+    "DistributionBehaviour": 15287,
+    "DormantAccountActivation": 4171,
+    "ExpectedBusinessCycle": 8346,
+    "FanInCollection": 13,
+    "InsufficientBehaviouralHistory": 6588,
+    "LiquidityBalancingBehaviour": 90,
+    "MoneyAccumulationBehaviour": 14972,
+    "RapidLayeringBehaviour": 10234,
+    "RelationshipCollapseBehaviour": 10117,
+    "RoutinePayrollBehaviour": 14,
+    "ShellCompanyBehaviour": 11,
+    "SupplierSettlementBehaviour": 43194,
+    "TransitBehaviour": 3301,
+    "UnexpectedBusinessCycle": 9979
+  },
+  "coverage": {
+    "abstain_rate": 0.09033,
+    "behaviour_objects": 147041,
+    "conflicts": 20175,
+    "established_baseline_rate": 0.90404,
+    "established_baselines": 90404,
+    "insufficient_behavioural_history": 6588,
+    "insufficient_behavioural_history_rate": 0.06588,
+    "mean_behaviour_confidence": 0.5595303612311949,
+    "no_established_baseline": 9596,
+    "no_established_baseline_rate": 0.09596,
+    "role_transitions": 12001,
+    "scenario_objects": 42899,
+    "substantive_behaviour_objects": 140453
+  },
+  "peak_rss_bytes": 1413726208,
+  "positives": {
+    "IBM-ML-04977524": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04978073": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 16,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 36,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04978453": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 18,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04978459": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04978819": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 1117,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 5342,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-04979143": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04979544": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04979666": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 8,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04980208": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 14,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 46,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-04980472": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 30,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour",
+        "UnexpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-04980602": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 44,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04980748": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 14,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04981050": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 8,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 10,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04981754": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 11,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04981897": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 10,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "BurstActivityBehaviour"
+      ]
+    },
+    "IBM-ML-04982047": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04982439": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 15,
+      "role": "Dormant",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "DormantAccountActivation"
+      ]
+    },
+    "IBM-ML-04982556": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04982956": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 7062,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 33845,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-04983267": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 29,
+      "role": "ShellCompanyCandidate",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "DistributionBehaviour",
+        "ShellCompanyBehaviour",
+        "TransitBehaviour"
+      ]
+    },
+    "IBM-ML-04983268": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 29,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "BurstActivityBehaviour"
+      ]
+    },
+    "IBM-ML-04983397": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04983660": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 22,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-04983792": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 20,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04984059": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04984360": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 23,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-04984636": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 12,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 78,
+      "role": "Distributor",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "DistributionBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-04984910": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04985285": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Dormant",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04985287": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 15,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04985835": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 7,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04985837": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 15,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour",
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04985898": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 10,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04985971": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 17,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04986747": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 16,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04986899": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 10,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04986993": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04987038": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04987172": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04987286": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 7,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04987718": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04988096": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 8,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04988352": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 13,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04989379": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 17,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04989729": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 10,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 13,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04990006": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04990778": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04991045": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 13,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 32,
+      "role": "Collector",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "CollectionBehaviour"
+      ]
+    },
+    "IBM-ML-04991052": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 14,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-04991282": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04991336": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 7,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-04991535": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 13,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04991660": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 12,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 23,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04991662": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 13,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04991803": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 35,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-04992034": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04992548": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 20,
+      "role": "TransitAccount",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "TransitBehaviour"
+      ]
+    },
+    "IBM-ML-04992663": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04992911": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 16,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04993004": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 8,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04993017": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04993424": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04993487": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04995464": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 12,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 28,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour",
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-04996109": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 11461,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 55928,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-04996282": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04996912": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04997018": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04997429": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 15,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DormantAccountActivation",
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-04998169": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 18,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04998565": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 12,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 32,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour",
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-04998683": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04999022": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04999173": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 14,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04999175": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 7,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-04999914": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 12,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-04999916": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 16,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05001330": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 10,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05001557": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 15,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05002005": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 57,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "BurstActivityBehaviour"
+      ]
+    },
+    "IBM-ML-05002229": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05002239": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 8,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 58,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05002500": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05003413": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05004534": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05004863": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 10,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05005771": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05005902": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 14,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05006199": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05006346": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 10,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05006481": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05007315": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 14,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05007491": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05007555": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Dormant",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05007684": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 8,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 19,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05007941": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 564,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 2835,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05007954": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 12,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 31,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05008074": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 19,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05008395": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05009314": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 23,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05010004": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 8,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 40,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05010882": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05010883": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05011016": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 7,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05011708": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05011840": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 8,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 22,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05011965": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 13,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 32,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05012096": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 8,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 21,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05012716": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05013053": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05013201": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05013338": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 18,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 40,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour",
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05014338": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05015011": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05015159": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 11461,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 56668,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05015277": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 23,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05015417": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05015418": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 9,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 22,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05015848": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05015852": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 62,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05016547": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 8,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05016838": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 7,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05017123": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 9,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 25,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05017904": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 10,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05018118": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 7,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 12,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05018120": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 50,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour",
+        "UnexpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-05018356": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 62,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05019266": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05019363": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05019527": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05019528": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 34,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle",
+        "SupplierSettlementBehaviour",
+        "UnexpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-05019661": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05019931": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 12,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 38,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05020108": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05020186": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05020324": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 8,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05020625": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 7,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05020753": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05021142": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 18,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05021840": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 7062,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 34845,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05022051": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 9,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05022053": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05022108": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05022410": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 20,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05022660": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 13,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05022661": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05022833": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05022959": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 13,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 35,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05023495": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05024235": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 630,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 3140,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05024495": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 25,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05024894": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 24,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05025173": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 8,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05025554": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 42,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05025690": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05025952": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 8,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05025953": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 17,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05026768": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 7,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05026962": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 13,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 26,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05026964": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 26,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05027467": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05027490": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05027640": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05028059": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05029423": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05029851": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 11,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05030127": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05030940": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05031371": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05031498": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05031532": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05032156": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 9,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 35,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05033396": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05034042": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05034069": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Dormant",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05034250": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 6,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05034385": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05035055": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05035342": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 35,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05035475": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05035620": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour",
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05035622": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 18,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "TransitBehaviour"
+      ]
+    },
+    "IBM-ML-05036057": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 16,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05036059": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05036616": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 11,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 43,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05036618": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 18,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05036753": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 11461,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 57453,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05037531": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 10,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05037696": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05039165": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 14,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05040133": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 11461,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 57588,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05040365": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05040446": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 7062,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 35261,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05041157": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05042071": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05042269": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Dormant",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "DormantAccountActivation"
+      ]
+    },
+    "IBM-ML-05042944": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05043516": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05043629": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 14,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 29,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-05043947": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 58,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05044496": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 23,
+      "role": "TreasuryAccount",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle",
+        "LiquidityBalancingBehaviour"
+      ]
+    },
+    "IBM-ML-05044498": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05044621": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 18,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05044873": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05044888": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 13,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05045027": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05045087": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05045510": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 919,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 4747,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour"
+      ]
+    },
+    "IBM-ML-05046948": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 5,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 10,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05048686": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05049202": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05049570": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05049609": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05049627": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 9,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05049828": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05050166": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05051144": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 18,
+      "role": "SalaryReceiver",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05051856": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05053632": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05055037": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 6,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 26,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05056803": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05057202": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 44,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05057657": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 1,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05057678": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 9,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05057834": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 4,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 15,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05058423": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 5,
+      "role": "SalaryReceiver",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05058798": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ABSTAIN",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 7,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05059146": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05060953": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 9,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 19,
+      "role": "Collector",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "CollectionBehaviour",
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05061543": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05062805": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05063730": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 12,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05063751": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05064149": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 6,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 37,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "ExpectedBusinessCycle",
+        "MoneyAccumulationBehaviour",
+        "SupplierSettlementBehaviour",
+        "UnexpectedBusinessCycle"
+      ]
+    },
+    "IBM-ML-05064409": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 8,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 18,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05064856": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05066792": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 3,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05067323": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 13,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05067713": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 11461,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 58637,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05068731": {
+      "behaviour_decision": "BLOCK",
+      "distinct_counterparties": 1420,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 7203,
+      "role": "TransitAccount",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "CashConcentrationBehaviour",
+        "DistributionBehaviour",
+        "RapidLayeringBehaviour",
+        "RelationshipCollapseBehaviour"
+      ]
+    },
+    "IBM-ML-05069027": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 1,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05069399": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 6,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 6,
+      "role": "Accumulator",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05070529": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 3,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 14,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05071169": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 4,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05071638": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 25,
+      "role": "Accumulator",
+      "routed_to_ml": false,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": [
+        "MoneyAccumulationBehaviour"
+      ]
+    },
+    "IBM-ML-05072508": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05073170": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 13,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05073416": {
+      "behaviour_decision": "ALLOW",
+      "distinct_counterparties": 7,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 17,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "ALLOW",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05073418": {
+      "behaviour_decision": "REVIEW",
+      "distinct_counterparties": 10,
+      "frozen_decision": "BLOCK",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 28,
+      "role": "Distributor",
+      "routed_to_ml": false,
+      "scenarios": [
+        "TreasuryCycling"
+      ],
+      "semantic_decision": "REVIEW",
+      "substantive_behaviours": [
+        "DistributionBehaviour"
+      ]
+    },
+    "IBM-ML-05074096": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 2,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": true,
+      "observed_events": 10,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [
+        "NormalConsumerBehaviour"
+      ],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05075050": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 1,
+      "frozen_decision": "ALLOW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 2,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    },
+    "IBM-ML-05076170": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 5,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": false,
+      "no_established_baseline": false,
+      "observed_events": 39,
+      "role": "ActiveCounterparty",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": [
+        "SupplierSettlementBehaviour"
+      ]
+    },
+    "IBM-ML-05076376": {
+      "behaviour_decision": "ABSTAIN",
+      "distinct_counterparties": 0,
+      "frozen_decision": "REVIEW",
+      "insufficient_behavioural_history": true,
+      "no_established_baseline": true,
+      "observed_events": 0,
+      "role": "Unknown",
+      "routed_to_ml": true,
+      "scenarios": [],
+      "semantic_decision": "ABSTAIN",
+      "substantive_behaviours": []
+    }
+  },
+  "role_census": {
+    "Accumulator": 14753,
+    "ActiveCounterparty": 52769,
+    "Collector": 203,
+    "Distributor": 4877,
+    "Dormant": 3049,
+    "SalaryReceiver": 4353,
+    "ShellCompanyCandidate": 11,
+    "TransitAccount": 13528,
+    "TreasuryAccount": 90,
+    "Unknown": 6367
+  },
+  "scenario_census": {
+    "CollectThenForward": 20,
+    "NormalConsumerBehaviour": 37631,
+    "TreasuryCycling": 5248
+  },
+  "timing": {
+    "decision_pass_seconds": 359.4791213750141,
+    "feature_pass_seconds": 407.92299145902507
+  },
+  "window": {
+    "label": "3 days",
+    "ml_train_positives": 436,
+    "ml_train_rows": 400000,
+    "name": "C",
+    "prime_rows": 1489799,
+    "prime_start_row": 3487438
+  }
+}

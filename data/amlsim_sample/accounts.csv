@@ -1,0 +1,11 @@
+account_id,customer_id,bank_id,country,kyc_updated_at,is_sar,verified_source_of_funds,recently_manually_verified,expected_payroll_day
+A-100,C-100,BANK-US,US,2024-01-10,false,false,false,false
+B-200,C-200,BANK-AE,AE,2025-12-01,false,false,false,false
+A-300,C-300,BANK-US,US,2022-01-01,false,false,false,false
+B-400,C-400,BANK-IR,IR,2024-01-01,true,false,false,false
+A-500,C-500,BANK-US,US,2023-01-01,true,false,false,false
+B-600,C-600,BANK-US,US,2026-01-01,false,true,false,false
+A-700,C-700,BANK-US,US,2026-06-01,false,true,false,false
+B-800,C-800,BANK-US,US,2026-06-01,false,false,false,false
+A-900,C-900,BANK-US,US,2021-01-01,false,false,true,true
+B-910,C-910,BANK-US,US,2026-01-01,false,false,false,false

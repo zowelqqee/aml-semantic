@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="467" viewBox="0 0 900 467">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; fill: #172033; } .title { font-size: 16px; font-weight: 700; } .label { font-size: 12px; } .value { font-size: 12px; font-weight: 600; }</style>
+<text x="24" y="20" class="title">AML Decision Runtime v0.2 — label-free runtime metrics</text>
+<text x="24" y="56" class="title">Decisions</text>
+<text x="32" y="76" class="label">ALLOW</text>
+<rect x="270" y="63" width="421.09" height="14" rx="3" fill="#4f46e5"/>
+<text x="701.0899999999999" y="76" class="value">70297</text>
+<text x="32" y="96" class="label">REVIEW</text>
+<rect x="270" y="83" width="148.15" height="14" rx="3" fill="#4f46e5"/>
+<text x="428.15" y="96" class="value">24732</text>
+<text x="32" y="116" class="label">BLOCK</text>
+<rect x="270" y="103" width="3.53" height="14" rx="3" fill="#4f46e5"/>
+<text x="283.53" y="116" class="value">590</text>
+<text x="32" y="136" class="label">ABSTAIN</text>
+<rect x="270" y="123" width="26.24" height="14" rx="3" fill="#4f46e5"/>
+<text x="306.24" y="136" class="value">4381</text>
+<text x="24" y="164" class="title">Rule activations</text>
+<text x="32" y="184" class="label">AML-R01-LARGE</text>
+<rect x="270" y="171" width="142.4" height="14" rx="3" fill="#b45309"/>
+<text x="422.4" y="184" class="value">23772</text>
+<text x="32" y="204" class="label">AML-R03-VELOCITY</text>
+<rect x="270" y="191" width="13.92" height="14" rx="3" fill="#b45309"/>
+<text x="293.92" y="204" class="value">2323</text>
+<text x="32" y="224" class="label">AML-R07-BEHAVIOUR</text>
+<rect x="270" y="211" width="560.0" height="14" rx="3" fill="#b45309"/>
+<text x="840.0" y="224" class="value">93487</text>
+<text x="24" y="252" class="title">Policy activations</text>
+<text x="32" y="272" class="label">AML-00</text>
+<rect x="270" y="259" width="26.24" height="14" rx="3" fill="#047857"/>
+<text x="306.24" y="272" class="value">4381</text>
+<text x="32" y="292" class="label">AML-20</text>
+<rect x="270" y="279" width="3.53" height="14" rx="3" fill="#047857"/>
+<text x="283.53" y="292" class="value">590</text>
+<text x="32" y="312" class="label">AML-21</text>
+<rect x="270" y="299" width="148.15" height="14" rx="3" fill="#047857"/>
+<text x="428.15" y="312" class="value">24732</text>
+<text x="32" y="332" class="label">AML-22</text>
+<rect x="270" y="319" width="421.09" height="14" rx="3" fill="#047857"/>
+<text x="701.0899999999999" y="332" class="value">70297</text>
+</svg>

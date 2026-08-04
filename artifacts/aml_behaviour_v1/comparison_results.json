@@ -1,0 +1,520 @@
+{
+  "arms": {
+    "runtime_only": {
+      "decision_distribution": {
+        "ABSTAIN": 18156,
+        "ALLOW": 37150,
+        "BLOCK": 3780,
+        "REVIEW": 40914
+      },
+      "metrics": {
+        "alert_rate": 0.44694,
+        "alert_volume": 44694,
+        "f1": 0.0006260900675282859,
+        "false_positive_rate": 0.4469251390389309,
+        "fn": 14,
+        "fp": 44680,
+        "fp_per_tp": 3191.4285714285716,
+        "pr_auc": 0.00033258430125870974,
+        "precision": 0.000313241150937486,
+        "recall": 0.5,
+        "roc_auc": 0.5736073957851056,
+        "tn": 55292,
+        "tp": 14
+      },
+      "ml_inferences": 0
+    },
+    "semantic_behaviour_runtime": {
+      "decision_distribution": {
+        "ABSTAIN": 48709,
+        "ALLOW": 49084,
+        "REVIEW": 2207
+      },
+      "metrics": {
+        "alert_rate": 0.02207,
+        "alert_volume": 2207,
+        "f1": 0.0008948545861297539,
+        "false_positive_rate": 0.022066178529988396,
+        "fn": 27,
+        "fp": 2206,
+        "fp_per_tp": 2206.0,
+        "pr_auc": 0.0007864683943006913,
+        "precision": 0.00045310376076121433,
+        "recall": 0.03571428571428571,
+        "roc_auc": 0.6170490237266435,
+        "tn": 97766,
+        "tp": 1
+      },
+      "ml_inferences": 0
+    },
+    "semantic_behaviour_runtime_plus_ml/CatBoost": {
+      "decision_distribution": {
+        "ABSTAIN": 48603,
+        "ALLOW": 49084,
+        "REVIEW": 2313
+      },
+      "metrics": {
+        "alert_rate": 0.02313,
+        "alert_volume": 2313,
+        "f1": 0.0008543357539513029,
+        "false_positive_rate": 0.023126475413115674,
+        "fn": 27,
+        "fp": 2312,
+        "fp_per_tp": 2312.0,
+        "pr_auc": 0.0010803481488971271,
+        "precision": 0.00043233895373973193,
+        "recall": 0.03571428571428571,
+        "roc_auc": 0.8109206292047488,
+        "tn": 97660,
+        "tp": 1
+      },
+      "ml_inference_fraction": 0.48709,
+      "ml_inferences": 48709,
+      "semantic_feature_model": {
+        "metrics": {
+          "alert_rate": 0.03257,
+          "alert_volume": 3257,
+          "f1": 0.0012176560121765602,
+          "false_positive_rate": 0.032559116552634736,
+          "fn": 26,
+          "fp": 3255,
+          "fp_per_tp": 1627.5,
+          "pr_auc": 0.0006025124954740375,
+          "precision": 0.0006140620202640467,
+          "recall": 0.07142857142857142,
+          "roc_auc": 0.6289286000080022,
+          "tn": 96717,
+          "tp": 2
+        },
+        "prediction_latency_ms": 0.0002401516691315919,
+        "training_seconds": 7.563471792032942
+      }
+    },
+    "semantic_behaviour_runtime_plus_ml/LightGBM": {
+      "decision_distribution": {
+        "ABSTAIN": 35116,
+        "ALLOW": 49084,
+        "REVIEW": 15800
+      },
+      "metrics": {
+        "alert_rate": 0.158,
+        "alert_volume": 15800,
+        "f1": 0.0016426585797321203,
+        "false_positive_rate": 0.15791421598047453,
+        "fn": 15,
+        "fp": 15787,
+        "fp_per_tp": 1214.3846153846155,
+        "pr_auc": 0.0008001858593644385,
+        "precision": 0.0008227848101265823,
+        "recall": 0.4642857142857143,
+        "roc_auc": 0.7678616083932072,
+        "tn": 84185,
+        "tp": 13
+      },
+      "ml_inference_fraction": 0.48709,
+      "ml_inferences": 48709,
+      "semantic_feature_model": {
+        "metrics": {
+          "alert_rate": 0.43338,
+          "alert_volume": 43338,
+          "f1": 0.001014619748189826,
+          "false_positive_rate": 0.4332813187692554,
+          "fn": 6,
+          "fp": 43316,
+          "fp_per_tp": 1968.909090909091,
+          "pr_auc": 0.00045885814494702766,
+          "precision": 0.0005076376390234897,
+          "recall": 0.7857142857142857,
+          "roc_auc": 0.675637749998571,
+          "tn": 56656,
+          "tp": 22
+        },
+        "prediction_latency_ms": 0.00024016667040996253,
+        "training_seconds": 0.9224128749920055
+      }
+    },
+    "semantic_behaviour_runtime_plus_ml/XGBoost": {
+      "decision_distribution": {
+        "ABSTAIN": 48587,
+        "ALLOW": 49084,
+        "REVIEW": 2329
+      },
+      "metrics": {
+        "alert_rate": 0.02329,
+        "alert_volume": 2329,
+        "f1": 0.0008485362749257531,
+        "false_positive_rate": 0.023286520225663184,
+        "fn": 27,
+        "fp": 2328,
+        "fp_per_tp": 2328.0,
+        "pr_auc": 0.001116889076419492,
+        "precision": 0.00042936882782310007,
+        "recall": 0.03571428571428571,
+        "roc_auc": 0.8230402727049289,
+        "tn": 97644,
+        "tp": 1
+      },
+      "ml_inference_fraction": 0.48709,
+      "ml_inferences": 48709,
+      "semantic_feature_model": {
+        "metrics": {
+          "alert_rate": 0.01725,
+          "alert_volume": 1725,
+          "f1": 0.0022818026240730175,
+          "false_positive_rate": 0.01723482575121034,
+          "fn": 26,
+          "fp": 1723,
+          "fp_per_tp": 861.5,
+          "pr_auc": 0.0008946583617351257,
+          "precision": 0.0011594202898550724,
+          "recall": 0.07142857142857142,
+          "roc_auc": 0.7559116552634737,
+          "tn": 98249,
+          "tp": 2
+        },
+        "prediction_latency_ms": 0.0006457791605498642,
+        "training_seconds": 3.3820269170682877
+      }
+    },
+    "semantic_runtime": {
+      "decision_distribution": {
+        "ABSTAIN": 49310,
+        "ALLOW": 50308,
+        "REVIEW": 382
+      },
+      "metrics": {
+        "alert_rate": 0.00382,
+        "alert_volume": 382,
+        "f1": 0.0,
+        "false_positive_rate": 0.00382106989957188,
+        "fn": 28,
+        "fp": 382,
+        "fp_per_tp": Infinity,
+        "pr_auc": 0.00036838646202282566,
+        "precision": 0.0,
+        "recall": 0.0,
+        "roc_auc": 0.4751478628301639,
+        "tn": 99590,
+        "tp": 0
+      },
+      "ml_inferences": 0
+    }
+  },
+  "behaviour_census": {
+    "BurstActivityBehaviour": 3483,
+    "DistributionBehaviour": 6831,
+    "DormantAccountActivation": 1788,
+    "ExpectedBusinessCycle": 367,
+    "FanInCollection": 3,
+    "FanOutDistribution": 6593,
+    "InsufficientBehaviouralHistory": 77532,
+    "LiquidityBalancingBehaviour": 97,
+    "MoneyAccumulationBehaviour": 1524,
+    "RelationshipGrowthBehaviour": 2,
+    "RoutinePayrollBehaviour": 20,
+    "ShellCompanyBehaviour": 541,
+    "TransitBehaviour": 82,
+    "UnexpectedBusinessCycle": 50
+  },
+  "behaviour_counts": {
+    "behaviour_objects_generated": 98913,
+    "conflicts": 10603,
+    "role_transitions": 16218,
+    "scenario_detections": 28428
+  },
+  "benchmark_version": "aml-behaviour-benchmark/1.0",
+  "class_distribution": {
+    "test_negative": 99972,
+    "test_positive": 28,
+    "train_positive": 44
+  },
+  "conflict_census": {
+    "behaviour_regime": 16,
+    "behaviour_stability": 58,
+    "behaviour_structural": 146,
+    "counterparty_context": 5,
+    "structural_explanation": 5019,
+    "value_context": 5359
+  },
+  "ontology": {
+    "behaviour_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "behaviour_version": "aml-behaviour-ontology/1.0",
+    "entity_snapshot_hash": "7af2adb326be5c78ef77a2e9e078d867f68c74a41dd1e4d6c697243e70320ba6",
+    "resolved_accounts": 327325,
+    "semantic_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "semantic_version": "aml-semantic-ontology/1.0"
+  },
+  "peak_rss_bytes": 1113473024,
+  "protocol": {
+    "accounts": "data/ibm_aml_data/HI-Small_accounts.csv",
+    "evaluation_horizon": 100000,
+    "input_row_cap": 500000,
+    "label_boundary": "the laundering column is read into a separate array used for model fitting and post-decision evaluation only; no semantic object, behaviour object, role, scenario, evidence item, policy or audit reads it",
+    "ml_feature_count": 74,
+    "ml_feature_space": "semantic: behaviour, role, scenario, lifecycle and semantic objects only; no transaction column reaches the model",
+    "ml_high_band": 0.9,
+    "ml_standalone_threshold": 0.5,
+    "train_rows": 400000,
+    "transactions": "data/ibm_aml_data/HI-Small_Trans.csv",
+    "tuning_statement": "every semantic and behavioural constant was declared before this benchmark executed; no threshold was selected against the evaluation labels and none was changed after seeing a result"
+  },
+  "role_census": {
+    "Accumulator": 1517,
+    "ActiveCounterparty": 11193,
+    "Collector": 3,
+    "Distributor": 6851,
+    "Dormant": 6326,
+    "SalaryReceiver": 2064,
+    "ShellCompanyCandidate": 541,
+    "TransitAccount": 65,
+    "TreasuryAccount": 97,
+    "Unknown": 71343
+  },
+  "role_transition_census": {
+    "Accumulator->ActiveCounterparty": 81,
+    "Accumulator->Distributor": 2,
+    "Accumulator->Dormant": 2,
+    "Accumulator->SalaryReceiver": 7,
+    "Accumulator->ShellCompanyCandidate": 1,
+    "Accumulator->TreasuryAccount": 2,
+    "ActiveCounterparty->Accumulator": 20,
+    "ActiveCounterparty->Distributor": 21,
+    "ActiveCounterparty->Dormant": 707,
+    "ActiveCounterparty->SalaryReceiver": 22,
+    "ActiveCounterparty->ShellCompanyCandidate": 87,
+    "ActiveCounterparty->TransitAccount": 24,
+    "ActiveCounterparty->TreasuryAccount": 50,
+    "Collector->ActiveCounterparty": 1,
+    "Distributor->ActiveCounterparty": 7,
+    "Dormant->Accumulator": 5,
+    "Dormant->ActiveCounterparty": 1704,
+    "Dormant->SalaryReceiver": 2,
+    "Dormant->ShellCompanyCandidate": 41,
+    "Dormant->TransitAccount": 5,
+    "Dormant->TreasuryAccount": 2,
+    "Dormant->Unknown": 2416,
+    "SalaryReceiver->Accumulator": 46,
+    "SalaryReceiver->ActiveCounterparty": 13,
+    "SalaryReceiver->Dormant": 5,
+    "SalaryReceiver->ShellCompanyCandidate": 9,
+    "SalaryReceiver->TransitAccount": 7,
+    "SalaryReceiver->TreasuryAccount": 2,
+    "SalaryReceiver->Unknown": 4,
+    "ShellCompanyCandidate->ActiveCounterparty": 88,
+    "ShellCompanyCandidate->Dormant": 5,
+    "ShellCompanyCandidate->SalaryReceiver": 4,
+    "ShellCompanyCandidate->TransitAccount": 1,
+    "TransitAccount->ActiveCounterparty": 1,
+    "TransitAccount->ShellCompanyCandidate": 2,
+    "TreasuryAccount->Accumulator": 1,
+    "TreasuryAccount->ActiveCounterparty": 16,
+    "TreasuryAccount->Dormant": 3,
+    "TreasuryAccount->SalaryReceiver": 1,
+    "Unknown->Accumulator": 733,
+    "Unknown->ActiveCounterparty": 3394,
+    "Unknown->Collector": 3,
+    "Unknown->Distributor": 1,
+    "Unknown->Dormant": 5595,
+    "Unknown->SalaryReceiver": 916,
+    "Unknown->ShellCompanyCandidate": 159
+  },
+  "scenario_census": {
+    "CollectThenForward": 10,
+    "NormalConsumerBehaviour": 11089,
+    "TreasuryCycling": 17329
+  },
+  "semantic_feature_importances": {
+    "CatBoost": [
+      [
+        "sem_InternalBookEntry",
+        31.474738498282143
+      ],
+      [
+        "sem_NonInformativeNovelty",
+        10.33109215199629
+      ],
+      [
+        "evidence_mitigation_count",
+        8.994927605273652
+      ],
+      [
+        "lifecycle_idle_minutes",
+        6.65948448316342
+      ],
+      [
+        "lifecycle_age_minutes",
+        4.919496571817544
+      ],
+      [
+        "role_tenure_minutes",
+        4.031142563079268
+      ],
+      [
+        "role_transition_count",
+        3.688802360187103
+      ],
+      [
+        "lifecycle_horizons_filled",
+        2.992727072084352
+      ],
+      [
+        "sem_CrossJurisdictionTransfer",
+        2.8686135094234895
+      ],
+      [
+        "lifecycle_distinct_counterparties",
+        2.193803071676046
+      ],
+      [
+        "sem_ValueRegime",
+        2.135386811768574
+      ],
+      [
+        "beh_FanOutDistribution",
+        1.9121030744836913
+      ],
+      [
+        "role_code",
+        1.6622681310797145
+      ],
+      [
+        "evidence_unqualified_topics",
+        1.645489987863191
+      ],
+      [
+        "evidence_effective_risk",
+        1.5676218611813548
+      ]
+    ],
+    "LightGBM": [
+      [
+        "lifecycle_idle_minutes",
+        22.0
+      ],
+      [
+        "lifecycle_age_minutes",
+        18.0
+      ],
+      [
+        "lifecycle_observed_events",
+        16.0
+      ],
+      [
+        "lifecycle_distinct_counterparties",
+        15.0
+      ],
+      [
+        "role_tenure_minutes",
+        13.0
+      ],
+      [
+        "sem_CrossJurisdictionTransfer",
+        9.0
+      ],
+      [
+        "evidence_mitigation_count",
+        7.0
+      ],
+      [
+        "role_transition_count",
+        5.0
+      ],
+      [
+        "evidence_risk_count",
+        5.0
+      ],
+      [
+        "evidence_effective_risk",
+        5.0
+      ],
+      [
+        "evidence_strongest_risk",
+        5.0
+      ],
+      [
+        "sem_ValueRegime",
+        4.0
+      ],
+      [
+        "sem_InternalBookEntry",
+        4.0
+      ],
+      [
+        "scn_TreasuryCycling",
+        4.0
+      ],
+      [
+        "evidence_unqualified_topics",
+        4.0
+      ]
+    ],
+    "XGBoost": [
+      [
+        "sem_InternalBookEntry",
+        0.45591863989830017
+      ],
+      [
+        "evidence_mitigation_count",
+        0.09783702343702316
+      ],
+      [
+        "role_code",
+        0.04753071069717407
+      ],
+      [
+        "sem_EstablishedRelationship",
+        0.04115196689963341
+      ],
+      [
+        "lifecycle_observed_events",
+        0.039579976350069046
+      ],
+      [
+        "role_transition_count",
+        0.038664430379867554
+      ],
+      [
+        "sem_NonInformativeNovelty",
+        0.028872810304164886
+      ],
+      [
+        "scn_NormalConsumerBehaviour",
+        0.027476875111460686
+      ],
+      [
+        "sem_CrossJurisdictionTransfer",
+        0.020793462172150612
+      ],
+      [
+        "lifecycle_horizons_filled",
+        0.015720505267381668
+      ],
+      [
+        "sem_NormalOperationalBurst",
+        0.014677464962005615
+      ],
+      [
+        "lifecycle_age_minutes",
+        0.011168641038239002
+      ],
+      [
+        "lifecycle_idle_minutes",
+        0.010821082629263401
+      ],
+      [
+        "evidence_effective_risk",
+        0.00913404580205679
+      ],
+      [
+        "lifecycle_distinct_counterparties",
+        0.009109511971473694
+      ]
+    ]
+  },
+  "timing": {
+    "behaviour_runtime_seconds": 11.278502827626653,
+    "entity_resolution_seconds": 3.3783152090618387,
+    "frozen_runtime_seconds": 3.7784757299814373,
+    "semantic_feature_pass_seconds": 64.9232150419848
+  }
+}

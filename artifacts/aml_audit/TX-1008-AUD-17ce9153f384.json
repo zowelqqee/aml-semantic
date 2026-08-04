@@ -1,0 +1,147 @@
+{
+  "audit_id": "AUD-17ce9153f384",
+  "conflicts": [
+    {
+      "explanation": "Stale KYC evidence conflicts with a recent manual verification.",
+      "id": "C-f90786eeb98c",
+      "kind": "kyc_recency",
+      "mitigating_evidence_id": "E-93ab6d528af8",
+      "risk_evidence_id": "E-1d0eafd4a899"
+    }
+  ],
+  "dataset_fingerprint": "57135ae8ec8e8ad1cb99ceaed63d9aa8e3134357831c14bba9ebf5c861a002a2",
+  "decision": {
+    "decision": "ALLOW",
+    "policy_ids": [
+      "AML-10"
+    ],
+    "rationale": "Allow when every observed risk signal is explicitly qualified by mitigating evidence."
+  },
+  "evidence": [
+    {
+      "confidence": 0.86,
+      "direction": "risk",
+      "explanation": "Stale-KYC rule matched: OldKYC.",
+      "id": "E-1d0eafd4a899",
+      "rule_id": "AML-R06-KYC",
+      "source": "AML-R06-KYC",
+      "supporting_facts": [
+        "F-1de67842447f"
+      ],
+      "timestamp": "2026-08-01T08:00:00"
+    },
+    {
+      "confidence": 0.96,
+      "direction": "mitigation",
+      "explanation": "Recent-manual-verification control matched: RecentlyManuallyVerified.",
+      "id": "E-93ab6d528af8",
+      "rule_id": "AML-R09-MANUAL-KYC",
+      "source": "AML-R09-MANUAL-KYC",
+      "supporting_facts": [
+        "F-de4d9573f1f1"
+      ],
+      "timestamp": "2026-08-01T08:00:00"
+    },
+    {
+      "confidence": 0.9,
+      "direction": "mitigation",
+      "explanation": "Expected-payroll control matched: ExpectedPayrollDay.",
+      "id": "E-fee5dd76b097",
+      "rule_id": "AML-R10-PAYROLL",
+      "source": "AML-R10-PAYROLL",
+      "supporting_facts": [
+        "F-fb09cbe975bf"
+      ],
+      "timestamp": "2026-08-01T08:00:00"
+    }
+  ],
+  "execution_time_model": "deterministic-logical-clock",
+  "execution_time_ms": 0,
+  "facts": [
+    {
+      "confidence": 0.9,
+      "explanation": "The transaction is attributed to an expected payroll event.",
+      "id": "F-fb09cbe975bf",
+      "provenance": "account.expected_payroll_day/payment_type",
+      "subject_id": "TX-1008",
+      "timestamp": "2026-08-01T08:00:00",
+      "type": "ExpectedPayrollDay",
+      "value": "A-900"
+    },
+    {
+      "confidence": 0.86,
+      "explanation": "KYC was last updated 2038 days before this transaction.",
+      "id": "F-1de67842447f",
+      "provenance": "account.kyc_updated_at",
+      "subject_id": "TX-1008",
+      "timestamp": "2026-08-01T08:00:00",
+      "type": "OldKYC",
+      "value": "2038"
+    },
+    {
+      "confidence": 0.96,
+      "explanation": "Account was recently manually KYC verified.",
+      "id": "F-de4d9573f1f1",
+      "provenance": "account.recently_manually_verified",
+      "subject_id": "TX-1008",
+      "timestamp": "2026-08-01T08:00:00",
+      "type": "RecentlyManuallyVerified",
+      "value": "A-900"
+    }
+  ],
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block a known SAR-flagged originator unless qualifying evidence exists.",
+      "outcome": "BLOCK",
+      "policy_id": "AML-01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Block a high-value or rapid transfer connected to SAR activity unless qualified.",
+      "outcome": "BLOCK",
+      "policy_id": "AML-02",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review a large transfer involving a high-risk jurisdiction.",
+      "outcome": "REVIEW",
+      "policy_id": "AML-04",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Review unqualified behavioural, SAR-connection, or KYC risk evidence.",
+      "outcome": "REVIEW",
+      "policy_id": "AML-09",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-1d0eafd4a899",
+        "E-93ab6d528af8",
+        "E-fee5dd76b097"
+      ],
+      "explanation": "Allow when every observed risk signal is explicitly qualified by mitigating evidence.",
+      "outcome": "ALLOW",
+      "policy_id": "AML-10",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the supplied data yields neither risk nor control evidence.",
+      "outcome": "ABSTAIN",
+      "policy_id": "AML-00",
+      "triggered": false
+    }
+  ],
+  "rules": [
+    "AML-R06-KYC",
+    "AML-R09-MANUAL-KYC",
+    "AML-R10-PAYROLL"
+  ],
+  "runtime_version": "aml-decision-runtime/1.0.0",
+  "transaction_id": "TX-1008"
+}

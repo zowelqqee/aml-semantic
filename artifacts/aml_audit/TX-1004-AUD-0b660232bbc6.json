@@ -1,0 +1,231 @@
+{
+  "audit_id": "AUD-0b660232bbc6",
+  "conflicts": [],
+  "dataset_fingerprint": "57135ae8ec8e8ad1cb99ceaed63d9aa8e3134357831c14bba9ebf5c861a002a2",
+  "decision": {
+    "decision": "REVIEW",
+    "policy_ids": [
+      "AML-21"
+    ],
+    "rationale": "Review material unqualified risk; isolated low-severity behavioural novelty is not sufficient."
+  },
+  "evidence": [
+    {
+      "confidence": 0.91,
+      "direction": "risk",
+      "explanation": "Large-transfer rule matched: LargeTransfer.",
+      "id": "E-fdfe166589d4",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R01-LARGE",
+      "source": "AML-R01-LARGE",
+      "source_reliability": 0.98,
+      "supporting_facts": [
+        "F-5aa6947451c6"
+      ],
+      "timestamp": "2026-07-20T12:00:00",
+      "topic": "transaction_value"
+    },
+    {
+      "confidence": 0.95,
+      "direction": "risk",
+      "explanation": "High-risk-jurisdiction rule matched: HighRiskCountry.",
+      "id": "E-d3894bf828bc",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R02-JURISDICTION",
+      "source": "AML-R02-JURISDICTION",
+      "source_reliability": 0.99,
+      "supporting_facts": [
+        "F-e548917abd14"
+      ],
+      "timestamp": "2026-07-20T12:00:00",
+      "topic": "jurisdiction"
+    },
+    {
+      "confidence": 0.86,
+      "direction": "risk",
+      "explanation": "Stale-KYC rule matched: OldKYC.",
+      "id": "E-d03b03eba790",
+      "metadata": {},
+      "recency_days": 1661,
+      "rule_id": "AML-R06-KYC",
+      "source": "AML-R06-KYC",
+      "source_reliability": 0.78,
+      "supporting_facts": [
+        "F-fb3770bdf9a1"
+      ],
+      "timestamp": "2026-07-20T12:00:00",
+      "topic": "kyc_recency"
+    },
+    {
+      "confidence": 0.84,
+      "direction": "risk",
+      "explanation": "Abnormal-beneficiary-behaviour rule matched: RepeatedDestination.",
+      "id": "E-51c782a0505a",
+      "metadata": {},
+      "recency_days": null,
+      "rule_id": "AML-R07-BEHAVIOUR",
+      "source": "AML-R07-BEHAVIOUR",
+      "source_reliability": 0.72,
+      "supporting_facts": [
+        "F-b40c04704d08"
+      ],
+      "timestamp": "2026-07-20T12:00:00",
+      "topic": "counterparty_behaviour"
+    }
+  ],
+  "execution_time_model": "deterministic-logical-clock",
+  "execution_time_ms": 0,
+  "facts": [
+    {
+      "confidence": 0.95,
+      "explanation": "Destination jurisdiction IR is on the configured high-risk jurisdiction list.",
+      "id": "F-e548917abd14",
+      "provenance": "jurisdiction-list/v1",
+      "subject_id": "TX-1004",
+      "timestamp": "2026-07-20T12:00:00",
+      "type": "HighRiskCountry",
+      "value": "IR"
+    },
+    {
+      "confidence": 0.91,
+      "explanation": "Amount 92000.00 exceeds the 50000 monitoring threshold.",
+      "id": "F-5aa6947451c6",
+      "provenance": "transaction.amount",
+      "subject_id": "TX-1004",
+      "timestamp": "2026-07-20T12:00:00",
+      "type": "LargeTransfer",
+      "value": "92000.00"
+    },
+    {
+      "confidence": 0.86,
+      "explanation": "KYC was last updated 1661 days before this transaction.",
+      "id": "F-fb3770bdf9a1",
+      "provenance": "account.kyc_updated_at",
+      "subject_id": "TX-1004",
+      "timestamp": "2026-07-20T12:00:00",
+      "type": "OldKYC",
+      "value": "1661"
+    },
+    {
+      "confidence": 0.82,
+      "explanation": "The same beneficiary has already received at least two payments in the last 30 days.",
+      "id": "F-b40c04704d08",
+      "provenance": "transaction-history",
+      "subject_id": "TX-1004",
+      "timestamp": "2026-07-20T12:00:00",
+      "type": "RepeatedDestination",
+      "value": "B-200"
+    }
+  ],
+  "policies": [
+    {
+      "evidence_ids": [],
+      "explanation": "Block an unqualified known-SAR originator.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 0.999899,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 4
+      },
+      "outcome": "BLOCK",
+      "policy_id": "AML-01",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-fdfe166589d4"
+      ],
+      "explanation": "Block an unqualified SAR connection corroborated by transfer severity.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 0.999899,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 4
+      },
+      "outcome": "BLOCK",
+      "policy_id": "AML-02",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-fdfe166589d4",
+        "E-51c782a0505a"
+      ],
+      "explanation": "Block only when large value, velocity, and behavioural evidence independently corroborate a high effective-risk score.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 0.999899,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 4
+      },
+      "outcome": "BLOCK",
+      "policy_id": "AML-20",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [
+        "E-fdfe166589d4",
+        "E-d3894bf828bc",
+        "E-d03b03eba790",
+        "E-51c782a0505a"
+      ],
+      "explanation": "Review material unqualified risk; isolated low-severity behavioural novelty is not sufficient.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 0.999899,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 4
+      },
+      "outcome": "REVIEW",
+      "policy_id": "AML-21",
+      "triggered": true
+    },
+    {
+      "evidence_ids": [
+        "E-fdfe166589d4",
+        "E-d3894bf828bc",
+        "E-d03b03eba790",
+        "E-51c782a0505a"
+      ],
+      "explanation": "Allow when available evidence remains below the review threshold after explicit conflict qualification.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 0.999899,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 4
+      },
+      "outcome": "ALLOW",
+      "policy_id": "AML-22",
+      "triggered": false
+    },
+    {
+      "evidence_ids": [],
+      "explanation": "Abstain when the supplied data yields neither risk nor control evidence.",
+      "metrics": {
+        "configured_block_threshold": 0.995,
+        "configured_review_threshold": 0.9,
+        "effective_risk": 0.999899,
+        "qualified_risk_count": 0,
+        "unqualified_risk_count": 4
+      },
+      "outcome": "ABSTAIN",
+      "policy_id": "AML-00",
+      "triggered": false
+    }
+  ],
+  "rules": [
+    "AML-R01-LARGE",
+    "AML-R02-JURISDICTION",
+    "AML-R06-KYC",
+    "AML-R07-BEHAVIOUR"
+  ],
+  "runtime_version": "aml-decision-runtime/0.2.0",
+  "transaction_id": "TX-1004"
+}

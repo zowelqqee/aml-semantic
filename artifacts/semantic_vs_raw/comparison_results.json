@@ -1,0 +1,678 @@
+{
+  "ablations": [
+    {
+      "dropped_feature_count": 18,
+      "dropped_group": "raw",
+      "feature_count": 74,
+      "features": "raw_plus_semantic_minus_raw",
+      "inference_latency_ms": 0.000273543749935925,
+      "metrics": {
+        "alert_rate": 0.06356,
+        "alert_volume": 6356,
+        "f1": 0.06899682251475261,
+        "fn": 25,
+        "fp": 6128,
+        "pr_auc": 0.448771650569716,
+        "precision": 0.03587161736941473,
+        "recall": 0.9011857707509882,
+        "roc_auc": 0.9770807692870076,
+        "tn": 93619,
+        "tp": 228
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.0273543749935925,
+      "training_seconds": 9.937869957997464
+    },
+    {
+      "dropped_feature_count": 27,
+      "dropped_group": "context",
+      "feature_count": 65,
+      "features": "raw_plus_semantic_minus_context",
+      "inference_latency_ms": 0.00035956834093667564,
+      "metrics": {
+        "alert_rate": 0.04581,
+        "alert_volume": 4581,
+        "f1": 0.09598676044683492,
+        "fn": 21,
+        "fp": 4349,
+        "pr_auc": 0.5058761983938844,
+        "precision": 0.05064396419995634,
+        "recall": 0.9169960474308301,
+        "roc_auc": 0.9848422437620936,
+        "tn": 95398,
+        "tp": 232
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.03595683409366757,
+      "training_seconds": 11.366767665953375
+    },
+    {
+      "dropped_feature_count": 25,
+      "dropped_group": "behaviour",
+      "feature_count": 67,
+      "features": "raw_plus_semantic_minus_behaviour",
+      "inference_latency_ms": 0.00027490791049785914,
+      "metrics": {
+        "alert_rate": 0.04092,
+        "alert_volume": 4092,
+        "f1": 0.1049482163406214,
+        "fn": 25,
+        "fp": 3864,
+        "pr_auc": 0.5270630063252665,
+        "precision": 0.05571847507331378,
+        "recall": 0.9011857707509882,
+        "roc_auc": 0.9857906115119474,
+        "tn": 95883,
+        "tp": 228
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.027490791049785912,
+      "training_seconds": 11.023531166021712
+    },
+    {
+      "dropped_feature_count": 6,
+      "dropped_group": "scenario",
+      "feature_count": 86,
+      "features": "raw_plus_semantic_minus_scenario",
+      "inference_latency_ms": 0.0003113133308943361,
+      "metrics": {
+        "alert_rate": 0.04301,
+        "alert_volume": 4301,
+        "f1": 0.10101010101010101,
+        "fn": 23,
+        "fp": 4071,
+        "pr_auc": 0.5243058630852805,
+        "precision": 0.053475935828877004,
+        "recall": 0.9090909090909091,
+        "roc_auc": 0.9856757358964029,
+        "tn": 95676,
+        "tp": 230
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.03113133308943361,
+      "training_seconds": 11.615502458065748
+    },
+    {
+      "dropped_feature_count": 4,
+      "dropped_group": "role",
+      "feature_count": 88,
+      "features": "raw_plus_semantic_minus_role",
+      "inference_latency_ms": 0.0003127079107798636,
+      "metrics": {
+        "alert_rate": 0.04473,
+        "alert_volume": 4473,
+        "f1": 0.09648751586965722,
+        "fn": 25,
+        "fp": 4245,
+        "pr_auc": 0.5501596410166361,
+        "precision": 0.05097250167672703,
+        "recall": 0.9011857707509882,
+        "roc_auc": 0.9852646959653776,
+        "tn": 95502,
+        "tp": 228
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.03127079107798636,
+      "training_seconds": 11.423199124983512
+    },
+    {
+      "dropped_feature_count": 6,
+      "dropped_group": "lifecycle",
+      "feature_count": 86,
+      "features": "raw_plus_semantic_minus_lifecycle",
+      "inference_latency_ms": 0.00029912333004176615,
+      "metrics": {
+        "alert_rate": 0.04976,
+        "alert_volume": 4976,
+        "f1": 0.08950086058519793,
+        "fn": 19,
+        "fp": 4742,
+        "pr_auc": 0.42477633842573753,
+        "precision": 0.04702572347266881,
+        "recall": 0.924901185770751,
+        "roc_auc": 0.9847419901203801,
+        "tn": 95005,
+        "tp": 234
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.029912333004176617,
+      "training_seconds": 11.325395749998279
+    },
+    {
+      "dropped_feature_count": 6,
+      "dropped_group": "evidence",
+      "feature_count": 86,
+      "features": "raw_plus_semantic_minus_evidence",
+      "inference_latency_ms": 0.0002961745799984783,
+      "metrics": {
+        "alert_rate": 0.04217,
+        "alert_volume": 4217,
+        "f1": 0.1029082774049217,
+        "fn": 23,
+        "fp": 3987,
+        "pr_auc": 0.492982007689029,
+        "precision": 0.054541142992648804,
+        "recall": 0.9090909090909091,
+        "roc_auc": 0.9850970385906382,
+        "tn": 95760,
+        "tp": 230
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.02961745799984783,
+      "training_seconds": 11.209776541916654
+    }
+  ],
+  "arms": {
+    "raw": {
+      "feature_count": 18,
+      "features": "raw",
+      "inference_latency_ms": 0.0001306208304595202,
+      "metrics": {
+        "alert_rate": 0.04893,
+        "alert_volume": 4893,
+        "f1": 0.08861251457442675,
+        "fn": 25,
+        "fp": 4665,
+        "pr_auc": 0.274262747319704,
+        "precision": 0.04659717964438995,
+        "recall": 0.9011857707509882,
+        "roc_auc": 0.9827263371587033,
+        "tn": 95082,
+        "tp": 228
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.013062083045952022,
+      "training_seconds": 6.995080790948123
+    },
+    "raw_plus_semantic": {
+      "feature_count": 92,
+      "features": "raw_plus_semantic",
+      "inference_latency_ms": 0.000343368339817971,
+      "metrics": {
+        "alert_rate": 0.04558,
+        "alert_volume": 4558,
+        "f1": 0.09602993140719185,
+        "fn": 22,
+        "fp": 4327,
+        "pr_auc": 0.49274310812492383,
+        "precision": 0.050680122860903905,
+        "recall": 0.9130434782608695,
+        "roc_auc": 0.9845637526182348,
+        "tn": 95420,
+        "tp": 231
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.0343368339817971,
+      "training_seconds": 11.666794124990702
+    },
+    "semantic": {
+      "feature_count": 74,
+      "features": "semantic",
+      "inference_latency_ms": 0.00025660834042355417,
+      "metrics": {
+        "alert_rate": 0.06356,
+        "alert_volume": 6356,
+        "f1": 0.06899682251475261,
+        "fn": 25,
+        "fp": 6128,
+        "pr_auc": 0.448771650569716,
+        "precision": 0.03587161736941473,
+        "recall": 0.9011857707509882,
+        "roc_auc": 0.9770807692870076,
+        "tn": 93619,
+        "tp": 228
+      },
+      "peak_rss_bytes": 2261696512,
+      "prediction_seconds": 0.025660834042355418,
+      "training_seconds": 9.268283542012796
+    }
+  },
+  "experiment_version": "aml-semantic-vs-raw/1.0",
+  "feature_generation": {
+    "raw_feature_seconds": 80.52621862164233,
+    "semantic_feature_seconds": 703.9294090908952,
+    "total_pass_seconds": 904.07423883304
+  },
+  "group_importance": {
+    "raw": {
+      "_raw_total": {
+        "absolute": 99.99999999999999,
+        "share": 1.0
+      },
+      "_semantic_total": {
+        "absolute": 0.0,
+        "share": 0.0
+      },
+      "raw": {
+        "absolute": 99.99999999999999,
+        "share": 1.0
+      }
+    },
+    "raw_plus_semantic": {
+      "_raw_total": {
+        "absolute": 60.69016502946087,
+        "share": 0.6069016502946087
+      },
+      "_semantic_total": {
+        "absolute": 39.30983497053913,
+        "share": 0.39309834970539126
+      },
+      "behaviour": {
+        "absolute": 4.8112880711021795,
+        "share": 0.048112880711021794
+      },
+      "context": {
+        "absolute": 15.401982091843223,
+        "share": 0.15401982091843222
+      },
+      "evidence": {
+        "absolute": 4.387408707888113,
+        "share": 0.04387408707888113
+      },
+      "lifecycle": {
+        "absolute": 10.880614171863503,
+        "share": 0.10880614171863502
+      },
+      "raw": {
+        "absolute": 60.69016502946087,
+        "share": 0.6069016502946087
+      },
+      "role": {
+        "absolute": 3.388635074657791,
+        "share": 0.033886350746577906
+      },
+      "scenario": {
+        "absolute": 0.4399068531843184,
+        "share": 0.004399068531843184
+      }
+    },
+    "semantic": {
+      "_raw_total": {
+        "absolute": 0.0,
+        "share": 0.0
+      },
+      "_semantic_total": {
+        "absolute": 99.99999999999997,
+        "share": 1.0
+      },
+      "behaviour": {
+        "absolute": 8.312533805956608,
+        "share": 0.08312533805956611
+      },
+      "context": {
+        "absolute": 48.14102238432564,
+        "share": 0.4814102238432565
+      },
+      "evidence": {
+        "absolute": 9.707411848522854,
+        "share": 0.09707411848522857
+      },
+      "lifecycle": {
+        "absolute": 22.469126195153024,
+        "share": 0.2246912619515303
+      },
+      "role": {
+        "absolute": 10.295437316913578,
+        "share": 0.1029543731691358
+      },
+      "scenario": {
+        "absolute": 1.0744684491282752,
+        "share": 0.010744684491282755
+      }
+    }
+  },
+  "group_shap": {
+    "raw": {
+      "_raw_total": {
+        "absolute": 10.720496506023848,
+        "share": 1.0
+      },
+      "_semantic_total": {
+        "absolute": 0.0,
+        "share": 0.0
+      },
+      "raw": {
+        "absolute": 10.720496506023848,
+        "share": 1.0
+      }
+    },
+    "raw_plus_semantic": {
+      "_raw_total": {
+        "absolute": 6.890247141587272,
+        "share": 0.6334472180372206
+      },
+      "_semantic_total": {
+        "absolute": 3.9871345018859956,
+        "share": 0.3665527819627794
+      },
+      "behaviour": {
+        "absolute": 0.4752362846498092,
+        "share": 0.04369031998936658
+      },
+      "context": {
+        "absolute": 1.8935674114729963,
+        "share": 0.17408301680847887
+      },
+      "evidence": {
+        "absolute": 0.44971453305963777,
+        "share": 0.04134400610366366
+      },
+      "lifecycle": {
+        "absolute": 0.7966120058720696,
+        "share": 0.0732356399713215
+      },
+      "raw": {
+        "absolute": 6.890247141587272,
+        "share": 0.6334472180372206
+      },
+      "role": {
+        "absolute": 0.3301244430790742,
+        "share": 0.03034962400874829
+      },
+      "scenario": {
+        "absolute": 0.0418798237524085,
+        "share": 0.0038501750812004985
+      }
+    },
+    "semantic": {
+      "_raw_total": {
+        "absolute": 0.0,
+        "share": 0.0
+      },
+      "_semantic_total": {
+        "absolute": 7.9888615212569665,
+        "share": 1.0
+      },
+      "behaviour": {
+        "absolute": 0.5759577185246504,
+        "share": 0.07209509352391795
+      },
+      "context": {
+        "absolute": 5.1057494128335,
+        "share": 0.6391085136784499
+      },
+      "evidence": {
+        "absolute": 0.5935955869419677,
+        "share": 0.074302901028202
+      },
+      "lifecycle": {
+        "absolute": 1.143954123389042,
+        "share": 0.14319363533154
+      },
+      "role": {
+        "absolute": 0.5218078542068569,
+        "share": 0.06531692317089453
+      },
+      "scenario": {
+        "absolute": 0.04779682536094961,
+        "share": 0.005982933266995629
+      }
+    }
+  },
+  "peak_rss_bytes": 2261696512,
+  "protocol": {
+    "alert_threshold": 0.5,
+    "behaviour_ontology_hash": "7b99b0c109dbb8bd4840fd7363407c4b2aee7469e0c0376a07ccbf460f3e9a04",
+    "catboost": {
+      "depth": 6,
+      "iterations": 200,
+      "learning_rate": 0.05,
+      "loss_function": "Logloss",
+      "random_seed": 20260804,
+      "scale_pos_weight": "(n - positives) / positives, computed per partition",
+      "thread_count": 4
+    },
+    "evaluation_events": 100000,
+    "evaluation_positives": 253,
+    "evaluation_rows": "4,977,237..5,077,237",
+    "frozen": "Runtime, Semantic Context Layer, Behaviour Layer, policies, routing, thresholds, CatBoost hyperparameters, chronological split, train/test protocol and history window are unchanged",
+    "ml_train_rows": "4,577,237..4,977,237",
+    "priming_rows": "0..4,977,237",
+    "semantic_ontology_hash": "80103ed60dd19c7009624c6863b3282d86f7748de0967aaf76885fac97fd9c8c",
+    "shap_implementation": "CatBoost exact TreeSHAP (get_feature_importance type=ShapValues); the `shap` package is not installed",
+    "train_positives": 436
+  },
+  "raw_features_demoted_by_semantic": [
+    {
+      "feature": "same_bank",
+      "importance_raw_only": 0.5964129739614565,
+      "importance_raw_plus_semantic": 0.04188839929895961,
+      "importance_retained": 0.07023388344611474,
+      "rank_raw_only": 17,
+      "rank_raw_plus_semantic": 62
+    },
+    {
+      "feature": "originator_24h_count",
+      "importance_raw_only": 5.670730592810714,
+      "importance_raw_plus_semantic": 0.6111845394590905,
+      "importance_retained": 0.1077788001838675,
+      "rank_raw_only": 7,
+      "rank_raw_plus_semantic": 35
+    },
+    {
+      "feature": "day_offset",
+      "importance_raw_only": 0.8680091078149963,
+      "importance_raw_plus_semantic": 0.10706284601542226,
+      "importance_retained": 0.1233429984219027,
+      "rank_raw_only": 15,
+      "rank_raw_plus_semantic": 56
+    },
+    {
+      "feature": "originator_prior_count",
+      "importance_raw_only": 6.113628078133793,
+      "importance_raw_plus_semantic": 0.9212229878541977,
+      "importance_retained": 0.15068351821221748,
+      "rank_raw_only": 5,
+      "rank_raw_plus_semantic": 27
+    },
+    {
+      "feature": "amount_ratio",
+      "importance_raw_only": 0.16860316686505805,
+      "importance_raw_plus_semantic": 0.053732995005906885,
+      "importance_retained": 0.3186950518486537,
+      "rank_raw_only": 18,
+      "rank_raw_plus_semantic": 61
+    },
+    {
+      "feature": "from_bank_code",
+      "importance_raw_only": 9.329282736885459,
+      "importance_raw_plus_semantic": 3.24000852638974,
+      "importance_retained": 0.3472944938821098,
+      "rank_raw_only": 3,
+      "rank_raw_plus_semantic": 8
+    },
+    {
+      "feature": "hour",
+      "importance_raw_only": 2.920854667548718,
+      "importance_raw_plus_semantic": 1.0892866637698908,
+      "importance_retained": 0.3729342222576441,
+      "rank_raw_only": 12,
+      "rank_raw_plus_semantic": 21
+    },
+    {
+      "feature": "payment_currency_code",
+      "importance_raw_only": 2.514773197701557,
+      "importance_raw_plus_semantic": 1.0064352503636858,
+      "importance_retained": 0.40020915257230505,
+      "rank_raw_only": 14,
+      "rank_raw_plus_semantic": 24
+    },
+    {
+      "feature": "minute",
+      "importance_raw_only": 4.705044451418414,
+      "importance_raw_plus_semantic": 1.9468100493394522,
+      "importance_retained": 0.4137708090627186,
+      "rank_raw_only": 8,
+      "rank_raw_plus_semantic": 14
+    },
+    {
+      "feature": "receiving_currency_code",
+      "importance_raw_only": 2.6023139154532906,
+      "importance_raw_plus_semantic": 1.5228267907728998,
+      "importance_retained": 0.585181819045702,
+      "rank_raw_only": 13,
+      "rank_raw_plus_semantic": 16
+    },
+    {
+      "feature": "log_amount_paid",
+      "importance_raw_only": 6.53969572076001,
+      "importance_raw_plus_semantic": 3.8935801981377214,
+      "importance_retained": 0.5953763545569409,
+      "rank_raw_only": 4,
+      "rank_raw_plus_semantic": 5
+    },
+    {
+      "feature": "beneficiary_prior_count",
+      "importance_raw_only": 3.6994225070239932,
+      "importance_raw_plus_semantic": 2.2198847448740753,
+      "importance_retained": 0.6000625072316667,
+      "rank_raw_only": 11,
+      "rank_raw_plus_semantic": 11
+    },
+    {
+      "feature": "originator_prior_mean_log_amount",
+      "importance_raw_only": 5.8070989920106495,
+      "importance_raw_plus_semantic": 3.686785872516366,
+      "importance_retained": 0.6348756715855215,
+      "rank_raw_only": 6,
+      "rank_raw_plus_semantic": 6
+    },
+    {
+      "feature": "to_bank_code",
+      "importance_raw_only": 3.8385804572055995,
+      "importance_raw_plus_semantic": 2.669660009608168,
+      "importance_retained": 0.6954810611294626,
+      "rank_raw_only": 10,
+      "rank_raw_plus_semantic": 9
+    },
+    {
+      "feature": "pair_prior_count",
+      "importance_raw_only": 15.063742595713599,
+      "importance_raw_plus_semantic": 10.915908144730656,
+      "importance_retained": 0.7246478141386183,
+      "rank_raw_only": 2,
+      "rank_raw_plus_semantic": 2
+    },
+    {
+      "feature": "payment_format_code",
+      "importance_raw_only": 24.181715842491474,
+      "importance_raw_plus_semantic": 21.40683297777866,
+      "importance_retained": 0.8852487192063988,
+      "rank_raw_only": 1,
+      "rank_raw_plus_semantic": 1
+    },
+    {
+      "feature": "log_amount_received",
+      "importance_raw_only": 4.545931916336518,
+      "importance_raw_plus_semantic": 4.354100180466973,
+      "importance_retained": 0.9578014498677009,
+      "rank_raw_only": 9,
+      "rank_raw_plus_semantic": 4
+    },
+    {
+      "feature": "new_beneficiary",
+      "importance_raw_only": 0.8341590798646757,
+      "importance_raw_plus_semantic": 1.0029538530790134,
+      "importance_retained": 1.202353216896855,
+      "rank_raw_only": 16,
+      "rank_raw_plus_semantic": 25
+    }
+  ],
+  "reproduction_check": {
+    "expected_from_window_study_F": {
+      "fp": 6128,
+      "recall": 0.901
+    },
+    "matches": true,
+    "measured_semantic_only": {
+      "fp": 6128,
+      "recall": 0.9011857707509882
+    }
+  },
+  "semantic_features_never_used_in_either_model": [
+    "sem_BookkeepingAccount",
+    "sem_CoverageGap",
+    "beh_FanOutDistribution",
+    "beh_SettlementHubBehaviour",
+    "beh_HighVelocityLayering",
+    "beh_RelationshipGrowthBehaviour",
+    "beh_RoutinePayrollBehaviour",
+    "beh_PayrollOperatorBehaviour",
+    "beh_MoneyMuleBehaviour",
+    "scn_LayeringAttempt",
+    "scn_DormancyAfterOutflow"
+  ],
+  "shap_seconds": {
+    "raw": 1.7899733339436352,
+    "raw_plus_semantic": 2.14630029106047,
+    "semantic": 1.7926920839818195
+  },
+  "unused_semantic_features": [
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "sem_BookkeepingAccount",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "sem_CoverageGap",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "beh_FanOutDistribution",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "beh_SettlementHubBehaviour",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "beh_HighVelocityLayering",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "beh_RelationshipGrowthBehaviour",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 0,
+      "feature": "beh_RoutinePayrollBehaviour",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "beh_PayrollOperatorBehaviour",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "beh_MoneyMuleBehaviour",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "scn_LayeringAttempt",
+      "importance": 0.0,
+      "shap": 0.0
+    },
+    {
+      "constant_on_evaluation_set": 1,
+      "feature": "scn_DormancyAfterOutflow",
+      "importance": 0.0,
+      "shap": 0.0
+    }
+  ]
+}
