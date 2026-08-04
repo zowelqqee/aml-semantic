@@ -1,24 +1,12 @@
 # MicroWorld
 
-**A deterministic semantic runtime for reasoning over event streams.**
+**A portable semantic runtime that converts raw event streams into explicit
+semantic state before policy or machine-learning evaluation.**
 
-MicroWorld converts low-level events into explicit semantic state before a
-deterministic policy or machine-learning model evaluates them.
+![MicroWorld semantic runtime pipeline](assets/semantic-runtime.svg)
 
-```mermaid
-flowchart TB
-  R["Raw events"] --> S["Semantic runtime"]
-  S --> E["Entities"]
-  S --> L["Relationships"]
-  S --> C["Context"]
-  S --> B["Behaviour"]
-  E --> V["Evidence and conflicts"]
-  L --> V
-  C --> V
-  B --> V
-  V --> M["Machine learning or policy"]
-  M --> D["Decision and complete audit"]
-```
+Two implementations evaluate the runtime in distinct domains: AML transaction
+monitoring and IEEE-CIS card-payment fraud.
 
 Classical ML learns directly from event vectors.
 
@@ -31,9 +19,12 @@ declared policy reason over it.
 
 ## Why?
 
-Events describe what happened, not what it means. A transaction is not yet an
-entity, a relationship, a behavioural pattern, or a scenario. Treating those
-as explicit state makes the path to a decision inspectable.
+Most event-processing systems reason directly over observations.
+
+MicroWorld introduces an explicit semantic layer between observations and
+decisions. Instead of asking a model to infer everything from raw events, the
+runtime first constructs entities, relationships, behaviour, and evidence. The
+decision is then produced over this semantic state.
 
 ```mermaid
 flowchart TB
@@ -47,7 +38,26 @@ flowchart TB
 The runtime keeps every stage available for inspection. Rules and models emit
 evidence; the policy is the only component that selects an AML decision.
 
+## Portability
+
+**The runtime is portable. Only the ontology changes.**
+
+![MicroWorld portability across financial domains](assets/portable-runtime.svg)
+
+`MoneyMuleBehaviour`, `HighVelocityLayering`, and `LayeringAttempt` belong to
+the AML ontology. `CompromisedCardBehaviour`, `CardTestingRun`, and
+`DeviceTakeoverPattern` belong to the card-fraud ontology. Entity resolution,
+temporal behaviour, evidence, conflict handling, and the evaluation pipeline
+remain the same.
+
 ## Results
+
+> **Best observed results**
+>
+> - **AML:** recall ↑ 1.18 percentage points, false positives ↓ 338,
+>   PR-AUC ↑ 80% with Raw + Semantic features.
+> - **IEEE-CIS fraud:** recall ↑ 3.10 percentage points and 126 additional
+>   fraud cases detected with the transferred representation.
 
 ### AML
 
